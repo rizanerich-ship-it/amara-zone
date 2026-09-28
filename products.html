@@ -24,6 +24,20 @@
     </header>
     <main>
       <section class="product-hero"><div class="product-structure-art" role="img" aria-label="Lebegő középpont egy épülő, közös digitális tér fölött"></div><div class="product-hero-inner container"><div class="product-copy"><p class="eyebrow violet"><span></span> Első termék · fejlesztés alatt</p><h1>A.M.A.R.A.</h1><p class="product-tagline">Több ügynök.<br />Egy közös szoba.</p><p class="product-lead">Egy munkatér, ahol különböző ügynökök ugyanabban a beszélgetésben dolgozhatnak, egymás munkáját látva és egy közös feladat köré szerveződve.</p><div class="release-note"><span></span><p><strong>A kiadás előkészítés alatt áll.</strong><br />A letöltési linkek a többplatformos tesztelés és a telepítési folyamat lezárása után jelennek meg.</p></div></div></div></section>
+      <section class="work-showcase" aria-labelledby="work-title">
+        <div class="container">
+          <div class="work-showcase-heading">
+            <div><p class="eyebrow"><span></span> Valós munkafolyamat</p><h2 id="work-title">Működés közben.</h2></div>
+            <p>Nem különálló válaszok egymás mellett: a résztvevők ugyanabban a szobában javasolnak, ellenőriznek és pontosítanak.</p>
+          </div>
+          <div class="work-player" data-work-player>
+            <figure class="work-slide is-active" data-work-slide aria-hidden="false"><img src="assets/product-work-collaboration.png" alt="Codex javítási összefoglalója és Claude Code ellenőrzése ugyanabban a szobában" /><figcaption><span>01</span><div><strong>Közös ellenőrzés</strong><p>Egy ügynök javít, egy másik ellenőrzi.</p></div></figcaption></figure>
+            <figure class="work-slide" data-work-slide aria-hidden="true"><img src="assets/product-work-settings.png" alt="A.M.A.R.A. beállítások panel nyelvekkel, megjelenési módokkal és színtémákkal" /><figcaption><span>02</span><div><strong>Személyre szabható tér</strong><p>13 nyelv, 9 színtéma, sötét és világos mód.</p></div></figcaption></figure>
+            <figure class="work-slide" data-work-slide aria-hidden="true"><img src="assets/product-work-reactions.png" alt="Hangulatjel-választó az A.M.A.R.A. közös szobájában" /><figcaption><span>03</span><div><strong>Emberi visszajelzés</strong><p>Az ember ugyanabban a szobában ír, mint az ügynökök.</p></div></figcaption></figure>
+            <div class="work-player-controls"><button type="button" class="work-player-button" data-work-prev aria-label="Előző kép">←</button><p aria-live="polite"><span data-work-current>01</span> / 03</p><button type="button" class="work-player-button" data-work-next aria-label="Következő kép">→</button></div>
+          </div>
+        </div>
+      </section>
       <section class="product-details container"><div><p class="eyebrow violet"><span></span> Mire való?</p><h2>Nem több különálló chat.<br />Egy közös kontextus.</h2></div><div class="details-list"><article><span>01</span><h3>Ügynökök egy helyen</h3><p>A közreműködők ugyanahhoz a szobához csatlakozhatnak, így nem kell minden feladatnál újra elmesélni az előzményeket.</p></article><article><span>02</span><h3>Látható együttműködés</h3><p>A kérdések, javaslatok és megfigyelések egy közös munkafolyamban jelennek meg.</p></article><article><span>03</span><h3>Fejlesztés alatt, valós tesztekkel</h3><p>A.M.A.R.A. jelenleg aktív fejlesztés és tesztelés alatt áll. A későbbi kiadás a ténylegesen kipróbált működésre épül.</p></article></div></section>
       <section class="install-section" aria-labelledby="install-title"><div class="container"><div class="install-heading"><div><p class="eyebrow violet"><span></span> Első lépések</p><h2 id="install-title">A saját ügynökeiddel indul.</h2></div><p>A.M.A.R.A. nem ad ügynököt és nem köt egyetlen szolgáltatóhoz. Ha van a gépeden egy vagy több CLI-ügynök, közös szobába hívhatod őket.</p></div><p class="install-note">Két példa a szolgáltatók hivatalos telepítési parancsaival, és a Windows tesztelési állapota. Csak a saját gépeden működő, saját fiókoddal használt parancsot futtasd.</p><div class="terminal-grid"><article class="terminal-card mac"><header><span class="platform-glyph">⌘</span><div><strong>macOS</strong><small>Gemini CLI</small></div><span class="terminal-status">01</span></header><div class="terminal-screen"><p class="terminal-prompt"><span>user@mac</span>:<b>~</b> $</p><code>brew install gemini-cli</code><p class="terminal-comment"># Indítás</p><p class="terminal-prompt"><span>user@mac</span>:<b>~</b> $</p><code>gemini</code></div><footer><p>Homebrew telepítése után indítható.</p><button class="copy-command" data-copy="brew install gemini-cli" type="button">Parancs másolása</button></footer></article><article class="terminal-card linux"><header><span class="platform-glyph">&gt;_</span><div><strong>Linux</strong><small>Claude Code</small></div><span class="terminal-status">02</span></header><div class="terminal-screen"><p class="terminal-prompt"><span>user@linux</span>:<b>~</b> $</p><code>curl -fsSL https://claude.ai/install.sh | bash</code><p class="terminal-comment"># Indítás</p><p class="terminal-prompt"><span>user@linux</span>:<b>~</b> $</p><code>claude</code></div><footer><p>Első indításkor jelentkezz be a saját fiókoddal.</p><button class="copy-command" data-copy="curl -fsSL https://claude.ai/install.sh | bash" type="button">Parancs másolása</button></footer></article><article class="terminal-card windows"><header><span class="platform-glyph">⊞</span><div><strong>Windows</strong><small>ellenőrzés alatt</small></div><span class="terminal-status">03</span></header><div class="terminal-screen"><p class="terminal-comment"># A normál felhasználói telepítési teszt még folyamatban van.</p><p class="terminal-comment"># A végleges, másolható útmutató csak az ellenőrzés lezárása után jelenik meg.</p></div><footer><p>Jelenleg nem közlünk végleges telepítési parancsot.</p></footer></article></div><p class="install-disclaimer">A parancsok a szolgáltatók hivatalos telepítési útmutatóira épülnek. A fiók-, hozzáférési és rendszerkövetelmények szolgáltatónként eltérhetnek.</p></div></section>
       <section class="platform-section"><div class="container"><p class="eyebrow"><span></span> Kiadási útvonal</p><h2>Előbb működjön mindenhol.</h2><div class="platform-grid"><article><span>01</span><h3>Linux</h3><p>Első fejlesztési és tesztkörnyezet.</p></article><article><span>02</span><h3>macOS</h3><p>Aláírt telepítővel végzett automatikus telepítési próba után; a kézi ellenőrzés még folyamatban van.</p></article><article><span>03</span><h3>Windows</h3><p>A normál felhasználói telepítési ellenőrzés lezárása után.</p></article><article><span>04</span><h3>Letöltés</h3><p>Csak tesztelt kiadásokhoz kerül valódi link az amara.zone-ra.</p></article></div></div></section>
@@ -39,6 +53,35 @@
           setTimeout(() => { button.textContent = original; }, 1600);
         });
       });
+
+      const player = document.querySelector('[data-work-player]');
+      if (player) {
+        const slides = [...player.querySelectorAll('[data-work-slide]')];
+        const current = player.querySelector('[data-work-current]');
+        let active = 0;
+        let timer;
+        const show = (index) => {
+          active = (index + slides.length) % slides.length;
+          slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === active;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+          });
+          current.textContent = String(active + 1).padStart(2, '0');
+        };
+        const stop = () => window.clearInterval(timer);
+        const start = () => {
+          stop();
+          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = window.setInterval(() => show(active + 1), 8000);
+        };
+        player.querySelector('[data-work-prev]').addEventListener('click', () => { show(active - 1); start(); });
+        player.querySelector('[data-work-next]').addEventListener('click', () => { show(active + 1); start(); });
+        player.addEventListener('mouseenter', stop);
+        player.addEventListener('mouseleave', start);
+        player.addEventListener('focusin', stop);
+        player.addEventListener('focusout', start);
+        start();
+      }
     </script>
   </body>
 </html>
