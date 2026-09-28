@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c1f45"/>
+      <stop offset="1" stop-color="#0b0c1f"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ffe7c2"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <clipPath id="cB"><circle cx="598.6" cy="562" r="178"/></clipPath>
+    <clipPath id="cC"><circle cx="425.4" cy="562" r="178"/></clipPath>
+  </defs>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#tile)"/>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="183.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  <!-- agreement: the space all three share -->
+  <g clip-path="url(#cB)">
+    <g clip-path="url(#cC)">
+      <circle cx="512" cy="412" r="178" fill="#ffd28a" filter="url(#glow)" opacity="0.9"/>
+      <circle cx="512" cy="412" r="178" fill="url(#core)"/>
+    </g>
+  </g>
+  <!-- three voices -->
+  <g fill="none" stroke-width="30" style="mix-blend-mode:screen">
+    <circle cx="512" cy="412" r="178" stroke="#3fd8f2"/>
+    <circle cx="598.6" cy="562" r="178" stroke="#8b6cff"/>
+    <circle cx="425.4" cy="562" r="178" stroke="#ff6fa8"/>
+  </g>
+</svg>
