@@ -41,6 +41,7 @@
     </header>
     <main>
       <section class="product-hero"><div class="product-structure-art" role="img" aria-label="Lebegő középpont egy épülő, közös digitális tér fölött"></div><div class="product-hero-inner container"><div class="product-copy"><p class="eyebrow violet"><span></span> Első termék · hamarosan</p><h1>A.M.A.R.A.</h1><p class="product-tagline">Az asszisztenseid<span class="mobile-break"><br /></span> egy közös szobában.<br />Lokálisan,<span class="mobile-break"><br /></span> a saját gépeden.</p><p class="product-lead">Egy asztali alkalmazás Windowsra, macOS-re és Linuxra. A már használt CLI AI-asszisztenseidet hozza közös munkafolyamatba — például Claude Code-ot, Codexet, Geminit vagy DeepSeeket. Ezek példák: az A.M.A.R.A. modell- és szolgáltatófüggetlen.</p><ul class="product-signals"><li>Windows · macOS · Linux</li><li>10 név szerint felismert asszisztens</li><li>Más CLI-k is bevonhatók</li><li>Helyben futó desktop alkalmazás</li></ul><div class="release-note"><span></span><p><strong>A kiadás előkészítés alatt áll.</strong><br />Letöltés: 2026. október 8. 08:00<br />Budapesti idő · CEST / UTC+2</p></div><div class="hero-countdown" data-release-countdown><div class="countdown-clock" aria-live="polite" aria-label="A kiadásig hátralévő idő"><div><b data-countdown-days>--</b><span>nap</span></div><i>:</i><div><b data-countdown-hours>--</b><span>óra</span></div><i>:</i><div><b data-countdown-minutes>--</b><span>perc</span></div><i>:</i><div><b data-countdown-seconds>--</b><span>mp</span></div></div></div><button class="product-cta" type="button" disabled aria-disabled="true">Elérhető október 8-tól</button></div></div></section>
+      <section class="availability-notice" aria-labelledby="availability-title"><div class="container"><p class="eyebrow"><span></span> Átmeneti tájékoztatás</p><h2 id="availability-title">A letöltés átmenetileg nem indítható.</h2><p>Az értékesítési felület korlátozása miatt a letöltést jelenleg önhibánkon kívül nem tudjuk elindítani. <strong>A termékkel nincs probléma.</strong> Minden erőnkkel azon dolgozunk, hogy az értékesítés mielőbb újra elérhető legyen.</p></div></section>
 <section class="work-showcase" aria-labelledby="work-title">
         <div class="container">
           <div class="work-showcase-heading">
@@ -223,6 +224,15 @@
         compatibilityNote.textContent = 'Vásárlás előtt az ingyenes, 1 napos teszttel ellenőrizheted, hogy a géped támogatott-e.';
         platformNote.insertAdjacentElement('afterend', compatibilityNote);
       }
+
+      document.querySelectorAll('.product-cta').forEach((button) => {
+        button.textContent = 'Letöltés átmenetileg nem elérhető';
+        button.setAttribute('aria-label', 'A letöltés az értékesítési felület átmeneti korlátozása miatt nem elérhető');
+      });
+      document.querySelectorAll('.release-note').forEach((note) => {
+        note.innerHTML = '<span></span><p><strong>A letöltés átmenetileg nem érhető el.</strong><br />Az értékesítési felület helyreállításán dolgozunk.</p>';
+      });
+      document.querySelectorAll('[data-release-countdown]').forEach((countdown) => { countdown.hidden = true; });
 
       const releaseTarget = Date.UTC(2026, 9, 8, 6, 0, 0);
       const renderCountdown = () => {
