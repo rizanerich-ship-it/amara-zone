@@ -229,6 +229,15 @@
         button.textContent = 'Letöltés átmenetileg nem elérhető';
         button.setAttribute('aria-label', 'A letöltés az értékesítési felület átmeneti korlátozása miatt nem elérhető');
       });
+
+      const productDetailsTitle = document.querySelector('.product-details > div:first-child h2');
+      if (productDetailsTitle) {
+        const demoVideo = document.createElement('div');
+        demoVideo.className = 'product-demo-video';
+        const embedOrigin = encodeURIComponent(window.location.origin);
+        demoVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/p5p1JACnz-8?rel=0&enablejsapi=1&origin=${embedOrigin}" title="A.M.A.R.A. működés közben" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        productDetailsTitle.insertAdjacentElement('afterend', demoVideo);
+      }
       document.querySelectorAll('.release-note').forEach((note) => {
         note.innerHTML = '<span></span><p><strong>A letöltés átmenetileg nem érhető el.</strong><br />Az értékesítési felület helyreállításán dolgozunk.</p>';
       });
