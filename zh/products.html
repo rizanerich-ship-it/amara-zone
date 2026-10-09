@@ -241,6 +241,14 @@
         button.textContent = '下载暂时不可用';
         button.setAttribute('aria-label', '由于销售平台临时受限，下载暂不可用');
       });
+      const productDetailsTitle = document.querySelector('.product-details > div:first-child h2');
+      if (productDetailsTitle) {
+        const demoVideo = document.createElement('div');
+        demoVideo.className = 'product-demo-video';
+        const embedOrigin = encodeURIComponent(window.location.origin);
+        demoVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/p5p1JACnz-8?rel=0&enablejsapi=1&origin=${embedOrigin}" title="A.M.A.R.A. in action" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        productDetailsTitle.insertAdjacentElement('afterend', demoVideo);
+      }
       document.querySelectorAll('.release-note').forEach((note) => {
         note.innerHTML = '<span></span><p><strong>下载暂时无法使用。</strong><br />我们正在积极推进销售平台的恢复工作。</p>';
       });

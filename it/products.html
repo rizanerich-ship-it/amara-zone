@@ -241,6 +241,14 @@
         button.textContent = 'Download temporaneamente non disponibile';
         button.setAttribute('aria-label', 'Il download non è disponibile a causa di restrizioni temporanee sulla piattaforma di vendita');
       });
+      const productDetailsTitle = document.querySelector('.product-details > div:first-child h2');
+      if (productDetailsTitle) {
+        const demoVideo = document.createElement('div');
+        demoVideo.className = 'product-demo-video';
+        const embedOrigin = encodeURIComponent(window.location.origin);
+        demoVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/p5p1JACnz-8?rel=0&enablejsapi=1&origin=${embedOrigin}" title="A.M.A.R.A. in action" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        productDetailsTitle.insertAdjacentElement('afterend', demoVideo);
+      }
       document.querySelectorAll('.release-note').forEach((note) => {
         note.innerHTML = '<span></span><p><strong>Il download è temporaneamente non disponibile.</strong><br />Stiamo lavorando per ripristinare la piattaforma di vendita.</p>';
       });

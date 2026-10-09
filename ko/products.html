@@ -241,6 +241,14 @@
         button.textContent = '다운로드 일시 중단';
         button.setAttribute('aria-label', '판매 플랫폼의 일시적인 제한으로 인해 다운로드를 이용할 수 없습니다');
       });
+      const productDetailsTitle = document.querySelector('.product-details > div:first-child h2');
+      if (productDetailsTitle) {
+        const demoVideo = document.createElement('div');
+        demoVideo.className = 'product-demo-video';
+        const embedOrigin = encodeURIComponent(window.location.origin);
+        demoVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/p5p1JACnz-8?rel=0&enablejsapi=1&origin=${embedOrigin}" title="A.M.A.R.A. in action" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+        productDetailsTitle.insertAdjacentElement('afterend', demoVideo);
+      }
       document.querySelectorAll('.release-note').forEach((note) => {
         note.innerHTML = '<span></span><p><strong>다운로드가 일시적으로 중단되었습니다.</strong><br />판매 플랫폼 복구를 위해 작업 중입니다.</p>';
       });
