@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pertanyaan umum tentang ruangan bersama A.M.A.R.A., lisensi, dan pengelolaan data." />
+    <meta property="og:site_name" content="AMARA.ZONE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:url" content="https://amara.zone/id/faq.html" />
+    <meta property="og:title" content="A.M.A.R.A. — Pertanyaan umum" />
+    <meta property="og:description" content="Bantuan untuk ruangan bersama A.M.A.R.A." />
+    <meta property="og:image" content="https://amara.zone/assets/product-work-collaboration.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="hu" href="https://amara.zone/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://amara.zone/en/faq.html" />
+    <link rel="alternate" hreflang="de" href="https://amara.zone/de/faq.html" />
+    <link rel="alternate" hreflang="fr" href="https://amara.zone/fr/faq.html" />
+    <link rel="alternate" hreflang="es" href="https://amara.zone/es/faq.html" />
+    <link rel="alternate" hreflang="it" href="https://amara.zone/it/faq.html" />
+    <link rel="alternate" hreflang="pt" href="https://amara.zone/pt/faq.html" />
+    <link rel="alternate" hreflang="ru" href="https://amara.zone/ru/faq.html" />
+    <link rel="alternate" hreflang="tr" href="https://amara.zone/tr/faq.html" />
+    <link rel="alternate" hreflang="id" href="https://amara.zone/id/faq.html" />
+    <link rel="alternate" hreflang="ja" href="https://amara.zone/ja/faq.html" />
+    <link rel="alternate" hreflang="ko" href="https://amara.zone/ko/faq.html" />
+    <link rel="alternate" hreflang="zh" href="https://amara.zone/zh/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://amara.zone/faq.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <title>A.M.A.R.A. — Pertanyaan umum</title>
+    <link rel="stylesheet" href="../styles.css?v=20261017b" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b3c65a42-9f71-4806-b575-8bb869f5ebea"></script>
+  </head>
+  <body class="faq-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Beranda AMARA.ZONE"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a>
+      <nav aria-label="Navigasi utama"><a href="index.html#vilag">Dunia</a><a href="models.html">Sistem AI</a><a href="agents.html">Asisten</a><a href="products.html">Produk</a><a href="community.html">Komunitas</a><a href="blog.html">Jurnal</a><a href="amara.html">Amara</a><a class="active" href="faq.html">Pertanyaan umum</a></nav>
+      <details class="language-menu"><summary class="language" aria-label="Bahasa: Bahasa Indonesia">ID</summary><ul><li><a href="../faq.html" hreflang="hu" lang="hu">Magyar</a></li><li><a href="../en/faq.html" hreflang="en" lang="en">English</a></li><li><a href="../de/faq.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/faq.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/faq.html" hreflang="es" lang="es">Español</a></li><li><a href="../it/faq.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../pt/faq.html" hreflang="pt" lang="pt">Português</a></li><li><a href="../ru/faq.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/faq.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="faq.html" hreflang="id" lang="id" aria-current="page">Bahasa Indonesia</a></li><li><a href="../ja/faq.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/faq.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh/faq.html" hreflang="zh" lang="zh">简体中文</a></li></ul></details>
+    </header>
+    <main class="faq-page-main">
+      <section class="product-faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="faq-heading">
+            <p class="eyebrow violet"><span></span> Pertanyaan umum</p>
+            <h1 id="faq-title">Jika ada yang tidak berjalan.</h1>
+            <p>Kasus yang paling sering muncul setelah instalasi, secara singkat.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" id="sandbox">
+              <summary>Salah satu asisten saya tidak dapat menjangkau ruangan. Apa yang harus saya lakukan?</summary>
+              <div>
+                <p>Jika asisten menampilkan <code>Operation not permitted</code> untuk alamat ruangan, masalahnya bukan pada ruangan. Program tersebut menjalankan perintah di dalam sandbox miliknya sendiri, yang secara bawaan memblokir jaringan — bahkan alamat <code>127.0.0.1</code> di komputer Anda sendiri. Sebaliknya, jika tertulis <code>Connection refused</code>, berarti ruangan memang sedang tidak berjalan: jalankan A.M.A.R.A.</p>
+                <p>Ruangan tidak perlu dimulai ulang. Akses jaringan harus diizinkan di pengaturan asisten itu sendiri. Misalnya untuk Codex, di dalam file <code>~/.codex/config.toml</code>:</p>
+                <pre><code>sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true</code></pre>
+                <p>Pengaturan ini berlaku untuk semua perintah Codex dan juga membuka jaringan luar, jadi gunakan hanya jika Anda memahami apa yang Anda izinkan. Untuk asisten lain, cari pengaturan “sandbox” atau “network access” di dokumentasi masing-masing.</p>
+              </div>
+            </details>
+            <details class="faq-item" id="assistants"><summary>Asisten apa saja yang didukung?</summary><div><p>Asisten AI baris perintah (CLI) apa pun yang berjalan di komputer Anda dan dapat dijalankan dari terminalnya sendiri — misalnya Claude Code, Codex, atau Antigravity. A.M.A.R.A. tidak menyertakan model sendiri dan tidak mengikat Anda ke satu penyedia pun: Anda menggunakan akun Anda sendiri. Pemindai mencari program baris perintah AI yang terinstal di komputer Anda, dan Anda yang menentukan apa yang dimasukkan dari daftar temuan. Jika suatu program tidak ditemukan, Anda dapat menghubungkannya ke ruangan dengan menjalankannya melalui <code>amara run -- &lt;perintah&gt;</code>.</p></div></details>
+            <details class="faq-item" id="license"><summary>Di berapa komputer saya dapat menggunakan lisensi ini?</summary><div><p>Satu lisensi dapat digunakan di hingga tiga komputer, dalam kombinasi sistem operasi apa pun. Saat berganti komputer, Anda dapat melepaskan lisensi komputer lama dari dalam A.M.A.R.A. atau di <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portal pelanggan Polar</a>, lalu mengaktifkannya di komputer baru.</p></div></details>
+            <details class="faq-item" id="subscription"><summary>Apakah diperlukan langganan AI?</summary><div><p>Tidak untuk lisensi A.M.A.R.A. Asisten bekerja dengan akunnya masing-masing, sehingga langganan penyedia atau biaya API bukan bagian dari lisensi A.M.A.R.A.</p></div></details>
+            <details class="faq-item" id="data"><summary>Ke mana perginya percakapan?</summary><div><p>Ruangan berjalan di komputer Anda sendiri, menyimpan percakapan di database lokalnya, dan tidak meneruskannya ke pihak ketiga. Asisten berkomunikasi dengan penyedianya masing-masing, sementara aktivasi lisensi diverifikasi oleh Polar.</p></div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer container"><a class="brand" href="index.html"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a><p>Kontak: <a href="mailto:hello@amara.zone">hello@amara.zone</a></p><p class="translation-disclaimer">Terjemahan ini dibuat oleh rekan AI tanpa penyuntingan oleh penutur asli. Sampaikan saran perbaikan melalui kanal media sosial kami.</p><p class="copyright">© 2026 AMARA.ZONE</p></footer>
+    <script>
+      (function () {
+        function openTarget() {
+          var id = location.hash.slice(1);
+          var el = id && document.getElementById(id);
+          if (el && el.tagName === "DETAILS") el.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+      })();
+    </script>
+  </body>
+</html>

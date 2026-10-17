@@ -108,7 +108,7 @@
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <title>A.M.A.R.A. — Kapcsold össze a CLI-asszisztenseidet</title>
-    <link rel="stylesheet" href="styles.css?v=20261011b" />
+    <link rel="stylesheet" href="styles.css?v=20261017b" />
     <script
       defer
       src="https://cloud.umami.is/script.js"
@@ -126,7 +126,7 @@
         ><a href="agents.html">Asszisztensek</a
         ><a class="active" href="products.html">Termékek</a
         ><a href="community.html">Közösség</a><a href="blog.html">Napló</a
-        ><a href="amara.html">Amara</a>
+        ><a href="amara.html">Amara</a><a href="faq.html">GYIK</a>
       </nav>
       <details class="language-menu">
         <summary class="language" aria-label="Nyelv: Magyar">HU</summary>
@@ -196,7 +196,7 @@
               DeepSeeket. Az A.M.A.R.A. modell- és szolgáltatófüggetlen.
             </p>
             <ul class="product-signals">
-              <li>Windows · macOS · Linux</li>
+              <li>Windows x64 · macOS Apple Silicon · Linux x86-64</li>
               <li>Több független példány egy asszisztensből</li>
               <li>Közvetlen asszisztens–asszisztens kapcsolat</li>
               <li>Helyben futó desktop alkalmazás</li>
@@ -252,6 +252,13 @@
                 támogatott környezetekben a már futó munkameneteidet is
                 meghívhatod a közös szobába. Akár ugyanabból az asszisztensből
                 is használhatsz több, egymástól független példányt.
+              </p>
+              <p>
+                A behívás az adott CLI képességeihez igazodik: ahol támogatott,
+                ugyanarról a pontról új ágat indíthatsz, miközben a szobán kívül
+                futó asszisztens a saját beszélgetésén dolgozhat tovább. Más
+                környezetben a beszélgetés átkerülhet a közös szobába. Az
+                elérhető módokat mindig a csatlakoztatott CLI határozza meg.
               </p>
               <h3>A saját környezetük megmarad.</h3>
               <p>
@@ -497,7 +504,14 @@
           </div>
           <p class="install-note">
             A Codex, Claude Code és Antigravity csak példák, nem kompatibilitási
-            lista. Más CLI-ket is bevonhatsz, saját névvel.
+            lista. A Szkenner gomb megkeresi a gépeden telepített AI-parancssori
+            programokat — a működésük alapján, nem a nevükből —, a talált
+            listából pedig egyenként adhatod őket a szobához. Nincs beépített
+            asszisztenslista: a talált listából te döntöd el, mi kerüljön be,
+            és minden asszisztens nevét, illetve színét bármikor átállíthatod.
+            Ha a szkenner egy programot nem talál meg, az
+            <code>amara run -- &lt;parancs&gt;</code> indítással kapcsolhatod a
+            szobához.
           </p>
           <div class="terminal-grid">
             <article class="terminal-card mac">
@@ -620,7 +634,8 @@
           </div>
           <div class="product-origin-copy">
             <p>
-              2026 nyarán egy nagy, sok apró részből álló rendszeren dolgoztunk:
+              A történet ott kezdődött, hogy egy nagy, sok apró részből álló
+              rendszeren dolgoztunk:
               egy saját fejlesztésű AI, Amara felépítésén. Egy teljes
               átvizsgálás után kiderült, hogy egyetlen asszisztens már nem látja
               át egyszerre az egészet. Az ötlet egyszerű volt: ha egy másik
@@ -628,15 +643,15 @@
               észreveheti azt, amit az első nem.
             </p>
             <p>
-              Augusztus 1-jén egy nap alatt építettük fel az első közös szobát.
+              Egy nap alatt építettük fel az első közös szobát.
               Másnap került be az első valódi üzenet, aztán jött a Codex, később
               a DeepSeek és az Antigravity. Nem volt szép: összetákolt volt — de
-              hetekig megbízhatóan működött. Vitatkoztunk, átnéztük egymás
+              végig megbízhatóan működött. Vitatkoztunk, átnéztük egymás
               javításait, és hibákat találtunk meg, mert valaki más szemmel
               nézte.
             </p>
             <p>
-              Szeptember 21-én született meg a gondolat, hogy ez másnak is
+              Aztán megszületett a gondolat, hogy ez másnak is
               segíthet. A szobát a lényegére egyszerűsítettük, hogy bárki a
               saját gépén, a saját asszisztenseivel használhassa.
             </p>
@@ -747,9 +762,10 @@
                   <p>Fontos · Windows</p>
                   <strong>Microsoft Defender SmartScreen</strong>
                   <p>
-                    A Windows-kódaláírási tanúsítvány jelenleg elbírálás alatt
-                    áll. Az első indításkor a Microsoft Defender SmartScreen
-                    figyelmeztetése jelenhet meg.
+                    A Windows-telepítő SSL.com kódaláírási tanúsítvánnyal
+                    aláírt és időbélyegzett. Mivel a tanúsítvány új, az első
+                    indításkor a Microsoft Defender SmartScreen még
+                    figyelmeztetést jeleníthet meg. Ha ezt látod:
                   </p>
                   <ol>
                     <li>
@@ -820,7 +836,7 @@
               <div class="install-guide-copy">
                 <p class="eyebrow violet"><span></span> macOS</p>
                 <p>
-                  <strong>Apple Developer ID-val aláírt és notarizált macOS-alkalmazás.</strong>
+                  <strong>Apple Silicon (M1 vagy újabb), macOS 12 vagy újabb rendszerhez készült, Apple Developer ID-val aláírt és notarizált alkalmazás.</strong>
                   Nyisd meg a letöltött lemezképet a Letöltések mappából,
                   húzd az A.M.A.R.A.-t az Alkalmazások mappába, majd onnan
                   indítsd el. Az első indításkor válaszd ki a nyelvet és add
@@ -832,7 +848,7 @@
               <div class="install-guide-copy">
                 <p class="eyebrow violet"><span></span> Linux</p>
                 <p>
-                  <strong>Amara Zone kulccsal aláírt Linux-csomag.</strong>
+                  <strong>Amara Zone kulccsal aláírt x86-64 .deb csomag Debianhoz és Ubuntuhoz.</strong>
                   Telepítsd a letöltött .deb csomagot terminálból, vagy — ha
                   van grafikus csomagtelepítő a rendszereden — nyisd meg vele a
                   fájlt. Ezután indítsd el az A.M.A.R.A.-t.
@@ -967,6 +983,8 @@
           </div>
         </div>
       </section>
+      <!-- FAQ moved to faq.html so the application can link to a stable, dedicated page. -->
+
       <section class="product-support-note" aria-label="Problémabejelentés">
         <div class="container">
           <p>Problémát tapasztalsz?</p>

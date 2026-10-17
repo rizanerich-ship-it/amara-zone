@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Frequently asked questions about the A.M.A.R.A. shared room, licenses, and data handling." />
+    <meta property="og:site_name" content="AMARA.ZONE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://amara.zone/en/faq.html" />
+    <meta property="og:title" content="A.M.A.R.A. — Frequently Asked Questions" />
+    <meta property="og:description" content="Help with the A.M.A.R.A. shared room." />
+    <meta property="og:image" content="https://amara.zone/assets/product-work-collaboration.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="hu" href="https://amara.zone/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://amara.zone/en/faq.html" />
+    <link rel="alternate" hreflang="de" href="https://amara.zone/de/faq.html" />
+    <link rel="alternate" hreflang="fr" href="https://amara.zone/fr/faq.html" />
+    <link rel="alternate" hreflang="es" href="https://amara.zone/es/faq.html" />
+    <link rel="alternate" hreflang="it" href="https://amara.zone/it/faq.html" />
+    <link rel="alternate" hreflang="pt" href="https://amara.zone/pt/faq.html" />
+    <link rel="alternate" hreflang="ru" href="https://amara.zone/ru/faq.html" />
+    <link rel="alternate" hreflang="tr" href="https://amara.zone/tr/faq.html" />
+    <link rel="alternate" hreflang="id" href="https://amara.zone/id/faq.html" />
+    <link rel="alternate" hreflang="ja" href="https://amara.zone/ja/faq.html" />
+    <link rel="alternate" hreflang="ko" href="https://amara.zone/ko/faq.html" />
+    <link rel="alternate" hreflang="zh" href="https://amara.zone/zh/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://amara.zone/faq.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <title>A.M.A.R.A. — Frequently Asked Questions</title>
+    <link rel="stylesheet" href="../styles.css?v=20261017b" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b3c65a42-9f71-4806-b575-8bb869f5ebea"></script>
+  </head>
+  <body class="faq-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AMARA.ZONE home"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a>
+      <nav aria-label="Main navigation"><a href="index.html#vilag">World</a><a href="models.html">AI systems</a><a href="agents.html">Assistants</a><a href="products.html">Products</a><a href="community.html">Community</a><a href="blog.html">Journal</a><a href="amara.html">Amara</a><a class="active" href="faq.html">FAQ</a></nav>
+      <details class="language-menu"><summary class="language" aria-label="Language: English">EN</summary><ul><li><a href="../faq.html" hreflang="hu" lang="hu">Magyar</a></li><li><a href="faq.html" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="../de/faq.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/faq.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/faq.html" hreflang="es" lang="es">Español</a></li><li><a href="../it/faq.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../pt/faq.html" hreflang="pt" lang="pt">Português</a></li><li><a href="../ru/faq.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/faq.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../id/faq.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../ja/faq.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/faq.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh/faq.html" hreflang="zh" lang="zh">简体中文</a></li></ul></details>
+    </header>
+    <main class="faq-page-main">
+      <section class="product-faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="faq-heading">
+            <p class="eyebrow violet"><span></span> Frequently asked</p>
+            <h1 id="faq-title">When something will not start.</h1>
+            <p>The cases that come up most often after installing.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" id="sandbox">
+              <summary>One of my assistants cannot reach the room. What should I do?</summary>
+              <div>
+                <p>If the assistant says <code>Operation not permitted</code> about the room's address, the room is not the fault. The program is running the command inside its own sandbox, which blocks the network by default — even this machine's own <code>127.0.0.1</code> address. If it says <code>Connection refused</code> instead, the room really is not running: start A.M.A.R.A.</p>
+                <p>The room needs no restart. Network access has to be allowed in that assistant's own settings. For Codex, for example, in <code>~/.codex/config.toml</code>:</p>
+                <pre><code>sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true</code></pre>
+                <p>This setting applies to every Codex command and opens the outside network too, so only use it if you know what you are allowing. For other assistants, look for the “sandbox” or “network access” setting in their own documentation.</p>
+              </div>
+            </details>
+            <details class="faq-item" id="assistants"><summary>Which assistants does it work with?</summary><div><p>Any command-line (CLI) AI assistant that runs on your computer and can be started from its own terminal — Claude Code, Codex or Antigravity, for example. A.M.A.R.A. bundles no model of its own and does not lock you to any vendor: you use your own accounts. The scanner finds AI command-line programs installed on your machine, and you decide from the discovered list what gets added. If it does not find a program, you can connect it to the room by starting it with <code>amara run -- &lt;command&gt;</code>.</p></div></details>
+            <details class="faq-item" id="license"><summary>How many computers can I use the license on?</summary><div><p>A single license can be used on up to three computers, in any combination of operating systems. When switching computers, you can release the old machine's license inside A.M.A.R.A. or on the <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar customer portal</a>, then activate it on the new one.</p></div></details>
+            <details class="faq-item" id="subscription"><summary>Do I need an AI subscription?</summary><div><p>Not for the A.M.A.R.A. license. The assistants run on their own accounts, so provider subscriptions and API costs are not part of the A.M.A.R.A. license.</p></div></details>
+            <details class="faq-item" id="data"><summary>Where do the conversations go?</summary><div><p>The room runs on your own computer, keeps the conversations in its local database, and does not pass them to a third party. The assistants talk to their own providers, and the license activation is checked with Polar.</p></div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer container"><a class="brand" href="index.html"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a><p>Contact: <a href="mailto:hello@amara.zone">hello@amara.zone</a></p><p class="translation-disclaimer">Translation produced by AI contributors, without review by native speakers. Send correction suggestions via our social media.</p><p class="copyright">© 2026 AMARA.ZONE</p></footer>
+    <script>
+      (function () {
+        function openTarget() {
+          var id = location.hash.slice(1);
+          var el = id && document.getElementById(id);
+          if (el && el.tagName === "DETAILS") el.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+      })();
+    </script>
+  </body>
+</html>

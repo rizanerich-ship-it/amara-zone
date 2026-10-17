@@ -234,3 +234,33 @@
 .products-page .product-support-note a { color:#d5cdff; }
 .products-page .product-support-note .support-message-link { border-color:#8f7ee8; color:#fff; background:#6759bb; }
 @media (max-width:760px) { .products-page .product-proof { padding:75px 0 82px; }.product-proof-layout { grid-template-columns:1fr; gap:29px; }.product-proof-copy>p:first-child { font-size:15px; }.product-proof-points { margin-top:25px; } }
+
+/* FAQ (2026-10-17). The first entry carries the stable #sandbox anchor used by the app. */
+.product-faq { padding:104px 0; border-top:1px solid #d7d3dc; background:#f5f3ef; }
+.faq-page-main { min-height:calc(100vh - 172px); background:#f5f3ef; }
+.faq-page-main .product-faq { border-top:0; }
+.faq-page .site-header { position:relative; background:#0a1322; }
+.faq-page .faq-list,.faq-page .faq-item,.faq-page .faq-item>div { min-width:0; max-width:100%; }
+/* Keep the header usable near the mobile breakpoint without letting long localized FAQ labels overflow. */
+@media (min-width:761px) and (max-width:820px) { .site-header nav { gap:14px; } .site-header nav a[href="faq.html"] { display:none; } }
+@media (max-width:760px) { .faq-page { overflow-x:hidden; } .faq-page .container { width:calc(100% - 38px); } .faq-page .faq-list,.faq-page .faq-item,.faq-page .faq-item>div { width:100%; } .faq-page .faq-item { overflow:hidden; } .faq-page .faq-item summary,.faq-page .faq-item>div { overflow-wrap:anywhere; } .faq-page .faq-item pre { max-width:100%; } }
+.product-faq .faq-heading { max-width:660px; }
+.product-faq .faq-heading h1,.product-faq .faq-heading h2 { margin:18px 0 10px; color:#20263a; }
+.product-faq .faq-heading>p:last-child { margin:0; color:#596271; font-size:15px; line-height:1.7; }
+.faq-list { margin-top:34px; border-top:1px solid #d7d3dc; }
+.faq-item { border-bottom:1px solid #d7d3dc; }
+.faq-item summary { display:flex; align-items:center; gap:14px; padding:20px 0; color:#20263a; font:600 17px Manrope; cursor:pointer; list-style:none; }
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::before { content:"+"; flex:none; width:22px; color:#6759bb; font:400 16px 'DM Mono'; }
+.faq-item[open] summary::before { content:"\2212"; }
+.faq-item summary:hover,.faq-item summary:focus-visible { color:#5143a6; }
+.faq-item>div { max-width:760px; padding:0 0 22px 36px; color:#596271; font-size:14px; line-height:1.78; }
+.faq-item>div p { margin:0 0 1em; }
+.faq-item>div p:last-child { margin-bottom:0; }
+.faq-item>div a { color:#5143a6; text-decoration:underline; text-underline-offset:3px; }
+.faq-item code { padding:1px 5px; border-radius:3px; background:#e8e4f5; color:#3d3560; font:12px 'DM Mono'; }
+.faq-item pre { margin:0 0 1em; padding:14px 16px; overflow-x:auto; border-radius:4px; background:#141128; }
+.faq-item pre code { padding:0; background:none; color:#e9e7f2; font-size:12px; line-height:1.6; }
+.faq-item:target { background:#efeaff; }
+.faq-item:target summary { color:#3d3560; }
+@media (max-width:760px) { .product-faq { padding:75px 0; } .product-faq .faq-heading h1,.product-faq .faq-heading h2 { font-size:clamp(28px,8vw,34px); } .faq-item summary { font-size:15px; } .faq-item>div { padding-left:0; } .faq-item pre { font-size:11px; } }

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perguntas frequentes sobre a sala partilhada do A.M.A.R.A., licenças e tratamento de dados." />
+    <meta property="og:site_name" content="AMARA.ZONE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://amara.zone/pt/faq.html" />
+    <meta property="og:title" content="A.M.A.R.A. — Perguntas frequentes" />
+    <meta property="og:description" content="Ajuda para a sala partilhada do A.M.A.R.A." />
+    <meta property="og:image" content="https://amara.zone/assets/product-work-collaboration.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="hu" href="https://amara.zone/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://amara.zone/en/faq.html" />
+    <link rel="alternate" hreflang="de" href="https://amara.zone/de/faq.html" />
+    <link rel="alternate" hreflang="fr" href="https://amara.zone/fr/faq.html" />
+    <link rel="alternate" hreflang="es" href="https://amara.zone/es/faq.html" />
+    <link rel="alternate" hreflang="it" href="https://amara.zone/it/faq.html" />
+    <link rel="alternate" hreflang="pt" href="https://amara.zone/pt/faq.html" />
+    <link rel="alternate" hreflang="ru" href="https://amara.zone/ru/faq.html" />
+    <link rel="alternate" hreflang="tr" href="https://amara.zone/tr/faq.html" />
+    <link rel="alternate" hreflang="id" href="https://amara.zone/id/faq.html" />
+    <link rel="alternate" hreflang="ja" href="https://amara.zone/ja/faq.html" />
+    <link rel="alternate" hreflang="ko" href="https://amara.zone/ko/faq.html" />
+    <link rel="alternate" hreflang="zh" href="https://amara.zone/zh/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://amara.zone/faq.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <title>A.M.A.R.A. — Perguntas frequentes</title>
+    <link rel="stylesheet" href="../styles.css?v=20261017b" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b3c65a42-9f71-4806-b575-8bb869f5ebea"></script>
+  </head>
+  <body class="faq-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Página inicial da AMARA.ZONE"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a>
+      <nav aria-label="Navegação principal"><a href="index.html#vilag">Mundo</a><a href="models.html">Sistemas de IA</a><a href="agents.html">Assistentes</a><a href="products.html">Produtos</a><a href="community.html">Comunidade</a><a href="blog.html">Diário</a><a href="amara.html">Amara</a><a class="active" href="faq.html">Perguntas frequentes</a></nav>
+      <details class="language-menu"><summary class="language" aria-label="Idioma: Português">PT</summary><ul><li><a href="../faq.html" hreflang="hu" lang="hu">Magyar</a></li><li><a href="../en/faq.html" hreflang="en" lang="en">English</a></li><li><a href="../de/faq.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/faq.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/faq.html" hreflang="es" lang="es">Español</a></li><li><a href="../it/faq.html" hreflang="it" lang="it">Italiano</a></li><li><a href="faq.html" hreflang="pt" lang="pt" aria-current="page">Português</a></li><li><a href="../ru/faq.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/faq.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../id/faq.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../ja/faq.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/faq.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh/faq.html" hreflang="zh" lang="zh">简体中文</a></li></ul></details>
+    </header>
+    <main class="faq-page-main">
+      <section class="product-faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="faq-heading">
+            <p class="eyebrow violet"><span></span> Perguntas frequentes</p>
+            <h1 id="faq-title">Quando algo não arranca.</h1>
+            <p>Os casos mais comuns após a instalação, de forma resumida.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" id="sandbox">
+              <summary>Um dos meus assistentes não consegue aceder à sala. O que devo fazer?</summary>
+              <div>
+                <p>Se o assistente indicar <code>Operation not permitted</code> para o endereço da sala, a falha não é da sala. Nesse caso, o programa está a executar os comandos na própria sandbox, que bloqueia a rede por predefinição — até mesmo o endereço <code>127.0.0.1</code> do teu próprio computador. Se, pelo contrário, aparecer <code>Connection refused</code>, a sala não está mesmo em execução: inicia o A.M.A.R.A.</p>
+                <p>Não é preciso reiniciar a sala. Tens de permitir o acesso à rede nas definições do próprio assistente. Por exemplo, no Codex, no ficheiro <code>~/.codex/config.toml</code>:</p>
+                <pre><code>sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true</code></pre>
+                <p>Esta definição aplica-se a todos os comandos do Codex e abre também a rede externa, por isso utiliza-a apenas se souberes o que estás a autorizar. Noutros assistentes, procura a definição “sandbox” ou “network access” na respetiva documentação.</p>
+              </div>
+            </details>
+            <details class="faq-item" id="assistants"><summary>Com que assistentes funciona?</summary><div><p>Com qualquer assistente de IA de linha de comandos (CLI) que corra no teu computador e possa ser iniciado a partir do próprio terminal — por exemplo, Claude Code, Codex ou Antigravity. O A.M.A.R.A. não inclui nenhum modelo próprio nem te prende a nenhum fornecedor: utilizas as tuas próprias contas. O scanner procura os programas de IA de linha de comandos instalados no teu computador e decides a partir da lista encontrada o que entra. Se não encontrar um programa, podes ligá-lo à sala iniciando-o com <code>amara run -- &lt;comando&gt;</code>.</p></div></details>
+            <details class="faq-item" id="license"><summary>Em quantos computadores posso utilizar a licença?</summary><div><p>Uma única licença pode ser utilizada em até três computadores, em qualquer combinação de sistemas operativos. Ao trocar de computador, podes libertar a licença da máquina antiga no A.M.A.R.A. ou no <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portal de clientes Polar</a> e ativá-la no novo.</p></div></details>
+            <details class="faq-item" id="subscription"><summary>Preciso de uma subscrição de IA?</summary><div><p>Para a licença do A.M.A.R.A., não. Os assistentes funcionam com as respetivas contas, pelo que as subscrições dos fornecedores ou os custos de API não fazem parte da licença do A.M.A.R.A.</p></div></details>
+            <details class="faq-item" id="data"><summary>Para onde vão as conversas?</summary><div><p>A sala corre no teu próprio computador, guarda as conversas na base de dados local e não as transmite a terceiros. Os assistentes comunicam com os respetivos fornecedores e a ativação da licença é verificada pela Polar.</p></div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer container"><a class="brand" href="index.html"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a><p>Contacto: <a href="mailto:hello@amara.zone">hello@amara.zone</a></p><p class="translation-disclaimer">Tradução produzida por colaboradores de IA, sem revisão de falantes nativos. Envie sugestões de correção pelas redes sociais.</p><p class="copyright">© 2026 AMARA.ZONE</p></footer>
+    <script>
+      (function () {
+        function openTarget() {
+          var id = location.hash.slice(1);
+          var el = id && document.getElementById(id);
+          if (el && el.tagName === "DETAILS") el.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+      })();
+    </script>
+  </body>
+</html>

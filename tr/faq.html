@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A.M.A.R.A. ortak odası, lisanslar ve veri işleme hakkında sık sorulan sorular." />
+    <meta property="og:site_name" content="AMARA.ZONE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:url" content="https://amara.zone/tr/faq.html" />
+    <meta property="og:title" content="A.M.A.R.A. — Sık sorulan sorular" />
+    <meta property="og:description" content="A.M.A.R.A. ortak odası için yardım." />
+    <meta property="og:image" content="https://amara.zone/assets/product-work-collaboration.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="hu" href="https://amara.zone/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://amara.zone/en/faq.html" />
+    <link rel="alternate" hreflang="de" href="https://amara.zone/de/faq.html" />
+    <link rel="alternate" hreflang="fr" href="https://amara.zone/fr/faq.html" />
+    <link rel="alternate" hreflang="es" href="https://amara.zone/es/faq.html" />
+    <link rel="alternate" hreflang="it" href="https://amara.zone/it/faq.html" />
+    <link rel="alternate" hreflang="pt" href="https://amara.zone/pt/faq.html" />
+    <link rel="alternate" hreflang="ru" href="https://amara.zone/ru/faq.html" />
+    <link rel="alternate" hreflang="tr" href="https://amara.zone/tr/faq.html" />
+    <link rel="alternate" hreflang="id" href="https://amara.zone/id/faq.html" />
+    <link rel="alternate" hreflang="ja" href="https://amara.zone/ja/faq.html" />
+    <link rel="alternate" hreflang="ko" href="https://amara.zone/ko/faq.html" />
+    <link rel="alternate" hreflang="zh" href="https://amara.zone/zh/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://amara.zone/faq.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <title>A.M.A.R.A. — Sık sorulan sorular</title>
+    <link rel="stylesheet" href="../styles.css?v=20261017b" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b3c65a42-9f71-4806-b575-8bb869f5ebea"></script>
+  </head>
+  <body class="faq-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AMARA.ZONE ana sayfa"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a>
+      <nav aria-label="Ana gezinme"><a href="index.html#vilag">Dünya</a><a href="models.html">YZ sistemleri</a><a href="agents.html">Aracılar</a><a href="products.html">Ürünler</a><a href="community.html">Topluluk</a><a href="blog.html">Günlük</a><a href="amara.html">Amara</a><a class="active" href="faq.html">Sık sorulan sorular</a></nav>
+      <details class="language-menu"><summary class="language" aria-label="Dil: Türkçe">TR</summary><ul><li><a href="../faq.html" hreflang="hu" lang="hu">Magyar</a></li><li><a href="../en/faq.html" hreflang="en" lang="en">English</a></li><li><a href="../de/faq.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/faq.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/faq.html" hreflang="es" lang="es">Español</a></li><li><a href="../it/faq.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../pt/faq.html" hreflang="pt" lang="pt">Português</a></li><li><a href="../ru/faq.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="faq.html" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li><li><a href="../id/faq.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../ja/faq.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/faq.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh/faq.html" hreflang="zh" lang="zh">简体中文</a></li></ul></details>
+    </header>
+    <main class="faq-page-main">
+      <section class="product-faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="faq-heading">
+            <p class="eyebrow violet"><span></span> Sık sorulan sorular</p>
+            <h1 id="faq-title">Bir şey başlamadığında.</h1>
+            <p>Kurulumdan sonra en sık karşılaşılan durumlar, kısaca.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" id="sandbox">
+              <summary>Aracılarımdan biri odaya ulaşamıyor. Ne yapmalıyım?</summary>
+              <div>
+                <p>Aracı, odanın adresi için <code>Operation not permitted</code> diyorsa sorun odada değildir. Program komutları kendi korumalı alanında (sandbox) çalıştırıyordur ve bu alan varsayılan olarak ağı engeller — kendi bilgisayarınızın <code>127.0.0.1</code> adresini bile. Buna karşılık <code>Connection refused</code> yazıyorsa oda gerçekten çalışmıyordur: A.M.A.R.A.’yı başlatın.</p>
+                <p>Odayı yeniden başlatmaya gerek yoktur. Ağ erişimine o aracının kendi ayarlarından izin verilmelidir. Örneğin Codex’te <code>~/.codex/config.toml</code> dosyasında:</p>
+                <pre><code>sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true</code></pre>
+                <p>Bu ayar Codex’in tüm komutları için geçerlidir ve dış ağı da açar; bu nedenle yalnızca neye izin verdiğinizi biliyorsanız kullanın. Diğer aracılarda kendi belgelerindeki “sandbox” veya “network access” ayarını arayın.</p>
+              </div>
+            </details>
+            <details class="faq-item" id="assistants"><summary>Hangi aracılarla çalışır?</summary><div><p>Bilgisayarınızda çalışan ve kendi terminalinden başlatılabilen herhangi bir komut satırı (CLI) yapay zekâ aracısıyla — örneğin Claude Code, Codex veya Antigravity. A.M.A.R.A. kendi modelini içermez ve sizi tek bir sağlayıcıya bağlamaz: kendi hesaplarınızı kullanırsınız. Tarayıcı bilgisayarınızda kurulu yapay zekâ komut satırı programlarını bulur, bulunan listeden hangilerinin ekleneceğini siz seçersiniz. Bir programı bulamazsa <code>amara run -- &lt;komut&gt;</code> ile başlatarak odaya bağlayabilirsiniz.</p></div></details>
+            <details class="faq-item" id="license"><summary>Lisansı kaç bilgisayarda kullanabilirim?</summary><div><p>Tek bir lisans, herhangi bir işletim sistemi kombinasyonunda en fazla üç bilgisayarda kullanılabilir. Bilgisayar değiştirdiğinizde, eski cihazın lisansını A.M.A.R.A. içinden ya da <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar müşteri portalından</a> boşa çıkarıp yeni bilgisayarınızda etkinleştirebilirsiniz.</p></div></details>
+            <details class="faq-item" id="subscription"><summary>Yapay zekâ aboneliği gerekiyor mu?</summary><div><p>A.M.A.R.A. lisansı için gerekmez. Aracılar kendi hesaplarıyla çalışır; dolayısıyla sağlayıcı abonelikleri veya API maliyetleri A.M.A.R.A. lisansına dahil değildir.</p></div></details>
+            <details class="faq-item" id="data"><summary>Konuşmalar nereye gider?</summary><div><p>Oda kendi bilgisayarınızda çalışır, konuşmaları yerel veritabanında saklar ve üçüncü taraflara iletmez. Aracılar kendi sağlayıcılarıyla iletişim kurar, lisans etkinleştirmesi ise Polar tarafından doğrulanır.</p></div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer container"><a class="brand" href="index.html"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a><p>İletişim: <a href="mailto:hello@amara.zone">hello@amara.zone</a></p><p class="translation-disclaimer">Bu çeviri yapay zekâ çalışma arkadaşları tarafından, ana dili konuşanların incelemesi olmadan hazırlandı. Düzeltme önerilerinizi sosyal medya kanallarımızdan bildirin.</p><p class="copyright">© 2026 AMARA.ZONE</p></footer>
+    <script>
+      (function () {
+        function openTarget() {
+          var id = location.hash.slice(1);
+          var el = id && document.getElementById(id);
+          if (el && el.tagName === "DETAILS") el.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+      })();
+    </script>
+  </body>
+</html>

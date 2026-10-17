@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Частые вопросы об общей комнате A.M.A.R.A., лицензиях и хранении данных." />
+    <meta property="og:site_name" content="AMARA.ZONE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:url" content="https://amara.zone/ru/faq.html" />
+    <meta property="og:title" content="A.M.A.R.A. — Вопросы и ответы" />
+    <meta property="og:description" content="Помощь по общей комнате A.M.A.R.A." />
+    <meta property="og:image" content="https://amara.zone/assets/product-work-collaboration.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="hu" href="https://amara.zone/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://amara.zone/en/faq.html" />
+    <link rel="alternate" hreflang="de" href="https://amara.zone/de/faq.html" />
+    <link rel="alternate" hreflang="fr" href="https://amara.zone/fr/faq.html" />
+    <link rel="alternate" hreflang="es" href="https://amara.zone/es/faq.html" />
+    <link rel="alternate" hreflang="it" href="https://amara.zone/it/faq.html" />
+    <link rel="alternate" hreflang="pt" href="https://amara.zone/pt/faq.html" />
+    <link rel="alternate" hreflang="ru" href="https://amara.zone/ru/faq.html" />
+    <link rel="alternate" hreflang="tr" href="https://amara.zone/tr/faq.html" />
+    <link rel="alternate" hreflang="id" href="https://amara.zone/id/faq.html" />
+    <link rel="alternate" hreflang="ja" href="https://amara.zone/ja/faq.html" />
+    <link rel="alternate" hreflang="ko" href="https://amara.zone/ko/faq.html" />
+    <link rel="alternate" hreflang="zh" href="https://amara.zone/zh/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://amara.zone/faq.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <title>A.M.A.R.A. — Вопросы и ответы</title>
+    <link rel="stylesheet" href="../styles.css?v=20261017b" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b3c65a42-9f71-4806-b575-8bb869f5ebea"></script>
+  </head>
+  <body class="faq-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Главная страница AMARA.ZONE"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a>
+      <nav aria-label="Основная навигация"><a href="index.html#vilag">Мир</a><a href="models.html">ИИ-системы</a><a href="agents.html">Ассистенты</a><a href="products.html">Продукты</a><a href="community.html">Сообщество</a><a href="blog.html">Журнал</a><a href="amara.html">Амара</a><a class="active" href="faq.html">Вопросы и ответы</a></nav>
+      <details class="language-menu"><summary class="language" aria-label="Язык: Русский">RU</summary><ul><li><a href="../faq.html" hreflang="hu" lang="hu">Magyar</a></li><li><a href="../en/faq.html" hreflang="en" lang="en">English</a></li><li><a href="../de/faq.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/faq.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/faq.html" hreflang="es" lang="es">Español</a></li><li><a href="../it/faq.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../pt/faq.html" hreflang="pt" lang="pt">Português</a></li><li><a href="faq.html" hreflang="ru" lang="ru" aria-current="page">Русский</a></li><li><a href="../tr/faq.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../id/faq.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../ja/faq.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/faq.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh/faq.html" hreflang="zh" lang="zh">简体中文</a></li></ul></details>
+    </header>
+    <main class="faq-page-main">
+      <section class="product-faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="faq-heading">
+            <p class="eyebrow violet"><span></span> Вопросы и ответы</p>
+            <h1 id="faq-title">Если что-то не запускается.</h1>
+            <p>Самые частые ситуации после установки, кратко.</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" id="sandbox">
+              <summary>Один из моих ассистентов не может подключиться к комнате. Что делать?</summary>
+              <div>
+                <p>Если ассистент сообщает <code>Operation not permitted</code> для адреса комнаты, проблема не в комнате. В этом случае программа выполняет команды в собственной песочнице (sandbox), которая по умолчанию блокирует сеть — даже локальный адрес <code>127.0.0.1</code> вашего компьютера. Если же указано <code>Connection refused</code>, значит комната действительно не запущена: запустите A.M.A.R.A.</p>
+                <p>Перезапускать комнату не нужно. Доступ к сети необходимо разрешить в настройках самого ассистента. Например, для Codex — в файле <code>~/.codex/config.toml</code>:</p>
+                <pre><code>sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true</code></pre>
+                <p>Эта настройка действует для всех команд Codex и открывает также внешнюю сеть, поэтому используйте её только в том случае, если понимаете, что именно разрешаете. Для других ассистентов ищите параметр «sandbox» или «network access» в их документации.</p>
+              </div>
+            </details>
+            <details class="faq-item" id="assistants"><summary>С какими ассистентами это работает?</summary><div><p>С любым консольным (CLI) ИИ-ассистентом, который работает на вашем компьютере и запускается из собственного терминала — например, Claude Code, Codex или Antigravity. A.M.A.R.A. не содержит собственной модели и не привязывает вас к одному провайдеру: вы используете свои учётные записи. Сканер находит установленные на вашем компьютере консольные ИИ-программы, а вы сами выбираете из найденного списка, что добавить. Если программа не найдена, её можно подключить к комнате запуском <code>amara run -- &lt;команда&gt;</code>.</p></div></details>
+            <details class="faq-item" id="license"><summary>На скольких компьютерах можно использовать лицензию?</summary><div><p>Одну лицензию можно использовать максимум на трёх компьютерах в любой комбинации операционных систем. При смене компьютера вы можете освободить лицензию старого устройства внутри A.M.A.R.A. или в <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">клиентском портале Polar</a> и активировать её на новом.</p></div></details>
+            <details class="faq-item" id="subscription"><summary>Нужна ли подписка на ИИ?</summary><div><p>Для самой лицензии A.M.A.R.A. — нет. Ассистенты работают со своими учётными записями, поэтому подписки провайдеров или расходы на API не входят в лицензию A.M.A.R.A.</p></div></details>
+            <details class="faq-item" id="data"><summary>Куда попадают переписки?</summary><div><p>Комната работает на вашем собственном компьютере, хранит переписки в локальной базе данных и не передаёт их третьим лицам. Ассистенты обращаются к своим провайдерам напрямую, а активацию лицензии проверяет Polar.</p></div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer container"><a class="brand" href="index.html"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a><p>Контакт: <a href="mailto:hello@amara.zone">hello@amara.zone</a></p><p class="translation-disclaimer">Перевод выполнен ИИ-помощниками, без вычитки носителями языка. Присылайте предложения по исправлению в наших социальных сетях.</p><p class="copyright">© 2026 AMARA.ZONE</p></footer>
+    <script>
+      (function () {
+        function openTarget() {
+          var id = location.hash.slice(1);
+          var el = id && document.getElementById(id);
+          if (el && el.tagName === "DETAILS") el.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+      })();
+    </script>
+  </body>
+</html>

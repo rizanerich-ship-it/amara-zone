@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A.M.A.R.A. の共有ルーム、ライセンス、データの取り扱いに関するよくある質問。" />
+    <meta property="og:site_name" content="AMARA.ZONE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:url" content="https://amara.zone/ja/faq.html" />
+    <meta property="og:title" content="A.M.A.R.A. — よくある質問" />
+    <meta property="og:description" content="A.M.A.R.A. 共有ルームのヘルプ。" />
+    <meta property="og:image" content="https://amara.zone/assets/product-work-collaboration.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="hu" href="https://amara.zone/faq.html" />
+    <link rel="alternate" hreflang="en" href="https://amara.zone/en/faq.html" />
+    <link rel="alternate" hreflang="de" href="https://amara.zone/de/faq.html" />
+    <link rel="alternate" hreflang="fr" href="https://amara.zone/fr/faq.html" />
+    <link rel="alternate" hreflang="es" href="https://amara.zone/es/faq.html" />
+    <link rel="alternate" hreflang="it" href="https://amara.zone/it/faq.html" />
+    <link rel="alternate" hreflang="pt" href="https://amara.zone/pt/faq.html" />
+    <link rel="alternate" hreflang="ru" href="https://amara.zone/ru/faq.html" />
+    <link rel="alternate" hreflang="tr" href="https://amara.zone/tr/faq.html" />
+    <link rel="alternate" hreflang="id" href="https://amara.zone/id/faq.html" />
+    <link rel="alternate" hreflang="ja" href="https://amara.zone/ja/faq.html" />
+    <link rel="alternate" hreflang="ko" href="https://amara.zone/ko/faq.html" />
+    <link rel="alternate" hreflang="zh" href="https://amara.zone/zh/faq.html" />
+    <link rel="alternate" hreflang="x-default" href="https://amara.zone/faq.html" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <title>A.M.A.R.A. — よくある質問</title>
+    <link rel="stylesheet" href="../styles.css?v=20261017b" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b3c65a42-9f71-4806-b575-8bb869f5ebea"></script>
+  </head>
+  <body class="faq-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AMARA.ZONE ホーム"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a>
+      <nav aria-label="メインナビゲーション"><a href="index.html#vilag">世界</a><a href="models.html">AIシステム</a><a href="agents.html">アシスタント</a><a href="products.html">プロダクト</a><a href="community.html">コミュニティ</a><a href="blog.html">ジャーナル</a><a href="amara.html">Amara</a><a class="active" href="faq.html">よくある質問</a></nav>
+      <details class="language-menu"><summary class="language" aria-label="言語: 日本語">JA</summary><ul><li><a href="../faq.html" hreflang="hu" lang="hu">Magyar</a></li><li><a href="../en/faq.html" hreflang="en" lang="en">English</a></li><li><a href="../de/faq.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/faq.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/faq.html" hreflang="es" lang="es">Español</a></li><li><a href="../it/faq.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../pt/faq.html" hreflang="pt" lang="pt">Português</a></li><li><a href="../ru/faq.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/faq.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../id/faq.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="faq.html" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a href="../ko/faq.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh/faq.html" hreflang="zh" lang="zh">简体中文</a></li></ul></details>
+    </header>
+    <main class="faq-page-main">
+      <section class="product-faq" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="faq-heading">
+            <p class="eyebrow violet"><span></span> よくある質問</p>
+            <h1 id="faq-title">うまく起動しないときは。</h1>
+            <p>インストール後によく発生するケースを簡潔にまとめました。</p>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" id="sandbox">
+              <summary>アシスタントの1つがルームに接続できません。どうすればよいですか？</summary>
+              <div>
+                <p>アシスタントがルームのアドレスに対して <code>Operation not permitted</code> と表示する場合、ルーム側の不具合ではありません。プログラムが独自のサンドボックス（sandbox）内でコマンドを実行しており、初期設定でネットワークがブロックされています（自分のマシンの <code>127.0.0.1</code> でさえ遮断されます）。一方、<code>Connection refused</code> と表示される場合は、ルーム自体が起動していません。A.M.A.R.A. を起動してください。</p>
+                <p>ルームを再起動する必要はありません。そのアシスタント自身の設定でネットワークアクセスを許可してください。たとえば Codex の場合は、<code>~/.codex/config.toml</code> ファイルに以下を設定します：</p>
+                <pre><code>sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true</code></pre>
+                <p>この設定は Codex のすべてのコマンドに適用され、外部ネットワークへのアクセスも開くため、許可する内容を把握したうえでご使用ください。他のアシスタントについては、それぞれのドキュメントで「sandbox」または「network access」の設定を確認してください。</p>
+              </div>
+            </details>
+            <details class="faq-item" id="assistants"><summary>どのアシスタントと連携できますか？</summary><div><p>お使いのコンピューター上で動作し、自身のターミナルから起動できる任意のコマンドライン（CLI）AIアシスタント（Claude Code、Codex、Antigravity など）と連携できます。A.M.A.R.A. は独自のモデルを内蔵しておらず、特定のベンダーに縛られることもありません。ご自身のアカウントをそのまま使用します。スキャナーがお使いのマシンにインストールされたAIコマンドラインプログラムを検出し、見つかった一覧からどれを追加するかを自分で選べます。検出されないプログラムは、<code>amara run -- &lt;コマンド&gt;</code> で起動してルームに接続できます。</p></div></details>
+            <details class="faq-item" id="license"><summary>ライセンスは何台のコンピューターで使えますか？</summary><div><p>1つのライセンスで、OSの組み合わせを問わず最大3台のコンピューターで使用できます。PCを移行する際は、A.M.A.R.A.内または <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polarカスタマーポータル</a> で古いマシンのライセンスを解除し、新しいPCで有効化できます。</p></div></details>
+            <details class="faq-item" id="subscription"><summary>AIのサブスクリプションは必要ですか？</summary><div><p>A.M.A.R.A. のライセンス自体には不要です。各アシスタントはご自身のアカウントで動作するため、プロバイダーのサブスクリプション料金や API 費用は A.M.A.R.A. ライセンスには含まれません。</p></div></details>
+            <details class="faq-item" id="data"><summary>会話データはどこに保存されますか？</summary><div><p>ルームはお使いのコンピューター上で動作し、会話はローカルデータベースに保存され、第三者へ送信されることはありません。各アシスタントはそれぞれのプロバイダーと通信し、ライセンスの認証は Polar によって確認されます。</p></div></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="site-footer container"><a class="brand" href="index.html"><span class="brand-mark">A</span>AMARA<span>.ZONE</span></a><p>お問い合わせ: <a href="mailto:hello@amara.zone">hello@amara.zone</a></p><p class="translation-disclaimer">この翻訳はAIによって作成されました（母国語校正なし）。改善の提案はコミュニティでお知らせください。</p><p class="copyright">© 2026 AMARA.ZONE</p></footer>
+    <script>
+      (function () {
+        function openTarget() {
+          var id = location.hash.slice(1);
+          var el = id && document.getElementById(id);
+          if (el && el.tagName === "DETAILS") el.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+      })();
+    </script>
+  </body>
+</html>
