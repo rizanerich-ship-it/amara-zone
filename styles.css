@@ -156,13 +156,37 @@
 
 /* Platform illustrations: compact at the end of the OS section, full size on request. */
 .platform-art-thumb { display:grid; place-items:center; width:68px; height:68px; margin:0 0 19px; padding:0; overflow:hidden; border:1px solid rgba(203,193,255,.5); border-radius:50%; background:radial-gradient(circle,rgba(255,255,255,.13),rgba(255,255,255,.03)); cursor:zoom-in; transition:transform .2s,box-shadow .2s; } .platform-art-thumb:hover,.platform-art-thumb:focus-visible { transform:translateY(-3px) scale(1.04); box-shadow:0 9px 22px rgba(144,116,255,.28); } .platform-art-thumb img { display:block; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 6px 9px rgba(0,0,0,.24)); } .platform-art-thumb:focus-visible { outline:2px solid #d3c7ff; outline-offset:4px; }
-.platform-art-lightbox { width:min(96vw,1200px); max-width:none; max-height:96vh; padding:0; border:0; background:transparent; box-shadow:none; overflow:visible; } .platform-art-lightbox::backdrop { background:transparent; } .platform-art-lightbox img { display:block; max-width:95vw; max-height:92vh; object-fit:contain; } .platform-art-lightbox-close { position:fixed; top:20px; right:24px; z-index:1; width:42px; height:42px; border:1px solid rgba(255,255,255,.78); border-radius:50%; color:#fff; background:rgba(7,11,18,.48); cursor:pointer; font-size:30px; line-height:1; } .platform-art-lightbox-close:hover { color:#121827; background:#fff; }
+.platform-art-lightbox { width:96vw; max-width:1500px; max-height:96vh; padding:0; border:0; background:transparent; box-shadow:none; overflow:visible; } .platform-art-lightbox::backdrop { background:rgba(5,13,27,.88); } .platform-art-lightbox img { display:block; max-width:100%; max-height:92vh; object-fit:contain; } .platform-art-lightbox-close { position:fixed; top:20px; right:24px; z-index:1; width:42px; height:42px; border:1px solid rgba(255,255,255,.78); border-radius:50%; color:#fff; background:rgba(7,11,18,.78); cursor:pointer; font-size:30px; line-height:1; } .platform-art-lightbox-close:hover { color:#121827; background:#fff; }
 
 .release-purchase-intro .trial-callout { margin:17px 0 0; padding:12px 13px; border-left:2px solid #c6b9ff; color:#ece9fa; background:rgba(188,171,255,.11); font-size:12px; line-height:1.6; } .release-purchase-intro .trial-callout strong { color:#fff; font:700 12px Manrope; } .trial-compatibility-note { max-width:610px; margin:13px 0 0; color:#d6cfff; font-size:12px; line-height:1.6; }
 .product-support-note { padding:28px 0; border-top:1px solid #d7d3dc; background:#eeece8; color:#596271; } .product-support-note .container { display:flex; flex-wrap:wrap; align-items:center; gap:9px 13px; font-size:13px; } .product-support-note p { margin:0; color:#282d39; font-weight:700; } .product-support-note a { color:#5143a6; font:600 12px 'DM Mono'; text-decoration:underline; text-underline-offset:3px; } .product-support-note a:hover { color:#2e2572; } .product-support-note .support-message-link { padding:8px 11px; border:1px solid #7967d5; border-radius:4px; color:#fff; background:#6759bb; text-decoration:none; } .product-support-note .support-message-link:hover { color:#fff; background:#5143a6; }
 @media (max-width:760px) { .platform-art-thumb { width:60px; height:60px; margin-bottom:15px; } .platform-art-lightbox-close { top:10px; right:10px; } }
 
 .product-demo-video { width:100%; aspect-ratio:1680 / 1022; margin:29px 0 0; overflow:hidden; border:1px solid #30384a; border-radius:8px; background:#080e17; box-shadow:0 18px 42px rgba(10,19,34,.16); } .product-demo-video iframe { display:block; width:100%; height:100%; border:0; }
+
+/* Product-page interaction cues: the live-room image opens in the existing lightbox. */
+.work-showcase-zoom { position:relative; display:block; width:100%; margin:0; padding:0; overflow:hidden; border:0; background:#070b12; cursor:zoom-in; text-align:inherit; }
+.work-showcase-zoom img { transition:transform .28s ease; }
+.work-showcase-zoom:hover img,.work-showcase-zoom:focus-visible img { transform:scale(1.012); }
+.work-showcase-zoom:focus-visible { outline:2px solid #d3c7ff; outline-offset:-4px; }
+.work-showcase-zoom-hint { position:absolute; left:16px; bottom:15px; display:flex; align-items:center; gap:6px; padding:8px 11px; border:1px solid rgba(220,214,255,.72); border-radius:999px; color:#fff; background:rgba(10,19,34,.78); box-shadow:0 8px 20px rgba(0,0,0,.28); font:600 11px/1 Manrope; opacity:.9; transition:opacity .2s,transform .2s; }
+.work-showcase-zoom:hover .work-showcase-zoom-hint,.work-showcase-zoom:focus-visible .work-showcase-zoom-hint { opacity:1; transform:translateY(-2px); }
+.terminal-example { margin-left:auto; padding:4px 7px; border:1px solid rgba(171,155,255,.62); border-radius:999px; color:#d7cfff; background:rgba(138,116,241,.12); font:600 9px/1 'DM Mono'; letter-spacing:.04em; text-transform:uppercase; }
+.terminal-example + .terminal-status { margin-left:9px; }
+
+/* A full guide is a primary next step, not a faint line of text. */
+.technical-workflow { overflow:hidden; border:1px solid rgba(169,151,255,.72); border-radius:8px; background:linear-gradient(135deg,rgba(107,88,189,.18),rgba(16,23,34,.9) 42%); box-shadow:0 14px 34px rgba(0,0,0,.16); }
+.technical-workflow summary { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:72px; padding:18px 22px; color:#f0ecff; cursor:pointer; font:700 clamp(17px,2vw,21px)/1.25 Manrope; list-style:none; transition:background .2s,color .2s; }
+.technical-workflow summary::-webkit-details-marker { display:none; }
+.technical-workflow summary::after { content:'+'; display:grid; flex:none; place-items:center; width:30px; height:30px; border:1px solid rgba(214,203,255,.8); border-radius:50%; color:#ece7ff; font:400 25px/1 Manrope; transition:transform .24s ease,background .2s,color .2s; }
+.technical-workflow summary:hover { background:rgba(177,160,255,.12); }
+.technical-workflow summary:hover::after { color:#131827; background:#d9d0ff; }
+.technical-workflow summary:focus-visible { outline:2px solid #fff; outline-offset:-4px; }
+.technical-workflow[open] summary { margin-bottom:0; border-bottom:1px solid rgba(169,151,255,.38); background:rgba(177,160,255,.11); }
+.technical-workflow[open] summary::after { transform:rotate(45deg); }
+.technical-workflow .workflow-article { padding:26px 28px 29px; }
+.workflow-cli-note { padding:15px 17px; border-left:3px solid #b7a8ff; color:#e5e0f6; background:rgba(183,168,255,.1); }
+@media (max-width:760px) { .work-showcase-zoom-hint { left:11px; bottom:11px; padding:7px 9px; font-size:10px; } .technical-workflow summary { min-height:68px; padding:16px 17px; font-size:17px; } .technical-workflow .workflow-article { padding:21px 18px 23px; } .workflow-cli-note { padding:13px 14px; } .platform-art-lightbox { width:100vw; max-height:100dvh; overflow:auto; } .platform-art-lightbox img { max-width:none; max-height:88dvh; } }
 @media (max-width:760px) { .product-demo-video { margin-top:24px; } }
 .work-slide img { max-height:none; aspect-ratio:16/10; }
 @media (max-width:760px) { .work-slide img { max-height:none; aspect-ratio:16/10; } }
