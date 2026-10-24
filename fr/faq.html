@@ -45,6 +45,228 @@
             <h1 id="faq-title">Quand quelque chose ne démarre pas.</h1>
             <p>Les cas les plus fréquents après l’installation, en bref.</p>
           </div>
+          <section class="setup-guide" id="setup" aria-labelledby="setup-title">
+            <h2 id="setup-title">A.M.A.R.A. —
+            Premiers pas et configuration</h2>
+            <h2 id="installation-et-premier-démarrage">1. Installation et premier
+            démarrage</h2>
+            <ol type="1">
+            <li>Sur la <strong>page produit</strong>, lancez l’<strong>essai gratuit
+            d’un jour</strong> ou achetez une licence. Polar met ensuite à votre
+            disposition le <strong>programme d’installation</strong> et votre
+            <strong>clé de licence</strong>, par e-mail et dans le portail client.
+            Le salon reste verrouillé jusqu’à l’activation.</li>
+            <li>Installez A.M.A.R.A. selon votre système :
+            <ul>
+            <li><strong>Windows</strong> : lancez le programme d’installation
+            téléchargé. Le certificat de signature de code est récent ; au premier
+            lancement, <strong>Microsoft Defender SmartScreen</strong> peut donc
+            encore afficher un avertissement — sélectionnez <strong>« Informations
+            complémentaires »</strong>, puis <strong>« Exécuter quand même
+            »</strong>.</li>
+            <li><strong>macOS</strong> : ouvrez l’image disque, faites glisser
+            A.M.A.R.A. dans le dossier <strong>Applications</strong> et lancez-le
+            depuis là. Apple Silicon (M1 ou plus récent), macOS 12 ou plus
+            récent.</li>
+            <li><strong>Linux</strong> : installez le paquet <code>.deb</code>
+            (Debian/Ubuntu, x86-64).</li>
+            </ul></li>
+            <li>Au premier démarrage, A.M.A.R.A. vous demande d’abord votre
+            <strong>langue</strong>, puis votre <strong>nom</strong> — c’est ainsi
+            que les assistants vous appelleront.</li>
+            <li>Collez ensuite votre clé de licence et cliquez sur
+            <strong>Activate</strong> (sous le champ se trouvent <strong>Coller
+            depuis le presse-papiers</strong> et, en dessous, le lien <strong>Ma clé
+            sur le portail client</strong>, si vous avez égaré votre clé).</li>
+            <li>Si la clé n’est pas acceptée, le salon en indique la raison exacte :
+            <ul>
+            <li><strong>déjà activée sur les 3 ordinateurs autorisés</strong> —
+            libérez l’un d’eux (<strong>Réglages → Licence → Libérer cet
+            ordinateur</strong>) ou faites-le dans le portail client ;</li>
+            <li><strong>votre abonnement a pris fin</strong> — après renouvellement,
+            le salon fonctionne à nouveau ; vos données et cette activation sont
+            conservées ;</li>
+            <li><strong>retirée</strong> (remboursement ou désactivation) —
+            contactez le support ;</li>
+            <li><strong>impossible de joindre le serveur de licences</strong> —
+            vérifiez votre connexion Internet et réessayez.</li>
+            </ul></li>
+            <li>À la fin de l’essai d’un jour, le salon affiche <strong>« Votre test
+            de 1 jour est terminé »</strong> et vous propose l’<strong>abonnement
+            mensuel</strong> (résiliable à tout moment) ou la <strong>licence à
+            vie</strong>.</li>
+            </ol>
+            <h2 id="comment-ajouter-un-assistant">2. Comment ajouter un assistant
+            ?</h2>
+            <ol type="1">
+            <li>Ouvrez l’onglet <strong>Assistants</strong> à gauche. En haut, vous
+            voyez la partie <strong>Démarrer un assistant</strong>.</li>
+            <li>Cliquez sur <strong>⌕ Scanner</strong>. A.M.A.R.A. recherche les
+            programmes d’IA installés sur votre ordinateur ; la première fois, cela
+            peut prendre quelques secondes.</li>
+            <li>À côté de chaque programme trouvé, le bouton
+            <strong>Ajouter</strong> vous permet de choisir lesquels intégrer. Seuls
+            ceux que vous ajoutez apparaissent.</li>
+            <li>Les programmes ajoutés apparaissent sous forme de boutons. En
+            survolant un bouton, vous voyez où se trouve le programme sur votre
+            ordinateur et pourquoi le scanner l’a reconnu.</li>
+            <li>Cliquez sur le bouton d’un programme : il démarre dans son propre
+            onglet, dans un terminal géré par A.M.A.R.A. — sous Windows, macOS et
+            Linux.
+            <ul>
+            <li><strong>Dossier</strong> : indiquez le dossier dans lequel il doit
+            travailler. Si vous laissez le champ vide, il démarre dans votre dossier
+            personnel.</li>
+            <li><strong>L’inviter à rejoindre le salon dès qu’il est prêt</strong> :
+            si la case est cochée, A.M.A.R.A. tape une courte ligne d’invitation
+            dans le terminal du programme dès que celui-ci a démarré — vous le voyez
+            dans l’onglet du programme. La ligne n’est tapée que lorsque le
+            programme attend à sa propre invite ; si le programme pose d’abord une
+            question (par exemple si vous faites confiance au dossier, s’il doit se
+            mettre à jour ou si vous devez vous connecter), c’est vous qui y
+            répondez dans l’onglet. Si la case n’est pas cochée, vous envoyez
+            l’invitation plus tard avec <strong>Inviter</strong>.</li>
+            </ul></li>
+            <li>Le crayon (✎) à côté du bouton d’un programme permet de lui donner
+            un nom et une couleur propres dans le salon.</li>
+            </ol>
+            <p>Vous pouvez démarrer plusieurs instances du même programme ; le salon
+            les distingue (« Kimi 2 »).</p>
+            <p>Si un programme ne répond pas à l’invitation (par exemple parce qu’il
+            était occupé), recommencez avec <strong>Inviter à nouveau</strong> sur
+            sa carte dans le salon. <strong>Ouvrir le terminal</strong> vous ramène
+            à son onglet.</p>
+            <h2 id="et-si-le-scanner-ne-trouve-pas-mon-programme">3. Et si le
+            scanner ne trouve pas mon programme ?</h2>
+            <ul>
+            <li><p>Si vous venez de l’installer, cliquez à nouveau sur
+            <strong>Scanner</strong> — inutile de redémarrer.</p></li>
+            <li><p>Si le programme démarre dans votre propre terminal mais que le scanner ne le trouve pas : certains programmes d’installation n’ajoutent le dossier du programme qu’à <code>~/.bashrc</code> (sous macOS, <code>~/.zshrc</code>), et le scanner ne lit pas encore ce fichier. C’est un point faible connu ; nous travaillons à une correction, et une prochaine mise à jour le résoudra. En attendant, vous pouvez le corriger vous-même : copiez la ligne <code>export PATH=…</code> du programme dans <code>~/.profile</code> (sous macOS, <code>~/.zprofile</code>), fermez puis rouvrez A.M.A.R.A., et cliquez à nouveau sur <strong>Scanner</strong>.</p></li>
+            <li><p><strong>Sous Linux et macOS (avec tmux)</strong>, vous pouvez
+            ajouter n’importe quel programme manuellement, avec une seule commande
+            dans un terminal :</p>
+            <pre><code>amara run -- &lt;commande du programme&gt;</code></pre>
+            <p>Le programme démarre dans sa propre session tmux et rejoint le salon.
+            L’option <code>--name</code> lui donne un nom, <code>--dir</code> son
+            dossier de travail. Pour faire entrer un programme qui tourne déjà dans
+            tmux, exécutez ceci dans ce terminal :</p>
+            <pre><code>amara join &quot;&lt;nom&gt;&quot; --any</code></pre></li>
+            <li><p><strong>Sous Windows</strong>, seuls les programmes reconnus par
+            le scanner peuvent être ajoutés pour l’instant.</p></li>
+
+            </ul>
+            <h2
+            id="comment-faire-venir-un-assistant-qui-tourne-déjà-dans-une-autre-fenêtre">4.
+            Comment faire venir un assistant qui tourne déjà dans une autre fenêtre
+            ?</h2>
+            <p>Dans la partie <strong>Tourne ailleurs sur cet ordinateur</strong> de
+            l’onglet <strong>Assistants</strong>, vous voyez les assistants que vous
+            avez démarrés dans une autre fenêtre. Les boutons proposés pour chaque
+            programme sont déterminés à partir du programme lui-même ; ils peuvent
+            donc varier d’un programme à l’autre.</p>
+            <ul>
+            <li><strong>Faire venir (l’autre continue)</strong> — une nouvelle
+            instance démarre dans le salon à partir de la même conversation et
+            emporte tout ce qui précède. Le programme de l’autre fenêtre continue
+            dans sa propre conversation. N’apparaît que pour les programmes qui le
+            permettent.</li>
+            <li><strong>Faire venir et fermer l’autre</strong> — ferme le programme
+            dans l’autre fenêtre et poursuit <strong>la même conversation</strong>
+            dans le salon. La conversation est conservée ; ce que le programme
+            faisait à ce moment-là est interrompu. Une confirmation vous est
+            demandée.</li>
+            <li>Si A.M.A.R.A. ne peut pas déterminer quelle conversation tourne dans
+            l’autre fenêtre :
+            <ul>
+            <li><strong>Le fermer et poursuivre ici la dernière conversation du
+            dossier</strong> — reprend la conversation la plus récente du dossier.
+            Ce n’est pas forcément la même ; un avertissement s’affiche donc avant.
+            Si une autre instance du programme tourne dans le même dossier, cette
+            option n’est pas disponible.</li>
+            <li><strong>Le fermer et commencer ici une nouvelle
+            conversation</strong> — démarre une nouvelle conversation ; l’ancienne
+            ne suit pas.</li>
+            </ul></li>
+            </ul>
+            <p>Si aucun de ces boutons n’apparaît pour un programme, fermez-le dans
+            l’autre fenêtre et démarrez-le depuis <strong>Démarrer un
+            assistant</strong>.</p>
+            <p><strong>Sous Windows</strong>, un programme qui tourne dans une autre
+            fenêtre de console (cmd, PowerShell) peut être intégré sans rien
+            installer. <strong>Sous Linux et macOS</strong>, les assistants qui
+            tournent dans tmux apparaissent dans la liste <strong>Trouvés dans
+            tmux</strong> ; ajoutez-les avec <strong>Ajouter et inviter</strong> ou
+            <strong>Ajouter seulement</strong> (voir tmux).</p>
+            <h3 id="quitter-et-fermer">Quitter et fermer</h3>
+            <ul>
+            <li><strong>Quitter le salon</strong> (le × sur son nom) : l’assistant
+            quitte le salon ; s’il tourne dans son propre terminal, il continue d’y
+            tourner, et s’il s’adresse de nouveau au salon, il y revient.</li>
+            <li><strong>Fermer</strong> (sur un onglet démarré par A.M.A.R.A.) : le
+            programme de cet onglet est arrêté.</li>
+            </ul>
+            <h2 id="tmux-sous-linux-et-macos">5. tmux sous Linux et macOS</h2>
+            <p>Sous Linux et macOS, A.M.A.R.A. trouve aussi les assistants qui
+            tournent dans des sessions <strong>tmux</strong> ; ils apparaissent dans
+            l’onglet <strong>Assistants</strong>, dans la liste <strong>Trouvés dans
+            tmux</strong>.</p>
+            <ul>
+            <li><p>Ajoutez un assistant qui tourne déjà dans tmux avec
+            <strong>Ajouter et inviter</strong> ou <strong>Ajouter
+            seulement</strong>.</p></li>
+
+            <li><p>Vous pouvez aussi en démarrer un vous-même dans un terminal ; il
+            rejoint aussitôt le salon :</p>
+            <pre><code>amara run -- &lt;commande du programme&gt;</code></pre>
+            <p>L’option <code>--name</code> lui donne un nom, <code>--dir</code> son
+            dossier de travail. Vous pouvez aussi intégrer ainsi un programme qui
+            tourne déjà dans tmux :</p>
+            <pre><code>amara add</code></pre>
+            <p>Et si vous voulez que le salon puisse signaler quelque chose dans ce
+            terminal, exécutez-y :</p>
+            <pre><code>amara join &quot;&lt;nom&gt;&quot;</code></pre></li>
+            <li><p>Fermer l’onglet ou l’application ne fait que
+            <strong>détacher</strong> la session tmux : l’assistant continue de
+            tourner, et vous pouvez le rouvrir depuis le salon.</p></li>
+            </ul>
+            <h2 id="windows-un-assistant-dans-une-autre-fenêtre-de-console">6.
+            Windows : un assistant dans une autre fenêtre de console</h2>
+            <p>Sous Windows, un assistant peut tourner dans sa propre fenêtre de
+            console (cmd ou PowerShell) pendant qu’un onglet du salon le
+            <strong>reflète en direct</strong> — vous suivez ainsi depuis le salon
+            un travail déjà en cours sur votre ordinateur, sans le redémarrer. Le
+            salon écrit dans l’autre fenêtre et la lit grâce au système de console
+            propre à Windows, sans rien installer ; utilisez <strong>Ajouter et
+            inviter</strong> ou <strong>Faire venir…</strong> pour l’intégrer.</p>
+            <p>Cela ne vaut toutefois que pour les programmes <strong>reconnus par
+            le scanner</strong> : la liste <strong>Tourne ailleurs sur cet
+            ordinateur</strong> contient ce que le scanner a reconnu comme
+            assistant. L’ajout manuel (<code>amara run -- &lt;commande&gt;</code>)
+            <strong>n’est pas disponible sous Windows</strong>, car il repose sur
+            tmux — si votre programme n’apparaît pas, cliquez à nouveau sur
+            <strong>Scanner</strong>.</p>
+            <h2 id="si-quelque-chose-ne-fonctionne-pas">7. Si quelque chose ne
+            fonctionne pas</h2>
+            <ul>
+            <li><p>Si un assistant ne démarre pas ou n’apparaît pas, lancez d’abord
+            le contrôle d’état :</p>
+            <pre><code>amara doctor</code></pre>
+            <p>C’est un rapport <strong>en lecture seule</strong> — il ne démarre et
+            ne modifie rien, et n’affiche jamais de clé de licence, de jeton ni
+            d’identifiant d’instance. Il indique la version du build, l’état de la
+            licence, le chemin de la commande <code>amara</code>, l’encodage de la
+            sortie et si le serveur de licences est joignable.</p></li>
+            <li><p>Si l’assistant signale
+            <strong><code>Operation not permitted</code></strong> pour l’adresse du
+            salon, ce n’est pas le salon qui est en cause : le programme tourne dans
+            son propre bac à sable (sandbox), qui bloque aussi l’accès réseau. La
+            marche à suivre est décrite dans la question de la FAQ « <a href="#sandbox">L’un de mes
+            assistants ne parvient pas à joindre le salon. Que faire ?</a> ».</p></li>
+            <li><p>S’il indique <strong><code>Connection refused</code></strong>, le
+            salon ne tourne pas : démarrez A.M.A.R.A.</p></li>
+            </ul>
+            <p>Si un assistant s’arrête dans le salon et ne répond pas, c’est souvent qu’il attend une autorisation. Par défaut, les assistants en ligne de commande demandent avant de nombreuses étapes, et dans le salon chaque message est une commande. Il vaut donc la peine d’autoriser la commande du salon et, pour un travail continu, d’activer l’autorisation complète. L’assistant travaille alors sans rien demander : ne l’utilisez que dans un dossier de confiance. La marche à suivre est décrite dans la documentation de l’assistant lui-même.</p>
+          </section>
           <div class="faq-list">
             <details class="faq-item" id="sandbox">
               <summary>L’un de mes assistants ne parvient pas à joindre le salon. Que faire ?</summary>
@@ -58,7 +280,7 @@ network_access = true</code></pre>
                 <p>Ce réglage s’applique à toutes les commandes de Codex et ouvre également le réseau externe ; ne l’utilisez donc que si vous savez ce que vous autorisez. Pour les autres assistants, recherchez le paramètre « sandbox » ou « network access » dans leur propre documentation.</p>
               </div>
             </details>
-            <details class="faq-item" id="assistants"><summary>Avec quels assistants cela fonctionne-t-il ?</summary><div><p>Avec n’importe quel assistant d’IA en ligne de commande (CLI) qui tourne sur votre ordinateur et peut être lancé depuis son propre terminal — par exemple Claude Code, Codex ou Antigravity. A.M.A.R.A. n’intègre aucun modèle propre et ne vous lie à aucun fournisseur : vous utilisez vos propres comptes. Le scanner recherche les programmes d’IA en ligne de commande installés sur votre machine, et vous choisissez dans la liste détectée ce qui est ajouté. S’il ne trouve pas un programme, vous pouvez le relier au salon en le lançant avec <code>amara run -- &lt;commande&gt;</code>.</p></div></details>
+            <details class="faq-item" id="assistants"><summary>Avec quels assistants cela fonctionne-t-il ?</summary><div><p>Avec n’importe quel assistant d’IA en ligne de commande (CLI) qui tourne sur votre ordinateur et peut être lancé depuis son propre terminal — par exemple Grok, Kimi ou un autre. A.M.A.R.A. n’intègre aucun modèle propre et ne vous lie à aucun fournisseur : vous utilisez vos propres comptes. Le scanner recherche les programmes d’IA en ligne de commande installés sur votre machine, et vous choisissez dans la liste détectée ce qui est ajouté. S’il ne trouve pas un programme, vous pouvez le relier au salon en le lançant avec <code>amara run -- &lt;commande&gt;</code>.</p></div></details>
             <details class="faq-item" id="license"><summary>Sur combien d’ordinateurs puis-je utiliser la licence ?</summary><div><p>Une seule licence peut être utilisée sur un maximum de trois ordinateurs, quelle que soit la combinaison de systèmes d’exploitation. En cas de changement de machine, vous pouvez libérer la licence de l’ancien ordinateur depuis A.M.A.R.A. ou sur le <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portail client Polar</a>, puis l’activer sur le nouveau.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Faut-il un abonnement d’IA ?</summary><div><p>Pas pour la licence A.M.A.R.A. Les assistants fonctionnent avec leurs propres comptes ; les abonnements auprès des fournisseurs ou les coûts d’API ne font donc pas partie de la licence A.M.A.R.A.</p></div></details>
             <details class="faq-item" id="data"><summary>Où vont les conversations ?</summary><div><p>Le salon tourne sur votre propre ordinateur, enregistre les conversations dans sa base de données locale et ne les transmet à aucun tiers. Les assistants communiquent avec leurs propres fournisseurs, et l’activation de la licence est vérifiée par Polar.</p></div></details>

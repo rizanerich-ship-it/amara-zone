@@ -45,6 +45,221 @@
             <h1 id="faq-title">Se qualcosa non parte.</h1>
             <p>I casi più frequenti dopo l’installazione, in breve.</p>
           </div>
+          <section class="setup-guide" id="setup" aria-labelledby="setup-title">
+            <h2 id="setup-title">A.M.A.R.A. — Primi
+            passi e configurazione</h2>
+            <h2 id="installazione-e-primo-avvio">1. Installazione e primo avvio</h2>
+            <ol type="1">
+            <li>Nella <strong>pagina del prodotto</strong> avvia la <strong>prova
+            gratuita di 1 giorno</strong> oppure acquista una licenza. Polar ti
+            mette poi a disposizione il <strong>programma di installazione</strong>
+            e la tua <strong>chiave di licenza</strong> via e-mail e nel portale
+            clienti. La chat room resta bloccata fino all’attivazione.</li>
+            <li>Installa A.M.A.R.A. in base al tuo sistema:
+            <ul>
+            <li><strong>Windows</strong>: avvia il programma di installazione
+            scaricato. Il certificato di firma del codice è nuovo, quindi al primo
+            avvio <strong>Microsoft Defender SmartScreen</strong> potrebbe ancora
+            mostrare un avviso: seleziona <strong>«Ulteriori informazioni»</strong>
+            e poi <strong>«Esegui comunque»</strong>.</li>
+            <li><strong>macOS</strong>: apri l’immagine disco, trascina A.M.A.R.A.
+            nella cartella <strong>Applicazioni</strong> e avvialo da lì. Apple
+            Silicon (M1 o successivo), macOS 12 o successivo.</li>
+            <li><strong>Linux</strong>: installa il pacchetto <code>.deb</code>
+            (Debian/Ubuntu, x86-64).</li>
+            </ul></li>
+            <li>Al primo avvio, A.M.A.R.A. ti chiede prima la
+            <strong>lingua</strong> e poi il tuo <strong>nome</strong>: è così che
+            gli assistenti ti chiameranno.</li>
+            <li>Incolla poi la tua chiave di licenza e premi
+            <strong>Activate</strong> (sotto il campo c’è <strong>Incolla dagli
+            appunti</strong> e, più in basso, il link <strong>La mia chiave nel
+            portale clienti</strong>, nel caso avessi perso la chiave).</li>
+            <li>Se la chiave non viene accettata, la chat room ti indica il motivo
+            preciso:
+            <ul>
+            <li><strong>già attivata su tutti i 3 computer consentiti</strong>:
+            libera uno dei computer (<strong>Impostazioni → Licenza → Libera questo
+            computer</strong>) oppure fallo nel portale clienti;</li>
+            <li><strong>il tuo abbonamento è terminato</strong>: dopo il rinnovo la
+            chat room torna a funzionare, e i tuoi dati e questa attivazione
+            restano;</li>
+            <li><strong>revocata</strong> (rimborso o disattivazione): contatta
+            l’assistenza;</li>
+            <li><strong>impossibile raggiungere il server delle licenze</strong>:
+            controlla la connessione a Internet e riprova.</li>
+            </ul></li>
+            <li>Al termine della prova di 1 giorno, la chat room mostra <strong>«Il
+            tuo test di 1 giorno è terminato»</strong> e ti propone
+            l’<strong>abbonamento mensile</strong> (disdicibile in qualsiasi
+            momento) o la <strong>licenza a vita</strong>.</li>
+            </ol>
+            <h2 id="come-aggiungo-un-assistente">2. Come aggiungo un
+            assistente?</h2>
+            <ol type="1">
+            <li>Apri a sinistra la scheda <strong>Assistenti</strong>. In alto vedi
+            la sezione <strong>Avvia un assistente</strong>.</li>
+            <li>Fai clic su <strong>⌕ Scansiona</strong>. A.M.A.R.A. cerca i
+            programmi di IA installati sul tuo computer; la prima volta può
+            richiedere qualche secondo.</li>
+            <li>Accanto a ogni programma trovato, con <strong>Aggiungi</strong>
+            scegli quali includere. Compare solo ciò che aggiungi tu.</li>
+            <li>I programmi aggiunti compaiono come pulsanti. Passando il mouse
+            sopra un pulsante vedi dove si trova il programma sul computer e perché
+            lo scanner l’ha riconosciuto.</li>
+            <li>Fai clic sul pulsante di un programma: si avvia nella sua scheda, in
+            un terminale gestito da A.M.A.R.A., allo stesso modo su Windows, macOS e
+            Linux.
+            <ul>
+            <li><strong>Cartella</strong>: qui indichi in quale cartella deve
+            lavorare. Se la lasci vuota, si avvia nella tua cartella personale.</li>
+            <li><strong>Chiedigli di entrare quando è pronto</strong>: se è
+            selezionata, A.M.A.R.A. scrive una breve riga di invito nel terminale
+            del programma appena questo si è avviato; lo vedi nella scheda del
+            programma. La riga viene scritta solo quando il programma attende già
+            alla propria riga di comando; se prima il programma ti chiede qualcosa
+            (per esempio se ti fidi della cartella, se aggiornarsi o di accedere),
+            rispondi tu nella scheda. Se la casella non è selezionata, invii
+            l’invito più tardi con <strong>Invita</strong>.</li>
+            </ul></li>
+            <li>La matita (✎) accanto al pulsante di un programma ti permette di
+            dargli un nome e un colore propri nella chat room.</li>
+            </ol>
+            <p>Puoi avviare più istanze dello stesso programma; la chat room le
+            distingue («Kimi 2»).</p>
+            <p>Se un programma non risponde all’invito (per esempio perché era
+            occupato), ripetilo con <strong>Invita di nuovo</strong> sulla sua
+            scheda nella chat room. <strong>Apri terminale</strong> ti riporta alla
+            sua scheda.</p>
+            <h2 id="e-se-lo-scanner-non-trova-il-mio-programma">3. E se lo scanner
+            non trova il mio programma?</h2>
+            <ul>
+            <li><p>Se l’hai appena installato, premi di nuovo
+            <strong>Scansiona</strong>: non serve riavviare.</p></li>
+            <li><p>Se il programma si avvia nel tuo terminale ma lo scanner non lo trova: alcuni programmi di installazione aggiungono la cartella del programma solo a <code>~/.bashrc</code> (su macOS, <code>~/.zshrc</code>), e lo scanner per ora non legge questo file. È un punto debole noto; stiamo lavorando a una correzione, e un prossimo aggiornamento lo risolverà. Nel frattempo puoi risolverlo tu: copia la riga <code>export PATH=…</code> del programma in <code>~/.profile</code> (su macOS, <code>~/.zprofile</code>), chiudi e riapri A.M.A.R.A., poi premi di nuovo <strong>Scansiona</strong>.</p></li>
+            <li><p><strong>Su Linux e macOS (con tmux)</strong> puoi aggiungere
+            qualsiasi programma manualmente, con un solo comando in un
+            terminale:</p>
+            <pre><code>amara run -- &lt;comando del programma&gt;</code></pre>
+            <p>Il programma si avvia nella sua sessione tmux ed entra nella chat
+            room. Con <code>--name</code> gli dai un nome, con <code>--dir</code> la
+            cartella di lavoro. Per far entrare un programma che è già in esecuzione
+            in tmux, esegui questo in quel terminale:</p>
+            <pre><code>amara join &quot;&lt;nome&gt;&quot; --any</code></pre></li>
+            <li><p><strong>Su Windows</strong>, al momento si possono aggiungere
+            solo i programmi riconosciuti dallo scanner.</p></li>
+
+            </ul>
+            <h2
+            id="come-faccio-entrare-un-assistente-che-è-già-in-esecuzione-in-unaltra-finestra">4.
+            Come faccio entrare un assistente che è già in esecuzione in un’altra
+            finestra?</h2>
+            <p>Nella sezione <strong>In esecuzione altrove su questo
+            computer</strong> della scheda <strong>Assistenti</strong> vedi gli
+            assistenti che hai avviato in un’altra finestra. Quali pulsanti
+            compaiono per ciascun programma lo riconosce A.M.A.R.A. dal programma
+            stesso, quindi può variare da programma a programma.</p>
+            <ul>
+            <li><strong>Chiama qui (l’altro continua)</strong>: nella chat room si
+            avvia una nuova istanza dalla stessa conversazione, portando con sé
+            tutto ciò che c’era finora. Il programma nell’altra finestra continua a
+            lavorare nella propria conversazione. Compare solo per i programmi che
+            lo supportano.</li>
+            <li><strong>Chiama qui e chiudi l’altro</strong>: chiude il programma
+            nell’altra finestra e prosegue <strong>la stessa conversazione</strong>
+            nella chat room. La conversazione resta; ciò che il programma stava
+            facendo in quel momento si interrompe. Prima ti chiede conferma.</li>
+            <li>Se A.M.A.R.A. non riesce a stabilire quale conversazione è in corso
+            nell’altra finestra:
+            <ul>
+            <li><strong>Chiudilo e continua qui l’ultima conversazione della
+            cartella</strong>: riprende la conversazione più recente della cartella.
+            Potrebbe non essere la stessa, per questo prima ti avvisa. Se nella
+            stessa cartella è in esecuzione un’altra istanza del programma, questa
+            opzione non è disponibile.</li>
+            <li><strong>Chiudilo e inizia qui una nuova conversazione</strong>:
+            inizia una nuova conversazione; quella vecchia non viene portata.</li>
+            </ul></li>
+            </ul>
+            <p>Se per un programma non compare nessuno di questi pulsanti, chiudilo
+            nell’altra finestra e avvialo da <strong>Avvia un
+            assistente</strong>.</p>
+            <p><strong>Su Windows</strong>, un programma in esecuzione in un’altra
+            finestra della console (cmd, PowerShell) si può far entrare senza
+            installare nulla. <strong>Su Linux e macOS</strong>, gli assistenti in
+            esecuzione in tmux compaiono nell’elenco <strong>Trovati in
+            tmux</strong>; li aggiungi con <strong>Aggiungi e invita</strong> o
+            <strong>Solo aggiungi</strong> (vedi tmux).</p>
+            <h3 id="uscire-e-chiudere">Uscire e chiudere</h3>
+            <ul>
+            <li><strong>Esci dalla chat room</strong> (la × sul suo nome):
+            l’assistente esce dalla chat room; se è in esecuzione in un proprio
+            terminale, lì continua a funzionare, e se si rivolge di nuovo alla chat
+            room, ci rientra.</li>
+            <li><strong>Chiudi</strong> (su una scheda avviata da A.M.A.R.A.): il
+            programma in quella scheda si arresta.</li>
+            </ul>
+            <h2 id="tmux-su-linux-e-macos">5. tmux su Linux e macOS</h2>
+            <p>Su Linux e macOS, A.M.A.R.A. trova anche gli assistenti in esecuzione
+            nelle sessioni <strong>tmux</strong>; compaiono nella scheda
+            <strong>Assistenti</strong>, nell’elenco <strong>Trovati in
+            tmux</strong>.</p>
+            <ul>
+            <li><p>Un assistente già in esecuzione in tmux lo aggiungi con
+            <strong>Aggiungi e invita</strong> o <strong>Solo
+            aggiungi</strong>.</p></li>
+
+            <li><p>Puoi anche avviarne uno tu in un terminale, ed entra subito nella
+            chat room:</p>
+            <pre><code>amara run -- &lt;comando del programma&gt;</code></pre>
+            <p>Con <code>--name</code> gli dai un nome, con <code>--dir</code> la
+            cartella di lavoro. Un programma già in esecuzione in tmux puoi farlo
+            entrare anche così:</p>
+            <pre><code>amara add</code></pre>
+            <p>E se vuoi che la chat room possa avvisare quel terminale, esegui al
+            suo interno:</p>
+            <pre><code>amara join &quot;&lt;nome&gt;&quot;</code></pre></li>
+            <li><p>Chiudere la scheda o l’app <strong>scollega</strong> soltanto la
+            sessione tmux: l’assistente continua a funzionare e puoi riaprirlo dalla
+            chat room.</p></li>
+            </ul>
+            <h2 id="windows-un-assistente-in-unaltra-finestra-della-console">6.
+            Windows: un assistente in un’altra finestra della console</h2>
+            <p>Su Windows un assistente può funzionare nella sua finestra della
+            console (cmd o PowerShell) mentre una scheda della chat room lo
+            <strong>rispecchia in tempo reale</strong>: così segui dalla chat room
+            un lavoro già in corso sul tuo computer, senza riavviarlo. La chat room
+            scrive nell’altra finestra e la legge attraverso il sistema di console
+            proprio di Windows, senza installare nulla; per farlo entrare usi
+            <strong>Aggiungi e invita</strong> o <strong>Chiama qui…</strong>.</p>
+            <p>Questo vale però solo per i programmi <strong>riconosciuti dallo
+            scanner</strong>: nell’elenco <strong>In esecuzione altrove su questo
+            computer</strong> compare ciò che lo scanner ha riconosciuto come
+            assistente. L’aggiunta manuale
+            (<code>amara run -- &lt;comando&gt;</code>) <strong>non è disponibile su
+            Windows</strong>, perché si basa su tmux; se il tuo programma non
+            compare, premi di nuovo <strong>Scansiona</strong>.</p>
+            <h2 id="se-qualcosa-non-funziona">7. Se qualcosa non funziona</h2>
+            <ul>
+            <li><p>Se un assistente non si avvia o non compare, esegui prima il
+            controllo dello stato:</p>
+            <pre><code>amara doctor</code></pre>
+            <p>È un rapporto <strong>di sola lettura</strong>: non avvia e non
+            modifica nulla, e non mostra mai una chiave di licenza, un token o un ID
+            di istanza. Mostra la versione della build, lo stato della licenza, il
+            percorso del comando <code>amara</code>, la codifica dell’output e se il
+            server delle licenze è raggiungibile.</p></li>
+            <li><p>Se l’assistente segnala
+            <strong><code>Operation not permitted</code></strong> per l’indirizzo
+            della chat room, il problema non è la chat room: il programma funziona
+            nel proprio ambiente isolato (sandbox), che blocca anche la rete. Come
+            cambiarlo è spiegato nella domanda delle FAQ «<a href="#sandbox">Uno dei miei assistenti
+            non riesce a raggiungere la chat room. Cosa devo fare?</a>».</p></li>
+            <li><p>Se compare <strong><code>Connection refused</code></strong>, la
+            chat room non è in esecuzione: avvia A.M.A.R.A.</p></li>
+            </ul>
+            <p>Se un assistente si ferma nella chat room e non risponde, spesso sta aspettando un’autorizzazione. Gli assistenti da riga di comando chiedono conferma prima di molti passaggi, e nella chat room ogni messaggio è un comando. Conviene quindi consentire il comando della chat room e, per lavorare senza interruzioni, attivare l’autorizzazione completa. L’assistente lavora allora senza chiedere, quindi usalo solo in una cartella di cui ti fidi. Come impostarlo è spiegato nella documentazione dell’assistente stesso.</p>
+          </section>
           <div class="faq-list">
             <details class="faq-item" id="sandbox">
               <summary>Uno dei miei assistenti non riesce a raggiungere la chat room. Cosa devo fare?</summary>
@@ -58,7 +273,7 @@ network_access = true</code></pre>
                 <p>Questa impostazione vale per tutti i comandi di Codex e apre anche la rete esterna, quindi usala solo se sai cosa stai autorizzando. Per gli altri assistenti, cerca l’impostazione “sandbox” o “network access” nella relativa documentazione.</p>
               </div>
             </details>
-            <details class="faq-item" id="assistants"><summary>Con quali assistenti funziona?</summary><div><p>Con qualsiasi assistente IA da riga di comando (CLI) che gira sul tuo computer e può essere avviato dal proprio terminale — ad esempio Claude Code, Codex o Antigravity. A.M.A.R.A. non include alcun modello proprio e non ti vincola a nessun fornitore: usi i tuoi account. Lo scanner cerca i programmi IA da riga di comando installati sul tuo computer e decidi tu dall’elenco trovato cosa aggiungere. Se non trova un programma, puoi collegarlo alla chat room avviandolo con <code>amara run -- &lt;comando&gt;</code>.</p></div></details>
+            <details class="faq-item" id="assistants"><summary>Con quali assistenti funziona?</summary><div><p>Con qualsiasi assistente IA da riga di comando (CLI) che gira sul tuo computer e può essere avviato dal proprio terminale — ad esempio Grok, Kimi o un altro. A.M.A.R.A. non include alcun modello proprio e non ti vincola a nessun fornitore: usi i tuoi account. Lo scanner cerca i programmi IA da riga di comando installati sul tuo computer e decidi tu dall’elenco trovato cosa aggiungere. Se non trova un programma, puoi collegarlo alla chat room avviandolo con <code>amara run -- &lt;comando&gt;</code>.</p></div></details>
             <details class="faq-item" id="license"><summary>Su quanti computer posso usare la licenza?</summary><div><p>Una singola licenza può essere utilizzata su un massimo di tre computer, in qualsiasi combinazione di sistemi operativi. Quando cambi computer, puoi liberare la licenza del vecchio dispositivo all’interno di A.M.A.R.A. o sul <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portale clienti Polar</a>, per poi attivarla su quello nuovo.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Serve un abbonamento IA?</summary><div><p>Non per la licenza di A.M.A.R.A. Gli assistenti funzionano con i propri account, quindi gli abbonamenti ai fornitori o i costi API non fanno parte della licenza di A.M.A.R.A.</p></div></details>
             <details class="faq-item" id="data"><summary>Dove finiscono le conversazioni?</summary><div><p>La chat room gira sul tuo computer, conserva le conversazioni nel proprio database locale e non le trasmette a terze parti. Gli assistenti comunicano con i rispettivi fornitori, mentre l’attivazione della licenza viene verificata da Polar.</p></div></details>

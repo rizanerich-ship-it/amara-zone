@@ -303,6 +303,17 @@
 .product-faq .faq-heading { max-width:660px; }
 .product-faq .faq-heading h1,.product-faq .faq-heading h2 { margin:18px 0 10px; color:#20263a; }
 .product-faq .faq-heading>p:last-child { margin:0; color:#596271; font-size:15px; line-height:1.7; }
+.setup-guide { max-width:860px; margin:52px 0 58px; padding:34px; border:1px solid #d7d3dc; border-radius:8px; background:#fff; color:#596271; font-size:15px; line-height:1.78; }
+.setup-guide h2,.setup-guide h3,.setup-guide h4 { color:#20263a; line-height:1.25; }
+.setup-guide h2 { margin:0 0 28px; font-size:30px; }
+.setup-guide h3 { margin:34px 0 14px; font-size:22px; }
+.setup-guide h4 { margin:25px 0 10px; font-size:18px; }
+.setup-guide p,.setup-guide ul,.setup-guide ol { margin:0 0 16px; }
+.setup-guide ul,.setup-guide ol { padding-left:24px; }
+.setup-guide li+li { margin-top:8px; }
+.setup-guide code { padding:1px 5px; border-radius:3px; background:#e8e4f5; color:#3d3560; font:12px 'DM Mono'; }
+.setup-guide pre { margin:0 0 16px; padding:14px 16px; overflow-x:auto; border-radius:4px; background:#141128; }
+.setup-guide pre code { padding:0; background:none; color:#e9e7f2; font-size:12px; line-height:1.6; }
 .faq-list { margin-top:34px; border-top:1px solid #d7d3dc; }
 .faq-item { border-bottom:1px solid #d7d3dc; }
 .faq-item summary { display:flex; align-items:center; gap:14px; padding:20px 0; color:#20263a; font:600 17px Manrope; cursor:pointer; list-style:none; }
@@ -320,3 +331,4 @@
 .faq-item:target { background:#efeaff; }
 .faq-item:target summary { color:#3d3560; }
 @media (max-width:760px) { .product-faq { padding:75px 0; } .product-faq .faq-heading h1,.product-faq .faq-heading h2 { font-size:clamp(28px,8vw,34px); } .faq-item summary { font-size:15px; } .faq-item>div { padding-left:0; } .faq-item pre { font-size:11px; } }
+@media (max-width:760px) { .setup-guide { margin:38px 0 46px; padding:24px 20px; font-size:14px; } .setup-guide h2 { font-size:26px; } .setup-guide h3 { font-size:20px; } .setup-guide pre { font-size:11px; } }

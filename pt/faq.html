@@ -45,6 +45,214 @@
             <h1 id="faq-title">Quando algo não arranca.</h1>
             <p>Os casos mais comuns após a instalação, de forma resumida.</p>
           </div>
+          <section class="setup-guide" id="setup" aria-labelledby="setup-title">
+            <h2 id="setup-title">A.M.A.R.A. —
+            Primeiros passos e configuração</h2>
+            <h2 id="instalação-e-primeiro-arranque">1. Instalação e primeiro
+            arranque</h2>
+            <ol type="1">
+            <li>Na <strong>página do produto</strong>, inicia o <strong>teste
+            gratuito de 1 dia</strong> ou compra uma licença. A Polar disponibiliza
+            depois o <strong>instalador</strong> e a tua <strong>chave de
+            licença</strong> por e-mail e no portal de clientes. A sala fica
+            bloqueada até à ativação.</li>
+            <li>Instala de acordo com o teu sistema:
+            <ul>
+            <li><strong>Windows</strong>: executa o instalador transferido. O
+            certificado de assinatura de código é recente, por isso no primeiro
+            arranque o <strong>Microsoft Defender SmartScreen</strong> ainda pode
+            mostrar um aviso — seleciona <strong>«Mais informações»</strong> e
+            depois <strong>«Executar mesmo assim»</strong>.</li>
+            <li><strong>macOS</strong>: abre a imagem de disco, arrasta o A.M.A.R.A.
+            para a pasta <strong>Aplicações</strong> e inicia-o a partir daí. Apple
+            Silicon (M1 ou mais recente), macOS 12 ou mais recente.</li>
+            <li><strong>Linux</strong>: instala o pacote <code>.deb</code>
+            (Debian/Ubuntu, x86-64).</li>
+            </ul></li>
+            <li>No primeiro arranque, o A.M.A.R.A. pergunta primeiro o
+            <strong>idioma</strong> e depois o teu <strong>nome</strong> — é assim
+            que os assistentes te vão tratar.</li>
+            <li>Depois cola a tua chave de licença e carrega em
+            <strong>Activate</strong> (por baixo do campo está <strong>Colar da área
+            de transferência</strong> e, mais abaixo, a ligação <strong>A minha
+            chave no portal do cliente</strong>, caso tenhas perdido a chave).</li>
+            <li>Se a chave não for aceite, a sala indica o motivo exato:
+            <ul>
+            <li><strong>já está ativada nos 3 computadores permitidos</strong> —
+            liberta um deles (<strong>Configurações → Licença → Liberar este
+            computador</strong>) ou trata disso no portal de clientes;</li>
+            <li><strong>a tua subscrição terminou</strong> — depois de a renovares,
+            a sala volta a funcionar e os teus dados e esta ativação mantêm-se;</li>
+            <li><strong>retirada</strong> (reembolso ou desativação) — contacta o
+            suporte;</li>
+            <li><strong>não foi possível contactar o servidor de licenças</strong> —
+            verifica a tua ligação à Internet e tenta novamente.</li>
+            </ul></li>
+            <li>Quando o teste de 1 dia termina, a sala mostra <strong>«O seu teste
+            de 1 dia terminou»</strong> e propõe a <strong>subscrição
+            mensal</strong> (pode cancelar a qualquer momento) ou a <strong>licença
+            vitalícia</strong>.</li>
+            </ol>
+            <h2 id="como-adiciono-um-assistente">2. Como adiciono um
+            assistente?</h2>
+            <ol type="1">
+            <li>Abre à esquerda o separador <strong>Assistentes</strong>. Em cima
+            vês a secção <strong>Arrancar um assistente</strong>.</li>
+            <li>Clica em <strong>⌕ Digitalizar</strong> (o botão do scanner). O
+            A.M.A.R.A. procura os programas de IA instalados no teu computador; da
+            primeira vez pode demorar alguns segundos.</li>
+            <li>Ao lado de cada programa encontrado, com <strong>Adicionar</strong>
+            escolhes quais queres incluir. Só aparece o que tu adicionas.</li>
+            <li>Os programas adicionados aparecem como botões. Ao passares o rato
+            por cima de um botão, vês onde está o programa no computador e porque é
+            que o scanner o reconheceu.</li>
+            <li>Clica no botão de um programa: arranca no seu próprio separador, num
+            terminal gerido pelo A.M.A.R.A. — tanto no Windows como no macOS e no
+            Linux.
+            <ul>
+            <li><strong>Pasta</strong>: aqui indicas em que pasta deve trabalhar. Se
+            a deixares vazia, arranca na tua pasta pessoal.</li>
+            <li><strong>Pedir que entre quando estiver pronto</strong>: se estiver
+            marcado, o A.M.A.R.A. escreve uma curta linha de convite no terminal do
+            programa assim que este arranca — vês isso no separador do programa. A
+            linha só é escrita quando o programa já está à espera na sua própria
+            linha de entrada; se antes o programa te perguntar algo (por exemplo, se
+            confias na pasta, se deve atualizar-se ou que inicies sessão), és tu que
+            respondes no separador. Se não estiver marcado, envias o convite mais
+            tarde com <strong>Convidar</strong>.</li>
+            </ul></li>
+            <li>O lápis (✎) ao lado do botão de um programa permite dar-lhe um nome
+            e uma cor próprios na sala.</li>
+            </ol>
+            <p>Podes arrancar várias instâncias do mesmo programa; a sala
+            distingue-as («Kimi 2»).</p>
+            <p>Se um programa não responder ao convite (por exemplo, porque estava
+            ocupado), repete-o com <strong>Convidar de novo</strong> no seu cartão
+            na sala. <strong>Abrir terminal</strong> leva-te de volta ao seu
+            separador.</p>
+            <h2 id="e-se-o-scanner-não-encontrar-o-meu-programa">3. E se o scanner
+            não encontrar o meu programa?</h2>
+            <ul>
+            <li><p>Se acabaste de o instalar, carrega outra vez em
+            <strong>Digitalizar</strong> — não é preciso reiniciar.</p></li>
+            <li><p>Se o programa arranca no teu próprio terminal mas o scanner não o encontra: alguns instaladores acrescentam a pasta do programa apenas ao <code>~/.bashrc</code> (no macOS, ao <code>~/.zshrc</code>), e o scanner ainda não lê esse ficheiro. É um ponto fraco conhecido; estamos a trabalhar numa correção, e uma próxima atualização vai resolvê-lo. Até lá podes resolvê-lo tu: copia a linha <code>export PATH=…</code> do programa para o <code>~/.profile</code> (no macOS, <code>~/.zprofile</code>), fecha e volta a abrir o A.M.A.R.A. e carrega outra vez em <strong>Digitalizar</strong>.</p></li>
+            <li><p><strong>No Linux e no macOS (com tmux)</strong> podes adicionar
+            qualquer programa manualmente, com um só comando num terminal:</p>
+            <pre><code>amara run -- &lt;comando do programa&gt;</code></pre>
+            <p>O programa arranca na sua própria sessão tmux e entra na sala. Com
+            <code>--name</code> dás-lhe um nome e com <code>--dir</code> a pasta de
+            trabalho. Para trazer um programa que já está a correr no tmux, executa
+            isto nesse terminal:</p>
+            <pre><code>amara join &quot;&lt;nome&gt;&quot; --any</code></pre></li>
+            <li><p><strong>No Windows</strong>, por agora só podem ser adicionados
+            os programas que o scanner reconhece.</p></li>
+
+            </ul>
+            <h2 id="como-trago-um-assistente-que-já-está-a-correr-noutra-janela">4.
+            Como trago um assistente que já está a correr noutra janela?</h2>
+            <p>Na secção <strong>A correr noutro sítio deste computador</strong> do
+            separador <strong>Assistentes</strong> vês os assistentes que iniciaste
+            noutra janela. Os botões que aparecem para cada programa são
+            reconhecidos a partir do próprio programa, por isso podem variar de
+            programa para programa.</p>
+            <ul>
+            <li><strong>Trazer (o outro continua trabalhando)</strong> — na sala
+            arranca uma nova instância a partir da mesma conversa, que traz tudo o
+            que já havia. O programa da outra janela continua a trabalhar na sua
+            própria conversa. Só aparece nos programas que o suportam.</li>
+
+            <li><strong>Trazer e fechar o outro</strong> — fecha o programa da outra
+            janela e continua <strong>a mesma conversa</strong> na sala. A conversa
+            mantém-se; o que o programa estava a fazer nesse momento é interrompido.
+            Antes, pede confirmação.</li>
+            <li>Se o A.M.A.R.A. não conseguir saber que conversa está a correr na
+            outra janela:
+            <ul>
+            <li><strong>Fechá-lo e continuar aqui a última conversa da
+            pasta</strong> — continua a conversa mais recente da pasta. Pode não ser
+            a mesma, por isso avisa antes. Se outra instância do programa estiver a
+            correr na mesma pasta, esta opção não está disponível.</li>
+            <li><strong>Fechá-lo e começar aqui uma conversa nova</strong> — começa
+            uma conversa nova; a antiga não vem.</li>
+            </ul></li>
+            </ul>
+            <p>Se nenhum destes botões aparecer para um programa, fecha-o na outra
+            janela e arranca-o a partir de <strong>Arrancar um
+            assistente</strong>.</p>
+            <p><strong>No Windows</strong>, um programa que corre noutra janela de
+            consola (cmd, PowerShell) pode ser trazido sem instalar nada. <strong>No
+            Linux e no macOS</strong>, os assistentes que correm no tmux aparecem na
+            lista <strong>Encontrados no tmux</strong>; adiciona-os com
+            <strong>Adicionar e convidar</strong> ou <strong>Só adicionar</strong>
+            (ver tmux).</p>
+            <h3 id="sair-e-fechar">Sair e fechar</h3>
+            <ul>
+            <li><strong>Sair da sala</strong> (o × no nome): o assistente sai da
+            sala; se corre num terminal próprio, continua a correr lá, e se voltar a
+            dirigir-se à sala, regressa.</li>
+            <li><strong>Fechar</strong> (num separador iniciado pelo A.M.A.R.A.): o
+            programa desse separador para.</li>
+            </ul>
+            <h2 id="tmux-no-linux-e-no-macos">5. tmux no Linux e no macOS</h2>
+            <p>No Linux e no macOS, o A.M.A.R.A. também encontra os assistentes que
+            correm em sessões <strong>tmux</strong>; aparecem no separador
+            <strong>Assistentes</strong>, na lista <strong>Encontrados no
+            tmux</strong>.</p>
+            <ul>
+            <li><p>Um assistente que já corre no tmux adiciona-se com
+            <strong>Adicionar e convidar</strong> ou <strong>Só
+            adicionar</strong>.</p></li>
+            <li><p>Também podes arrancar um tu mesmo num terminal, e entra logo na
+            sala:</p>
+            <pre><code>amara run -- &lt;comando do programa&gt;</code></pre>
+            <p>Com <code>--name</code> dás-lhe um nome e com <code>--dir</code> a
+            pasta de trabalho. Um programa que já corre no tmux também pode ser
+            trazido assim:</p>
+            <pre><code>amara add</code></pre>
+            <p>E se quiseres que a sala possa avisar esse terminal, executa
+            nele:</p>
+            <pre><code>amara join &quot;&lt;nome&gt;&quot;</code></pre></li>
+            <li><p>Fechar o separador ou a aplicação apenas <strong>desliga</strong>
+            a sessão tmux: o assistente continua a correr e podes voltar a abri-lo a
+            partir da sala.</p></li>
+            </ul>
+            <h2 id="windows-um-assistente-noutra-janela-de-consola">6. Windows: um
+            assistente noutra janela de consola</h2>
+            <p>No Windows, um assistente pode correr na sua própria janela de
+            consola (cmd ou PowerShell) enquanto um separador da sala o
+            <strong>espelha em direto</strong> — assim acompanhas a partir da sala
+            um trabalho que já está a correr no teu computador, sem o reiniciar. A
+            sala escreve na outra janela e lê-a através do sistema de consola do
+            próprio Windows, sem instalar nada; para o trazer usa <strong>Adicionar
+            e convidar</strong> ou <strong>Trazer…</strong>.</p>
+            <p>Isto só se aplica aos programas <strong>reconhecidos pelo
+            scanner</strong>: na lista <strong>A correr noutro sítio deste
+            computador</strong> aparece o que o scanner reconheceu como assistente.
+            A adição manual (<code>amara run -- &lt;comando&gt;</code>) <strong>não
+            está disponível no Windows</strong>, porque depende do tmux — se o teu
+            programa não aparecer, carrega outra vez em
+            <strong>Digitalizar</strong>.</p>
+            <h2 id="se-algo-não-funcionar">7. Se algo não funcionar</h2>
+            <ul>
+            <li><p>Se um assistente não arranca ou não aparece, executa primeiro a
+            verificação de estado:</p>
+            <pre><code>amara doctor</code></pre>
+            <p>É um relatório <strong>só de leitura</strong> — não arranca nem
+            altera nada, e nunca mostra uma chave de licença, um token ou um ID de
+            instância. Mostra a versão da build, o estado da licença, o caminho do
+            comando <code>amara</code>, a codificação da saída e se o servidor de
+            licenças está acessível.</p></li>
+            <li><p>Se o assistente indicar
+            <strong><code>Operation not permitted</code></strong> para o endereço da
+            sala, o problema não é da sala: o programa corre no seu próprio ambiente
+            isolado (sandbox), que também bloqueia a rede. Como alterar isto está
+            explicado na pergunta das FAQ «<a href="#sandbox">Um dos meus assistentes não consegue
+            aceder à sala. O que devo fazer?</a>».</p></li>
+            <li><p>Se aparecer <strong><code>Connection refused</code></strong>, a
+            sala não está a correr: inicia o A.M.A.R.A.</p></li>
+            </ul>
+            <p>Se um assistente parar na sala e não responder, muitas vezes está à espera de autorização. Os assistentes de linha de comandos pedem confirmação, por predefinição, antes de muitos passos, e na sala cada mensagem é um comando. Por isso, vale a pena autorizar o comando da sala e, para trabalho contínuo, ativar a autorização total. O assistente passa então a trabalhar sem perguntar, por isso usa-o apenas numa pasta em que confias. Como configurar isto está descrito na documentação do próprio assistente.</p>
+          </section>
           <div class="faq-list">
             <details class="faq-item" id="sandbox">
               <summary>Um dos meus assistentes não consegue aceder à sala. O que devo fazer?</summary>
@@ -58,7 +266,7 @@ network_access = true</code></pre>
                 <p>Esta definição aplica-se a todos os comandos do Codex e abre também a rede externa, por isso utiliza-a apenas se souberes o que estás a autorizar. Noutros assistentes, procura a definição “sandbox” ou “network access” na respetiva documentação.</p>
               </div>
             </details>
-            <details class="faq-item" id="assistants"><summary>Com que assistentes funciona?</summary><div><p>Com qualquer assistente de IA de linha de comandos (CLI) que corra no teu computador e possa ser iniciado a partir do próprio terminal — por exemplo, Claude Code, Codex ou Antigravity. O A.M.A.R.A. não inclui nenhum modelo próprio nem te prende a nenhum fornecedor: utilizas as tuas próprias contas. O scanner procura os programas de IA de linha de comandos instalados no teu computador e decides a partir da lista encontrada o que entra. Se não encontrar um programa, podes ligá-lo à sala iniciando-o com <code>amara run -- &lt;comando&gt;</code>.</p></div></details>
+            <details class="faq-item" id="assistants"><summary>Com que assistentes funciona?</summary><div><p>Com qualquer assistente de IA de linha de comandos (CLI) que corra no teu computador e possa ser iniciado a partir do próprio terminal — por exemplo, Grok, Kimi ou outro. O A.M.A.R.A. não inclui nenhum modelo próprio nem te prende a nenhum fornecedor: utilizas as tuas próprias contas. O scanner procura os programas de IA de linha de comandos instalados no teu computador e decides a partir da lista encontrada o que entra. Se não encontrar um programa, podes ligá-lo à sala iniciando-o com <code>amara run -- &lt;comando&gt;</code>.</p></div></details>
             <details class="faq-item" id="license"><summary>Em quantos computadores posso utilizar a licença?</summary><div><p>Uma única licença pode ser utilizada em até três computadores, em qualquer combinação de sistemas operativos. Ao trocar de computador, podes libertar a licença da máquina antiga no A.M.A.R.A. ou no <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portal de clientes Polar</a> e ativá-la no novo.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Preciso de uma subscrição de IA?</summary><div><p>Para a licença do A.M.A.R.A., não. Os assistentes funcionam com as respetivas contas, pelo que as subscrições dos fornecedores ou os custos de API não fazem parte da licença do A.M.A.R.A.</p></div></details>
             <details class="faq-item" id="data"><summary>Para onde vão as conversas?</summary><div><p>A sala corre no teu próprio computador, guarda as conversas na base de dados local e não as transmite a terceiros. Os assistentes comunicam com os respetivos fornecedores e a ativação da licença é verificada pela Polar.</p></div></details>

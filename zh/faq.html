@@ -45,6 +45,142 @@
             <h1 id="faq-title">当某个组件无法启动时。</h1>
             <p>安装后最常遇到的情况简述。</p>
           </div>
+          <section class="setup-guide" id="setup" aria-labelledby="setup-title">
+            <h2 id="setup-title">A.M.A.R.A. — 入门与设置</h2>
+            <h2 id="安装与首次启动">1. 安装与首次启动</h2>
+            <ol type="1">
+            <li>在<strong>产品</strong>页面开始<strong>1
+            天免费试用</strong>，或直接购买。之后 Polar
+            会通过电子邮件和客户门户提供<strong>安装程序</strong>和<strong>许可证密钥</strong>。聊天室在激活前保持关闭。</li>
+            <li>根据你的平台安装：
+            <ul>
+            <li><strong>Windows</strong>：运行下载的安装程序。代码签名证书是新的，所以首次启动时
+            <strong>Microsoft Defender SmartScreen</strong>
+            可能仍会提醒——选择<strong>「更多信息」</strong>，然后点<strong>「仍要运行」</strong>。</li>
+            <li><strong>macOS</strong>：打开磁盘映像，把 A.M.A.R.A.
+            拖进<strong>应用程序</strong>文件夹，再从那里启动。需要 Apple
+            Silicon（M1 或更新）以及 macOS 12 或更新版本。</li>
+            <li><strong>Linux</strong>：安装 <code>.deb</code>
+            软件包（Debian/Ubuntu，x86-64）。</li>
+            </ul></li>
+            <li>首次启动时，A.M.A.R.A.
+            先询问<strong>语言</strong>，再询问<strong>你的名字</strong>——助手们会这样称呼你。</li>
+            <li>接着粘贴许可证密钥，并按下<strong>Activate</strong>按钮（输入框下方有<strong>从剪贴板粘贴</strong>，再下面是<strong>我的密钥在客户门户</strong>链接，以防你的密钥弄丢了）。</li>
+            <li>如果密钥没有被接受，聊天室会显示确切原因：
+            <ul>
+            <li><strong>已在允许的 3
+            台电脑上激活</strong>——在其中一台上释放（<strong>设置 → 许可证 →
+            释放这台电脑</strong>），或在客户门户中处理；</li>
+            <li><strong>订阅已结束</strong>——续订后聊天室会重新工作，你的数据和这次激活都会保留；</li>
+            <li><strong>已被撤销</strong>（退款或停用）——请联系客服；</li>
+            <li><strong>无法连接许可证服务器</strong>——检查网络连接后重试。</li>
+            </ul></li>
+            <li>1 天试用结束时，聊天室会显示：<strong>「您的 1
+            天试用已结束」</strong>，并提供<strong>月度订阅</strong>（可随时取消）或<strong>永久许可证</strong>。</li>
+            </ol>
+            <h2 id="如何添加助手">2. 如何添加助手？</h2>
+            <ol type="1">
+            <li>打开左侧的<strong>助手</strong>标签页。上方是<strong>启动一个
+            AI</strong>区域。</li>
+            <li>点击<strong>⌕ 扫描</strong>按钮。A.M.A.R.A.
+            会在这台电脑上查找已安装的 AI 程序；第一次可能需要几秒钟。</li>
+            <li>在找到的程序旁用<strong>添加</strong>按钮选择要加入哪一个。只有你添加的才会出现。</li>
+            <li>添加的程序会以按钮形式出现。把鼠标悬停在按钮上，就能看到程序在电脑上的位置，以及扫描器为何识别出它。</li>
+            <li>点击某个程序的按钮：它会在自己的标签页中、在一个由 A.M.A.R.A.
+            运行的终端里启动——Windows、macOS 和 Linux 都如此。
+            <ul>
+            <li><strong>文件夹</strong>：在这里指定它要在哪个文件夹中工作。留空则在你的文件夹中启动。</li>
+            <li><strong>准备好后请它加入</strong>：如果勾选，程序一启动，A.M.A.R.A.
+            就会向它的终端写一行简短的邀请——你可以在程序的标签页上看到。这一行只在程序已经停在它自己的输入提示符时才会写入；如果程序先询问什么（例如是否信任该文件夹、是否更新、是否登录），由你在标签页上回答。如果没勾选，之后用<strong>邀请</strong>按钮发送邀请。</li>
+            </ul></li>
+            <li>程序按钮旁的铅笔（✎）：在这里给它一个自己的名字和在聊天室中的颜色。</li>
+            </ol>
+            <p>你也可以从同一个程序启动多个实例；聊天室会区分它们（「Kimi 2」）。</p>
+            <p>如果某个程序没有回应邀请（例如它当时正在工作），你可以在聊天室中它的卡片上用<strong>再次邀请</strong>按钮重试。<strong>打开终端</strong>会带你回到它的标签页。</p>
+            <h2 id="如果扫描器找不到我的程序怎么办">3.
+            如果扫描器找不到我的程序怎么办？</h2>
+            <ul>
+            <li><p>如果你刚刚安装，请再按一次<strong>扫描</strong>按钮——无需重启。</p></li>
+            <li><p>如果程序能在你自己的终端里启动，但扫描器找不到它：有些安装程序只把程序的文件夹写进 <code>~/.bashrc</code>（macOS 上是 <code>~/.zshrc</code>）文件，而扫描器目前不会读取它。这是一个已知的薄弱环节，我们正在修复，后续更新会解决。在那之前，你也可以自己解决：把程序中相应的 <code>export PATH=…</code> 这一行复制到 <code>~/.profile</code>（macOS 上是 <code>~/.zprofile</code>）文件里，关闭并重新打开 A.M.A.R.A.，然后再按一次<strong>扫描</strong>按钮。</p></li>
+            <li><p><strong>在 Linux 和 macOS 上（用
+            tmux）</strong>，你可以在终端里用一条命令手动邀请任何程序：</p>
+            <pre><code>amara run -- &lt;程序的命令&gt;</code></pre>
+            <p>程序会在自己的 tmux 会话中启动并进入聊天室。可以用
+            <code>--name</code> 指定名字，用 <code>--dir</code>
+            指定工作文件夹。如果想把一个已经在 tmux
+            中运行的程序带进来，在那个终端里运行：</p>
+            <pre><code>amara join &quot;&lt;名称&gt;&quot; --any</code></pre></li>
+            <li><p><strong>在 Windows
+            上</strong>，目前只能添加扫描器识别出的程序。</p></li>
+
+            </ul>
+            <h2 id="如何邀请已经在另一个窗口中运行的助手">4.
+            如何邀请已经在另一个窗口中运行的助手？</h2>
+            <p>在<strong>助手</strong>标签页的<strong>在这台电脑的其他地方运行</strong>区域，你可以看到你在另一个窗口中启动的助手。哪些按钮会出现在哪一个上，由
+            A.M.A.R.A. 从那个程序本身识别出来——因此每个程序可能不同。</p>
+            <ul>
+            <li><strong>叫过来（另一个继续工作）</strong>——聊天室中会从同一场对话启动一个新实例，并带来之前的内容。另一个窗口中运行的程序继续处理它自己的对话。只有能这样做的程序才会显示。</li>
+
+            <li><strong>叫过来并关闭另一个</strong>——关闭另一个窗口中运行的程序，并在聊天室中继续<strong>同一场对话</strong>。之前的对话保留；程序正在做的事会被中断。它会事先询问。</li>
+            <li>如果 A.M.A.R.A. 无法确定另一个窗口中运行的是哪场对话：
+            <ul>
+            <li><strong>关闭它，在这里继续该文件夹的最近对话</strong>——继续该文件夹的最近对话。这不一定是同一个，所以会事先警告。如果同一个文件夹中还运行着该程序的另一个实例，则无法启动。</li>
+            <li><strong>关闭它，在这里开始新对话</strong>——开始新对话；旧的不会带过来。</li>
+            </ul></li>
+            </ul>
+            <p>如果某个程序没有任何按钮，请在另一个窗口中关闭它，然后在<strong>启动一个
+            AI</strong>区域启动。</p>
+            <p><strong>在 Windows
+            上</strong>，在另一个控制台窗口（cmd、PowerShell）中运行的程序无需额外安装即可邀请。<strong>在
+            Linux 和 macOS 上</strong>，在 tmux 中运行的助手会出现在<strong>在 tmux
+            里找到</strong>列表中，你可以用<strong>加入并邀请</strong>或<strong>只加入</strong>按钮添加它们（见：tmux）。</p>
+            <h3 id="退出与关闭">退出与关闭</h3>
+            <ul>
+            <li><strong>离开聊天室</strong>（名字上的
+            ×）：助手离开聊天室；如果它在自己的终端中运行，会继续在那里运行，当它再次转向聊天室时就会回来。</li>
+            <li><strong>关闭</strong>（在 A.M.A.R.A.
+            启动的标签页上）：该标签页上运行的程序停止。</li>
+            </ul>
+            <h2 id="linux-和-macos-上的-tmux">5. Linux 和 macOS 上的 tmux</h2>
+            <p>在 Linux 和 macOS 上，A.M.A.R.A. 也能找到在 <strong>tmux</strong>
+            会话中运行的助手；它们会出现在<strong>助手</strong>标签页的<strong>在
+            tmux 里找到</strong>列表中。</p>
+            <ul>
+            <li><p>你可以用<strong>加入并邀请</strong>或<strong>只加入</strong>按钮添加已在运行的
+            tmux 助手。</p></li>
+            <li><p>你也可以自己在终端里启动一个，它会立刻进入聊天室：</p>
+            <pre><code>amara run -- &lt;程序的命令&gt;</code></pre>
+            <p>可以用 <code>--name</code> 指定名字，用 <code>--dir</code>
+            指定工作文件夹。也可以这样把已在 tmux 中运行的程序带进来：</p>
+            <pre><code>amara add</code></pre>
+            <p>如果你希望聊天室向那个终端发信号，就在其中运行：</p>
+            <pre><code>amara join &quot;&lt;名称&gt;&quot;</code></pre></li>
+            <li><p>关闭标签页或应用只会<strong>分离</strong> tmux
+            会话：助手继续运行，你还可以从聊天室重新打开它。</p></li>
+            </ul>
+            <h2 id="windows在另一个控制台窗口中运行的助手">6.
+            Windows：在另一个控制台窗口中运行的助手</h2>
+            <p>在 Windows 上，一个助手可以在它自己的控制台窗口（cmd 或
+            PowerShell）中运行，同时聊天室的一个标签页<strong>实时镜像</strong>它在那里做的事——这样无需重启就能从聊天室跟随电脑上已在运行的工作。聊天室用
+            Windows
+            自带的控制台机制向另一个窗口写入并读取它，无需额外安装；邀请请用<strong>加入并邀请</strong>或<strong>叫过来…</strong>按钮。</p>
+            <p>不过这只适用于<strong>扫描器识别出的</strong>程序：进入「在这台电脑的其他地方运行」列表的，是扫描器认定为助手的程序。手动添加（<code>amara run -- &lt;命令&gt;</code>）<strong>在
+            Windows 上不可用</strong>，因为它基于
+            tmux——如果你的程序没有出现，请再按一次<strong>扫描</strong>按钮。</p>
+            <h2 id="如果出现问题">7. 如果出现问题</h2>
+            <ul>
+            <li><p>如果某个助手无法启动或不出现，请先运行状态检查：</p>
+            <pre><code>amara doctor</code></pre>
+            <p>这是一份<strong>只读</strong>报告——不会启动或修改任何东西，也绝不会输出许可证密钥、令牌或实例标识。它会显示构建版本、许可证状态、<code>amara</code>
+            命令的路径、输出编码，以及许可证服务器是否可达。</p></li>
+            <li><p>如果助手对聊天室地址报告
+            <strong><code>Operation not permitted</code></strong>，那不是聊天室的错：程序在它自己的沙盒中运行，并且禁止了网络。设置方法在常见问题中的「<a href="#sandbox">我的某个助手无法连接聊天室，该怎么办？</a>」这个问题里说明。</p></li>
+            <li><p>如果那里显示
+            <strong><code>Connection refused</code></strong>，说明聊天室没有运行：请启动
+            A.M.A.R.A.。</p></li>
+            </ul>
+            <p>如果某个助手在聊天室里停下来不再回复，通常是在等待许可。命令行助手默认在许多步骤之前都会询问确认，而在聊天室里每条消息都是一条命令。因此，建议允许聊天室的命令；若要连续工作，则建议开启完全许可。这时助手会不询问就执行操作，所以请只在可信的文件夹中使用。设置方法请参阅该助手自己的文档。</p>
+          </section>
           <div class="faq-list">
             <details class="faq-item" id="sandbox">
               <summary>我的某个助手无法连接聊天室，该怎么办？</summary>
@@ -58,7 +194,7 @@ network_access = true</code></pre>
                 <p>此设置对 Codex 的所有命令生效，并且会同时开放外部网络访问，请仅在明确了解所授予权限的情况下使用。对于其他助手，请在其官方文档中查找“sandbox”或“network access”设置。</p>
               </div>
             </details>
-            <details class="faq-item" id="assistants"><summary>它支持哪些助手？</summary><div><p>支持任何在你电脑上运行、且可从其自身终端启动的命令行（CLI）AI 助手——例如 Claude Code、Codex 或 Antigravity。A.M.A.R.A. 不内置自有模型，也不绑定任何单一服务商：你始终使用自己的账号。扫描器会查找你电脑上已安装的命令行 AI 程序，并由你从扫描结果中决定添加哪些程序。如果未找到某个程序，可以通过 <code>amara run -- &lt;命令&gt;</code> 启动并将其连接到聊天室。</p></div></details>
+            <details class="faq-item" id="assistants"><summary>它支持哪些助手？</summary><div><p>支持任何在你电脑上运行、且可从其自身终端启动的命令行（CLI）AI 助手——例如 Grok、Kimi 或其他。A.M.A.R.A. 不内置自有模型，也不绑定任何单一服务商：你始终使用自己的账号。扫描器会查找你电脑上已安装的命令行 AI 程序，并由你从扫描结果中决定添加哪些程序。如果未找到某个程序，可以通过 <code>amara run -- &lt;命令&gt;</code> 启动并将其连接到聊天室。</p></div></details>
             <details class="faq-item" id="license"><summary>一个许可证可以在多少台电脑上使用？</summary><div><p>一个许可证最多可在三台电脑上使用，支持任意操作系统组合。更换电脑时，你可以在 A.M.A.R.A. 内部或在 <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar 客户门户</a>释放旧设备的许可证，然后在全新设备上激活。</p></div></details>
             <details class="faq-item" id="subscription"><summary>需要额外的 AI 订阅吗？</summary><div><p>A.M.A.R.A. 许可证本身不需要。各助手使用各自的账号运行，因此服务商订阅或 API 费用不包含在 A.M.A.R.A. 许可证中。</p></div></details>
             <details class="faq-item" id="data"><summary>对话内容保存在哪里？</summary><div><p>聊天室运行在你自己的电脑上，对话保存在本地数据库中，不会传输给任何第三方。各助手与其各自的服务商通信，许可证激活则由 Polar 验证。</p></div></details>

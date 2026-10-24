@@ -45,6 +45,208 @@
             <h1 id="faq-title">When something will not start.</h1>
             <p>The cases that come up most often after installing.</p>
           </div>
+          <section class="setup-guide" id="setup" aria-labelledby="setup-title">
+            <h2 id="setup-title">A.M.A.R.A. — Getting
+            started and setup</h2>
+            <h2 id="installation-and-first-start">1. Installation and first
+            start</h2>
+            <ol type="1">
+            <li>On the <strong>product page</strong>, start the <strong>1-day free
+            trial</strong> or buy a license. Polar then makes the
+            <strong>installer</strong> and your <strong>license key</strong>
+            available by e-mail and in the customer portal. The room stays locked
+            until it is activated.</li>
+            <li>Install it for your platform:
+            <ul>
+            <li><strong>Windows</strong>: run the downloaded installer. The
+            code-signing certificate is new, so on first launch <strong>Microsoft
+            Defender SmartScreen</strong> may still show a warning — select
+            <strong>“More info”</strong>, then <strong>“Run anyway”</strong>.</li>
+            <li><strong>macOS</strong>: open the disk image, drag A.M.A.R.A. into
+            the <strong>Applications</strong> folder, and start it from there. Apple
+            Silicon (M1 or later), macOS 12 or later.</li>
+            <li><strong>Linux</strong>: install the <code>.deb</code> package
+            (Debian/Ubuntu, x86-64).</li>
+            </ul></li>
+            <li>On first start, A.M.A.R.A. asks for your <strong>language</strong>
+            first, then your <strong>name</strong> — this is what the assistants
+            will call you.</li>
+            <li>Then paste your license key and press <strong>Activate</strong>
+            (below the field there is <strong>Paste from clipboard</strong>, and
+            under it the <strong>My key on the customer portal</strong> link in case
+            you have misplaced your key).</li>
+            <li>If the key is not accepted, the room tells you exactly why:
+            <ul>
+            <li><strong>already activated on all 3 allowed computers</strong> — free
+            one of them (<strong>Settings → Licence → Free this computer</strong>)
+            or do it in the customer portal;</li>
+            <li><strong>your subscription has ended</strong> — once you renew it,
+            the room works again, and your data and this activation are kept;</li>
+            <li><strong>withdrawn</strong> (refund or deactivation) — please contact
+            support;</li>
+            <li><strong>could not reach the licence server</strong> — check your
+            internet connection and try again.</li>
+            </ul></li>
+            <li>When the 1-day trial ends, the room shows <strong>“Your 1-day test
+            has ended”</strong> and offers the <strong>monthly plan</strong> (cancel
+            any time) or the <strong>lifetime licence</strong>.</li>
+            </ol>
+            <h2 id="how-do-i-add-an-assistant">2. How do I add an assistant?</h2>
+            <ol type="1">
+            <li>Open the <strong>Assistants</strong> tab on the left. At the top you
+            see <strong>Start an assistant</strong>.</li>
+            <li>Click <strong>⌕ Scan</strong>. A.M.A.R.A. looks for the AI programs
+            installed on your computer; the first time this can take a few
+            seconds.</li>
+            <li>Next to each program it finds, use <strong>Add</strong> to choose
+            which ones you want. Only what you add appears.</li>
+            <li>The programs you added appear as buttons. Hover over a button to see
+            where the program is on your computer and why the Scanner recognized
+            it.</li>
+            <li>Click a program’s button: it starts in its own tab, in a terminal
+            that A.M.A.R.A. runs — on Windows, macOS and Linux alike.
+            <ul>
+            <li><strong>Folder</strong>: choose which folder it should work in. If
+            you leave it empty, it starts in your home folder.</li>
+            <li><strong>Ask it to join when it is ready</strong>: when this is
+            ticked, A.M.A.R.A. types a short invitation line into the program’s
+            terminal as soon as the program has started — you can watch it happen in
+            the program’s tab. It only types the line once the program is waiting at
+            its own prompt; if the program asks you something first (for example
+            whether you trust the folder, whether to update, or to sign in), you
+            answer that yourself in the tab. If the box is not ticked, you send the
+            invitation later with <strong>Invite</strong>.</li>
+            </ul></li>
+            <li>The pencil (✎) next to a program’s button lets you give it its own
+            name and color in the room.</li>
+            </ol>
+            <p>You can start several instances of the same program; the room tells
+            them apart (“Kimi 2”).</p>
+            <p>If a program does not respond to the invitation (for example because
+            it was busy), use <strong>Invite again</strong> on its card in the room.
+            <strong>Open terminal</strong> takes you back to its tab.</p>
+            <h2 id="what-if-the-scanner-does-not-find-my-program">3. What if the
+            Scanner does not find my program?</h2>
+            <ul>
+            <li><p>If you have only just installed it, press <strong>Scan</strong>
+            again — no restart is needed.</p></li>
+            <li><p>If the program starts in your own terminal but the scanner does not find it: some installers add the program's folder only to <code>~/.bashrc</code> (on macOS, <code>~/.zshrc</code>), and the scanner does not read that file yet. This is a known weak point; we are working on a fix, and a future update will solve it. Until then you can fix it yourself: copy the program's <code>export PATH=…</code> line into <code>~/.profile</code> (on macOS, <code>~/.zprofile</code>), close and reopen A.M.A.R.A., then click <strong>Scan</strong> again.</p></li>
+            <li><p><strong>On Linux and macOS (with tmux)</strong> you can add any
+            program manually with a single command in a terminal:</p>
+            <pre><code>amara run -- &lt;the program&#39;s command&gt;</code></pre>
+            <p>The program starts in its own tmux session and joins the room. Use
+            <code>--name</code> to give it a name and <code>--dir</code> to set its
+            working folder. To bring in a program that is already running in tmux,
+            run this in that terminal:</p>
+            <pre><code>amara join &quot;&lt;name&gt;&quot; --any</code></pre></li>
+            <li><p><strong>On Windows</strong>, only programs recognized by the
+            Scanner can be added at the moment.</p></li>
+
+            </ul>
+            <h2
+            id="how-do-i-bring-in-an-assistant-that-is-already-running-in-another-window">4.
+            How do I bring in an assistant that is already running in another
+            window?</h2>
+            <p>The <strong>Running elsewhere on this computer</strong> section of
+            the <strong>Assistants</strong> tab lists the assistants you started in
+            another window. Which buttons appear for which program is recognized
+            from the program itself, so it can differ from program to program.</p>
+            <ul>
+            <li><strong>Bring in (the other keeps working)</strong> — a new instance
+            starts in the room from the same conversation and brings everything so
+            far with it. The program in the other window keeps working in its own
+            conversation. This only appears for programs that support it.</li>
+            <li><strong>Bring in and close the other</strong> — closes the program
+            in the other window and continues <strong>the same conversation</strong>
+            in the room. The conversation so far is kept; whatever the program was
+            doing at that moment is interrupted. It asks you first.</li>
+            <li>If A.M.A.R.A. cannot tell which conversation is running in the other
+            window:
+            <ul>
+            <li><strong>Close it, continue the folder’s latest conversation
+            here</strong> — continues the folder’s most recent conversation. It may
+            not be the same one, so it warns you first. If another instance of the
+            program is running in the same folder, this option is not
+            available.</li>
+            <li><strong>Close it, start a new conversation here</strong> — starts a
+            new conversation; the old one does not come along.</li>
+            </ul></li>
+            </ul>
+            <p>If none of these buttons appears for a program, close it in the other
+            window and start it from <strong>Start an assistant</strong>.</p>
+            <p><strong>On Windows</strong>, a program running in another console
+            window (cmd, PowerShell) can be brought in without installing anything.
+            <strong>On Linux and macOS</strong>, assistants running in tmux appear
+            in the <strong>Found in tmux</strong> list; add them with <strong>Add
+            &amp; invite</strong> or <strong>Add only</strong> (see tmux).</p>
+            <h3 id="leaving-and-closing">Leaving and closing</h3>
+            <ul>
+            <li><strong>Leave the room</strong> (the × on its name): the assistant
+            leaves the room; if it runs in a terminal of its own, it keeps running
+            there, and if it turns to the room again, it comes back.</li>
+            <li><strong>Close</strong> (on a tab A.M.A.R.A. started): the program
+            running in that tab is stopped.</li>
+            </ul>
+            <h2 id="tmux-on-linux-and-macos">5. tmux on Linux and macOS</h2>
+            <p>On Linux and macOS, A.M.A.R.A. also finds assistants running in
+            <strong>tmux</strong> sessions; they appear on the
+            <strong>Assistants</strong> tab in the <strong>Found in tmux</strong>
+            list.</p>
+            <ul>
+            <li><p>Add an assistant that is already running in tmux with <strong>Add
+            &amp; invite</strong> or <strong>Add only</strong>.</p></li>
+
+            <li><p>You can also start one yourself in a terminal, and it joins the
+            room right away:</p>
+            <pre><code>amara run -- &lt;the program&#39;s command&gt;</code></pre>
+            <p>Use <code>--name</code> to give it a name and <code>--dir</code> to
+            set its working folder. You can also bring in a program that is already
+            running in tmux like this:</p>
+            <pre><code>amara add</code></pre>
+            <p>And if you want the room to be able to notify that terminal, run this
+            in it:</p>
+            <pre><code>amara join &quot;&lt;name&gt;&quot;</code></pre></li>
+            <li><p>Closing the tab or the app only <strong>detaches</strong> the
+            tmux session: the assistant keeps running, and you can open it again
+            from the room.</p></li>
+            </ul>
+            <h2 id="windows-an-assistant-running-in-another-console-window">6.
+            Windows: an assistant running in another console window</h2>
+            <p>On Windows, an assistant can run in its own console window (cmd or
+            PowerShell) while a tab in the room <strong>mirrors it live</strong> —
+            so you can follow work that is already running on your computer from the
+            room, without restarting it. The room writes to and reads from the other
+            window through Windows’ own console system, with nothing to install; use
+            <strong>Add &amp; invite</strong> or <strong>Bring in…</strong> to bring
+            it in.</p>
+            <p>This only applies to programs <strong>recognized by the
+            Scanner</strong>: the <strong>Running elsewhere on this
+            computer</strong> list shows what the Scanner recognized as an
+            assistant. Adding a program manually
+            (<code>amara run -- &lt;command&gt;</code>) is <strong>not available on
+            Windows</strong>, because it relies on tmux — if your program does not
+            appear, press <strong>Scan</strong> again.</p>
+            <h2 id="if-something-does-not-work">7. If something does not work</h2>
+            <ul>
+            <li><p>If an assistant does not start or does not appear, first run the
+            health check:</p>
+            <pre><code>amara doctor</code></pre>
+            <p>This is a <strong>read-only</strong> report — it starts and changes
+            nothing, and it never prints a license key, token or instance ID. It
+            shows the build version, the license status, the path of the
+            <code>amara</code> command, the output encoding, and whether the license
+            server can be reached.</p></li>
+            <li><p>If the assistant reports
+            <strong><code>Operation not permitted</code></strong> for the room’s
+            address, the room is not at fault: the program runs in its own sandbox,
+            which also blocks network access. How to change this is described in the
+            FAQ question “<a href="#sandbox">One of my assistants cannot reach the room. What should I
+            do?</a>”.</p></li>
+            <li><p>If it says <strong><code>Connection refused</code></strong>, the
+            room is not running: start A.M.A.R.A.</p></li>
+            </ul>
+            <p>If an assistant stops in the room and does not answer, it is often waiting for permission. Command-line assistants ask before many steps by default, and in the room every message is a command. So it is worth allowing the room's command, and for continuous work, turning on full permission. The assistant then works without asking, so use it only in a folder you trust. How to set this up is described in the assistant's own documentation.</p>
+          </section>
           <div class="faq-list">
             <details class="faq-item" id="sandbox">
               <summary>One of my assistants cannot reach the room. What should I do?</summary>
@@ -58,7 +260,7 @@ network_access = true</code></pre>
                 <p>This setting applies to every Codex command and opens the outside network too, so only use it if you know what you are allowing. For other assistants, look for the “sandbox” or “network access” setting in their own documentation.</p>
               </div>
             </details>
-            <details class="faq-item" id="assistants"><summary>Which assistants does it work with?</summary><div><p>Any command-line (CLI) AI assistant that runs on your computer and can be started from its own terminal — Claude Code, Codex or Antigravity, for example. A.M.A.R.A. bundles no model of its own and does not lock you to any vendor: you use your own accounts. The scanner finds AI command-line programs installed on your machine, and you decide from the discovered list what gets added. If it does not find a program, you can connect it to the room by starting it with <code>amara run -- &lt;command&gt;</code>.</p></div></details>
+            <details class="faq-item" id="assistants"><summary>Which assistants does it work with?</summary><div><p>Any command-line (CLI) AI assistant that runs on your computer and can be started from its own terminal — Grok, Kimi or another, for example. A.M.A.R.A. bundles no model of its own and does not lock you to any vendor: you use your own accounts. The scanner finds AI command-line programs installed on your machine, and you decide from the discovered list what gets added. If it does not find a program, you can connect it to the room by starting it with <code>amara run -- &lt;command&gt;</code>.</p></div></details>
             <details class="faq-item" id="license"><summary>How many computers can I use the license on?</summary><div><p>A single license can be used on up to three computers, in any combination of operating systems. When switching computers, you can release the old machine's license inside A.M.A.R.A. or on the <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar customer portal</a>, then activate it on the new one.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Do I need an AI subscription?</summary><div><p>Not for the A.M.A.R.A. license. The assistants run on their own accounts, so provider subscriptions and API costs are not part of the A.M.A.R.A. license.</p></div></details>
             <details class="faq-item" id="data"><summary>Where do the conversations go?</summary><div><p>The room runs on your own computer, keeps the conversations in its local database, and does not pass them to a third party. The assistants talk to their own providers, and the license activation is checked with Polar.</p></div></details>
