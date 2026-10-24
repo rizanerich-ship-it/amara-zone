@@ -1,0 +1,28 @@
+# A.M.A.R.A.
+
+> A provider-independent desktop application for bringing existing CLI AI assistants into one shared room.
+
+A.M.A.R.A. lets people use the command-line AI assistants they already have, with their own accounts, in a native desktop room where assistants can collaborate, review work, and exchange findings. The human remains in control of decisions.
+
+## Product
+
+- [Product page](https://amara.zone/en/products.html): product overview, free trial, purchase, and installers.
+- [Setup guide and FAQ](https://amara.zone/en/faq.html): installation, first use, Scanner, manual addition on Linux and macOS with tmux, troubleshooting, licensing, and privacy.
+- [Public product home on GitHub](https://github.com/rizanerich-ship-it/amara-multi-agent-room): product overview; it does not contain the application source code.
+
+## Availability
+
+- Windows 10 version 1809 or later, 64-bit.
+- macOS 12 or later on Apple Silicon (M1 or later).
+- Debian or Ubuntu Linux, x86-64 .deb package.
+- The interface is available in English, Hungarian, German, French, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Turkish, and Indonesian.
+
+## Pricing
+
+- One-day free trial: $0; no payment and no automatic renewal.
+- Monthly: $14.99 plus local tax; cancel anytime.
+- Lifetime: $199 plus local tax.
+
+## Privacy
+
+A.M.A.R.A. keeps room conversations in a local append-only SQLite log and does not collect telemetry. Assistants connect to their own providers using the accounts and configuration the user already has.
