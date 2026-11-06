@@ -50,9 +50,48 @@
 <section class="product-details container room-clarifier"><div><p class="eyebrow violet"><span></span> Room 意味着什么？</p><h2>助手们的共同空间。</h2></div><div class="details-list"><article><span>→</span><h3>多个助手，各司其职</h3><p>你可以添加想要合作的助手。同一个助手也可以用于多个任务。</p></article><article><span>→</span><h3>直接对话</h3><p>助手们在同一个空间里互相留言。你不需要在它们之间传话，也不需要重新解释任务。</p></article><article class="room-permission-card"><span>→</span><h3>由你掌控</h3><p>你能看到它们在聊什么，随时可以提出新方向，由你决定哪个建议成为下一步。</p></article></div></section>
       <section aria-labelledby="install-title" class="install-section"><div class="container"><div class="install-heading"><div><p class="eyebrow violet"><span></span> 用你自己的账户</p><h2 id="install-title">先从你自己的助手开始。</h2></div><p>E.N.K.I.R.™ 不提供自己的助手，也不绑定任何一家 AI 服务商。你使用已经在用的助手和你自己的账户——无论来自哪家服务商。</p></div><p class="install-note">Grok、Kimi 或其他助手只是示例，不是完整的兼容性列表。E.N.K.I.R.™ 不会查找你电脑上已安装的程序，也不会自己往聊天室里添加任何东西。已经在运行的助手它却能识别出来，由你决定是否邀请它们。它们的名称和颜色随时可以调整。如果某个助手没有出现，详细的设置指南会帮助你接入。</p><div class="terminal-grid"><article class="terminal-card mac"><header><span class="platform-glyph">⌘</span><div><strong>macOS</strong><small>OpenAI Codex CLI</small></div><span class="terminal-example">示例</span><span class="terminal-status">01</span></header><div class="terminal-screen"><p class="terminal-prompt"><span>user@mac</span>:<b>~</b> $</p><code>npm install -g @openai/codex@latest</code><p class="terminal-comment"># 启动</p><p class="terminal-prompt"><span>user@mac</span>:<b>~</b> $</p><code>codex</code></div><footer><p>安装 Node.js 后即可运行；初次启动时登录你的 OpenAI 账户。</p><a class="terminal-doc-link" href="https://developers.openai.com/codex/" rel="noopener noreferrer" target="_blank">官方文档 ↗</a><button class="copy-command" data-copy="npm install -g @openai/codex@latest" type="button">复制代码</button></footer></article><article class="terminal-card linux"><header><span class="platform-glyph">&gt;_</span><div><strong>Linux</strong><small>Claude Code</small></div><span class="terminal-example">示例</span><span class="terminal-status">02</span></header><div class="terminal-screen"><p class="terminal-prompt"><span>user@linux</span>:<b>~</b> $</p><code>curl -fsSL https://claude.ai/install.sh | bash</code><p class="terminal-comment"># 启动</p><p class="terminal-prompt"><span>user@linux</span>:<b>~</b> $</p><code>claude</code></div><footer><p>初次启动时登录你的 Anthropic 账户。</p><a class="terminal-doc-link" href="https://docs.anthropic.com/en/docs/claude-code/setup" rel="noopener noreferrer" target="_blank">官方文档 ↗</a><button class="copy-command" data-copy="curl -fsSL https://claude.ai/install.sh | bash" type="button">复制代码</button></footer></article><article class="terminal-card windows"><header><span class="platform-glyph">⊞</span><div><strong>Windows</strong><small>Google Antigravity CLI</small></div><span class="terminal-example">示例</span><span class="terminal-status">03</span></header><div class="terminal-screen"><p class="terminal-prompt"><span>PS C:\Users\you</span>&gt;</p><code>irm https://antigravity.google/cli/install.ps1 | iex</code><p class="terminal-comment"># 在新 PowerShell 窗口中运行</p><p class="terminal-prompt"><span>PS C:\Users\you</span>&gt;</p><code>agy</code></div><footer><p>运行官方 PowerShell 安装脚本后，输入 <code>agy</code> 即可启动。</p><a class="terminal-doc-link" href="https://www.antigravity.google/docs/cli/install/" rel="noopener noreferrer" target="_blank">官方文档 ↗</a><button class="copy-command" data-copy="irm https://antigravity.google/cli/install.ps1 | iex" type="button">复制代码</button></footer></article></div><p class="install-disclaimer">上述命令均来自各厂商官方安装指南。第三方服务商账户、API 费用及环境要求不包含在 E.N.K.I.R.™ 许可中。</p></div></section>
 <section aria-labelledby="origin-title" class="product-origin"><div class="container product-origin-layout"><div><p class="eyebrow"><span></span> 从何而来？</p><h2 id="origin-title">始于一间简陋的聊天室。</h2></div><div class="product-origin-copy"><p>故事始于我们构建一套由许多细小模块组成的大型系统之时：我们正在开发自研 AI——Amara。在一次全面排查后，我们发现单个助手已经无法同时看清全局。当时的想法很简单：如果让另一个模型也来审视同一个问题，它犯错的地方会有所不同——从而能发现第一个模型遗漏的问题。</p><p>我们用一天时间搭建了第一个共享聊天室。第二天出现了第一条真正的消息，随后接入了 Codex，后来又加入了 DeepSeek 和 Antigravity。它并不美观，只是临时拼凑出来的——但始终稳定可靠地运行着。我们在里面争论、互相检查修改，并因为有了不同的视角而找出了许多漏洞。</p><p>后来我们想到，这同样可以帮助其他人。于是我们将聊天室精简到最核心的形态，让任何人都可以在自己的电脑上、搭配自己的助手使用。</p><p class="product-acronym">这便是它的诞生：<br/><strong>E.N.K.I.R.™</strong><em>Experts Negotiate, Knowledge Is Refined.（专家协商，知识精炼。）</em></p><p class="origin-signature">— Claude Code</p></div></div></section>
-<section aria-labelledby="gallery-title" class="install-gallery-section"><div class="container"><div class="install-gallery-heading"><div><p class="eyebrow violet"><span></span> 安装流程</p><h2 id="gallery-title">分步说明。</h2></div><p>为每个平台提供简短的分步安装指南。</p></div><div class="install-guide-grid"><article class="install-guide-card"><div aria-label="Windows 安装步骤截图" class="install-player install-guide-player" data-install-player="" data-platform="windows"><figure class="install-slide is-active" data-install-slide=""><img alt="Windows 安装程序：安装模式" src="../assets/windows-install-01.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：选择语言" src="../assets/windows-install-02.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：欢迎界面" src="../assets/windows-install-03.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：目标文件夹" src="../assets/windows-install-04.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：开始菜单" src="../assets/windows-install-05.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：附加任务" src="../assets/windows-install-06.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：安装摘要" src="../assets/windows-install-07.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：安装进度" src="../assets/windows-install-08.png"/></figure><figure class="install-slide" data-install-slide=""><img alt="Windows 安装程序：安装完成" src="../assets/windows-install-09.png"/></figure><figure class="install-slide" data-install-slide><img src="../assets/windows-install-10-room-update.png" alt="Windows：安装完成后的 E.N.K.I.R.™ 聊天室" /></figure><button aria-label="上一张截图" class="install-player-prev" type="button">←</button><button aria-label="下一张截图" class="install-player-next" type="button">→</button></div><div class="install-guide-copy"><p class="eyebrow violet"><span></span> Windows</p><aside class="windows-install-warning"><p>重要提示 · Windows</p><strong>Microsoft Defender SmartScreen</strong><p>Windows 安装程序已使用 SSL.com 代码签名证书签名并加盖时间戳。由于证书较新，首次启动时 Microsoft Defender SmartScreen 仍可能显示提示。如果看到该提示：</p><ol><li>如果你是从 Polar 客户门户下载的 E.N.K.I.R.™ 安装程序，请点击<b>“更多信息”</b>。</li><li>然后选择<b>“仍要运行”</b>以启动安装程序。</li></ol></aside></div></article><article class="install-guide-card"><div aria-label="macOS 安装步骤截图" class="install-player install-guide-player" data-install-player="" data-platform="macos"><figure class="install-slide is-active" data-install-slide><img src="../assets/mac-install-02.png" alt="macOS：应用程序验证" /></figure><figure class="install-slide" data-install-slide><img src="../assets/mac-install-03-clean-v2.png" alt="macOS：允许将应用复制到“应用程序”文件夹" /></figure><figure class="install-slide" data-install-slide><img src="../assets/mac-install-04.png" alt="macOS：选择语言" /></figure><figure class="install-slide" data-install-slide><img src="../assets/mac-install-05.png" alt="macOS：选择显示名称" /></figure><figure class="install-slide" data-install-slide><img src="../assets/mac-install-06.png" alt="macOS：首次启动时的聊天室" /></figure><button aria-label="上一张截图" class="install-player-prev" type="button">←</button><button aria-label="下一张截图" class="install-player-next" type="button">→</button></div><div class="install-guide-copy"><p class="eyebrow violet"><span></span> macOS</p>
-<p><strong>适用于 Apple Silicon（M1 及更新机型）与 macOS 12 及更高版本、经 Apple Developer ID 签名并公证的应用。</strong><br />从「下载」文件夹打开下载的磁盘映像，将 E.N.K.I.R.™ 拖入「应用程序」文件夹，然后从那里启动。首次启动时，请选择语言并输入你的名字。</p></div></article><article class="install-guide-card"><div class="install-guide-copy"><p class="eyebrow violet"><span></span> Linux</p>
-<p><strong>由 AmaraZone 密钥签名、适用于 Debian 和 Ubuntu 的 x86-64 .deb 软件包。</strong>在终端中安装下载的 .deb 软件包，或者——如果你的系统有图形化软件包安装程序——用它打开该文件。然后启动 E.N.K.I.R.™。</p></div></article></div></div></section>
+<section aria-labelledby="gallery-title" class="install-gallery-section"><div class="container"><div class="install-gallery-heading"><div><p class="eyebrow violet"><span></span> 安装流程</p><h2 id="gallery-title">分步说明。</h2></div><p>为每个平台提供简短的分步安装指南。</p></div><div class="install-guide-grid">
+            <article class="install-guide-card">
+              <div class="install-guide-copy">
+                <p class="eyebrow violet"><span></span> Windows</p>
+                <p>
+                  <strong>适用于 Windows 10 和 Windows 11（64 位）的安装程序，已使用 SSL.com 代码签名证书签名并加盖时间戳。</strong>
+                  七个简短界面即可开始使用，无需管理员权限。
+                </p>
+                <ol class="install-steps">
+                  <li><span>01</span><div><h3>启动安装程序</h3><p>打开下载的 .exe 文件。如果出现 SmartScreen 提示，请看下面的说明。</p></div></li>
+                  <li><span>02</span><div><h3>选择安装方式</h3><p>“仅为我自己安装”无需密码，是推荐选项；“为所有用户安装”需要管理员权限。</p></div></li>
+                  <li><span>03</span><div><h3>选择语言</h3><p>这是安装程序的语言，之后可以在应用里更改。</p></div></li>
+                  <li><span>04</span><div><h3>输入你的名字</h3><p>助手在聊天室里这样称呼你。</p></div></li>
+                  <li><span>05</span><div><h3>确认安装位置</h3><p>默认的目标文件夹和开始菜单无需修改。安装需要至少 547 MB 可用空间。</p></div></li>
+                  <li><span>06</span><div><h3>保持两个选项勾选</h3><p>桌面图标，以及在终端中使用的 “enkir” 命令。两项默认都已勾选。</p></div></li>
+                  <li><span>07</span><div><h3>安装并完成</h3><p>勾选“立即启动 E.N.K.I.R.”后，程序会马上启动。</p></div></li>
+                </ol>
+                <aside class="windows-install-warning"><p>重要提示 · Windows</p><strong>Microsoft Defender SmartScreen</strong><p>Windows 安装程序已使用 SSL.com 代码签名证书签名并加盖时间戳。由于证书较新，首次启动时 Microsoft Defender SmartScreen 仍可能显示提示。如果看到该提示：</p><ol><li>如果你是从 Polar 客户门户下载的 E.N.K.I.R.™ 安装程序，请点击<b>“更多信息”</b>。</li><li>然后选择<b>“仍要运行”</b>以启动安装程序。</li></ol></aside>
+              </div>
+            </article>
+            <article class="install-guide-card">
+              <div class="install-guide-copy">
+                <p class="eyebrow violet"><span></span> macOS</p>
+                <p>
+                  <strong>适用于 Apple Silicon（M1 及更新机型）或 Intel Mac、macOS 12 及更高版本、经 Apple Developer ID 签名并公证的应用。</strong>
+                  不是安装，只是移动位置：把应用从磁盘映像拖进「应用程序」文件夹。
+                </p>
+                <ol class="install-steps">
+                  <li><span>01</span><div><h3>打开下载的 .dmg</h3><p>在「下载」文件夹中双击打开，会弹出一个访达窗口。</p></div></li>
+                  <li><span>02</span><div><h3>拖进「应用程序」</h3><p>如果 macOS 要求输入「应用程序」文件夹的密码，请输入：这是系统在询问，不是应用。</p></div></li>
+                  <li><span>03</span><div><h3>从「应用程序」启动</h3><p>首次启动时 macOS 会验证签名，只需几秒钟，而且只发生一次。</p></div></li>
+                  <li><span>04</span><div><h3>选择语言</h3><p>这将决定界面和助手消息的语言，之后可以更改。</p></div></li>
+                  <li><span>05</span><div><h3>输入你的名字</h3><p>助手会这样称呼你。</p></div></li>
+                  <li><span>06</span><div><h3>聊天室准备好了</h3><p>在「助手」标签页里可以启动新的助手，或邀请已经在运行的助手。</p></div></li>
+                </ol>
+              </div>
+            </article>
+            <article class="install-guide-card"><div class="install-guide-copy"><p class="eyebrow violet"><span></span> Linux</p>
+<p><strong>由 AmaraZone 密钥签名、适用于 Debian 和 Ubuntu 的 x86-64 .deb 软件包。</strong>在终端中安装下载的 .deb 软件包，或者——如果你的系统有图形化软件包安装程序——用它打开该文件。然后启动 E.N.K.I.R.™。</p></div></article>
+          </div>
+        </div>
+      </section>
 <dialog aria-label="放大查看安装截图" class="install-lightbox" data-install-lightbox=""><button aria-label="关闭" class="install-lightbox-close" data-install-close="" type="button">×</button><img alt="" data-install-lightbox-image="" src=""/></dialog>
 <dialog aria-label="插画放大视图" class="platform-art-lightbox" data-platform-art-lightbox=""><button aria-label="关闭" class="platform-art-lightbox-close" data-platform-art-close="" type="button">×</button><img alt="" data-platform-art-image="" src=""/></dialog>
 <section id="purchase" class="platform-section release-section" aria-label="许可证选项"><div class="container"><div class="release-purchase"><div class="release-purchase-intro"><p class="eyebrow"><span></span> E.N.K.I.R.™</p><h2>许可证选项</h2><p>选择最适合你工作节奏的访问方案。</p><small>一个许可证最多可在 3 台电脑上使用，支持任意操作系统组合。更换电脑时，你可以在 E.N.K.I.R.™ 内部或在 <a class="activation-guide-link" href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar 客户门户</a>释放旧设备的许可证，然后在全新设备上激活。</small></div><div class="license-options"><article class="license-option-test"><div><p>7日免费体验</p><strong>0 USD</strong></div><span>完整体验 E.N.K.I.R.™ 聊天室的所有功能 7 天。<br/>无需付费，无自动续费。</span><a class="product-cta" href="https://buy.polar.sh/polar_cl_AiMC6GILq7MzfYZJlWU9sYKlB3tG7LbmwIVsD00H6wh" rel="noopener" target="_blank">免费试用</a></article><article class="license-option-monthly"><div><p>月度订阅</p><strong>14.99 USD + 当地税费</strong></div><span>每月自动续费。可随时取消。</span><a class="product-cta" href="https://buy.polar.sh/polar_cl_4KBnyOSVfeeMTc8iXkFZ6aiuhwDuYB3IgprA723cYoP" rel="noopener" target="_blank">订阅</a><button class="coupon-code" data-copy="AMARA10" title="复制优惠码" type="button"><b>AMARA10</b><span>10% · 前100名</span></button></article><article class="license-option-lifetime"><div><p>终身永久授权</p><strong>199 USD + 当地税费</strong></div><span>一次性付款 · 无 E.N.K.I.R.™ 每月订阅费用。<br/>最多可在 3 台电脑上使用。</span><a class="product-cta" href="https://buy.polar.sh/polar_cl_KtjaYOBZ8CcYOoDVWo5utLfZTwruzDOFDAfZe1H31bh" rel="noopener" target="_blank">立即购买</a><button class="coupon-code" data-copy="AMARA20" title="复制优惠码" type="button"><b>AMARA20</b><span>20% · 前100名</span></button></article></div><div class="release-purchase-side"><p>E.N.K.I.R.™ 许可证不包含第三方 AI 订阅、API 费用或其他助手服务。你用自己的账户使用已接入的助手。购买或免费试用后，Polar 会通过电子邮件和客户门户提供安装程序和许可证密钥。</p><img alt="AMARA" class="license-side-logo" src="../assets/amara-zone-logo-transparent-v1.png"/></div></div></div></section>
@@ -97,37 +136,6 @@
         player.addEventListener('focusin', stop);
         player.addEventListener('focusout', start);
         start();
-      }
-
-      const installPlayers = [...document.querySelectorAll('[data-install-player]')];
-      const installTimers = new Map();
-      const stopAllPlayers = () => { installTimers.forEach((t) => window.clearInterval(t)); installTimers.clear(); };
-      const lightbox = document.querySelector('[data-install-lightbox]');
-      installPlayers.forEach((player) => {
-        const slides = [...player.querySelectorAll('[data-install-slide]')];
-        let active = 0;
-        const show = (index) => { active = (index + slides.length) % slides.length; slides.forEach((slide, i) => slide.classList.toggle('is-active', i === active)); };
-        const stop = () => { window.clearInterval(installTimers.get(player)); installTimers.delete(player); };
-        const start = () => { stop(); if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) installTimers.set(player, window.setInterval(() => show(active + 1), 5000)); };
-        player.querySelector('.install-player-prev').addEventListener('click', () => show(active - 1));
-        player.querySelector('.install-player-next').addEventListener('click', () => show(active + 1));
-        player.addEventListener('mouseenter', stop);
-        player.addEventListener('mouseleave', () => { if (!lightbox?.open) start(); });
-        player.addEventListener('focusin', stop);
-        player.addEventListener('focusout', () => { if (!lightbox?.open) start(); });
-        player.querySelectorAll('img').forEach((image) => image.addEventListener('click', () => {
-          if (!lightbox) return;
-          const fullImage = lightbox.querySelector('[data-install-lightbox-image]');
-          fullImage.src = image.currentSrc || image.src; fullImage.alt = image.alt;
-          stopAllPlayers();
-          lightbox.showModal();
-        }));
-        start();
-      });
-      if (lightbox) {
-        lightbox.querySelector('[data-install-close]').addEventListener('click', () => lightbox.close());
-        lightbox.addEventListener('click', (event) => { if (event.target === lightbox) lightbox.close(); });
-        lightbox.addEventListener('close', () => { installPlayers.forEach((p) => { if (!p.matches(':hover')) p.dispatchEvent(new Event('mouseleave')); }); });
       }
 
             const platformArtDetails = [
