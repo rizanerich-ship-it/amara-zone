@@ -11,11 +11,11 @@
 <meta content="https://amara.zone/en/products.html" property="og:url"/>
 <meta content="E.N.K.I.R.™ — Bring your AI assistants together" property="og:title"/>
 <meta content="A shared workspace on your own computer where your AI assistants can discuss ideas and review each other’s work — while you stay in control." property="og:description"/>
-<meta content="https://amara.zone/assets/product-work-collaboration.png" property="og:image"/>
+<meta content="https://amara.zone/assets/product-work-09-room-collaboration.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="E.N.K.I.R.™ — Bring your AI assistants together" name="twitter:title"/>
 <meta content="A shared workspace on your own computer where your AI assistants can discuss ideas and review each other’s work — while you stay in control." name="twitter:description"/>
-<meta content="https://amara.zone/assets/product-work-collaboration.png" name="twitter:image"/>
+<meta content="https://amara.zone/assets/product-work-09-room-collaboration.png" name="twitter:image"/>
 <link href="https://amara.zone/products.html" hreflang="hu" rel="alternate"/>
 <link href="https://amara.zone/en/products.html" hreflang="en" rel="alternate"/>
 <link href="https://amara.zone/de/products.html" hreflang="de" rel="alternate"/>
@@ -135,8 +135,22 @@
                 </ol>
               </div>
             </article>
-            <article class="install-guide-card"><div class="install-guide-copy"><p class="eyebrow violet"><span></span> Linux</p>
-<p><strong>x86-64 .deb package for Debian and Ubuntu, signed with the AmaraZone key.</strong> Install the downloaded .deb package from the terminal, or — if your system has a graphical package installer — open the file with it. Then start E.N.K.I.R.™</p></div></article>
+            <article class="install-guide-card">
+              <div class="install-guide-copy">
+                <p class="eyebrow violet"><span></span> Linux</p>
+                <p>
+                  <strong>Four packages for Linux: .deb and AppImage, for x86-64 and arm64.</strong> The .deb is for Debian and Ubuntu; the AppImage is for Fedora and Arch. The AppImage needs no installation: it is a single file you make executable.
+                </p>
+                <ol class="install-steps install-steps-wide">
+                  <li><span>01</span><div><h3>Choose the architecture</h3><p>x86-64 for most desktops and laptops (in the .deb name: amd64, in the AppImage name: x86_64); arm64 for ARM machines, such as Snapdragon laptops.</p></div></li>
+                  <li><span>02</span><div><h3>Choose the format</h3><p>For Debian and Ubuntu the .deb: on x86-64 Ubuntu 22.04/24.04 and Debian 12, on arm64 Ubuntu 24.04 and Debian 13. On Fedora and Arch the AppImage; it needs no installation.</p></div></li>
+                  <li><span>03</span><div><h3>.deb: install it from the terminal</h3><p><code>sudo apt install ./E.N.K.I.R.-*-Linux-amd64.deb</code> — on arm64 the same line with arm64. apt installs the dependencies too.</p></div></li>
+                  <li><span>04</span><div><h3>.deb: or open it in a package installer</h3><p>Double-click the downloaded file: your system's graphical package installer opens it.</p></div></li>
+                  <li><span>05</span><div><h3>AppImage: make it executable</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, then start it by its file name or with a double click.</p></div></li>
+                  <li><span>06</span><div><h3>Start E.N.K.I.R.™</h3><p>After the .deb, from the application menu or with the <code>enkir</code> command. The AppImage creates its own icon on the first start; if you move the file later, start it once from the new place.</p></div></li>
+                </ol>
+              </div>
+            </article>
           </div>
         </div>
       </section>

@@ -11,11 +11,11 @@
 <meta content="https://amara.zone/zh/products.html" property="og:url"/>
 <meta property="og:title" content="E.N.K.I.R.™ — 把你的 AI 助手聚到一起"/>
 <meta property="og:description" content="在你自己的电脑上运行的共享工作空间，AI 助手可以在这里讨论想法并互相检查工作——由你来做决定。"/>
-<meta content="https://amara.zone/assets/product-work-collaboration.png" property="og:image"/>
+<meta content="https://amara.zone/assets/product-work-09-room-collaboration.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta name="twitter:title" content="E.N.K.I.R.™ — 把你的 AI 助手聚到一起"/>
 <meta name="twitter:description" content="在你自己的电脑上运行的共享工作空间，AI 助手可以在这里讨论想法并互相检查工作——由你来做决定。"/>
-<meta content="https://amara.zone/assets/product-work-collaboration.png" name="twitter:image"/>
+<meta content="https://amara.zone/assets/product-work-09-room-collaboration.png" name="twitter:image"/>
 <link href="https://amara.zone/products.html" hreflang="hu" rel="alternate"/>
 <link href="https://amara.zone/en/products.html" hreflang="en" rel="alternate"/>
 <link href="https://amara.zone/de/products.html" hreflang="de" rel="alternate"/>
@@ -87,8 +87,22 @@
                 </ol>
               </div>
             </article>
-            <article class="install-guide-card"><div class="install-guide-copy"><p class="eyebrow violet"><span></span> Linux</p>
-<p><strong>由 AmaraZone 密钥签名、适用于 Debian 和 Ubuntu 的 x86-64 .deb 软件包。</strong>在终端中安装下载的 .deb 软件包，或者——如果你的系统有图形化软件包安装程序——用它打开该文件。然后启动 E.N.K.I.R.™。</p></div></article>
+            <article class="install-guide-card">
+              <div class="install-guide-copy">
+                <p class="eyebrow violet"><span></span> Linux</p>
+                <p>
+                  <strong>四个 Linux 软件包:.deb 与 AppImage,面向 x86-64 和 arm64。</strong>.deb 适用于 Debian 和 Ubuntu,AppImage 适用于 Fedora 和 Arch。AppImage 无需安装:只是一个设为可执行的文件。
+                </p>
+                <ol class="install-steps install-steps-wide">
+                  <li><span>01</span><div><h3>选择架构</h3><p>大多数台式机和笔记本用 x86-64(.deb 文件名中为 amd64,AppImage 中为 x86_64);ARM 机器(例如 Snapdragon 笔记本)用 arm64。</p></div></li>
+                  <li><span>02</span><div><h3>选择格式</h3><p>Debian 和 Ubuntu 用 .deb:x86-64 为 Ubuntu 22.04/24.04 和 Debian 12,arm64 为 Ubuntu 24.04 和 Debian 13。Fedora 和 Arch 用 AppImage——它无需安装。</p></div></li>
+                  <li><span>03</span><div><h3>.deb:在终端中安装</h3><p><code>sudo apt install ./E.N.K.I.R.-*-Linux-amd64.deb</code>——arm64 上用同一命令的 arm64 版本。apt 会一并安装依赖。</p></div></li>
+                  <li><span>04</span><div><h3>.deb:或用软件包安装程序打开</h3><p>双击下载的文件,系统自带的图形化软件包安装程序会打开它。</p></div></li>
+                  <li><span>05</span><div><h3>AppImage:设为可执行</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>,然后用文件名启动或双击运行。</p></div></li>
+                  <li><span>06</span><div><h3>启动 E.N.K.I.R.™</h3><p>安装 .deb 后,从应用菜单或使用 <code>enkir</code> 命令启动。AppImage 首次启动时会自行创建图标;如果之后移动了文件,请从新位置启动一次。</p></div></li>
+                </ol>
+              </div>
+            </article>
           </div>
         </div>
       </section>

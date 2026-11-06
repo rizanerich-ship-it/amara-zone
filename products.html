@@ -21,7 +21,7 @@
     />
     <meta
       property="og:image"
-      content="https://amara.zone/assets/product-work-collaboration.png"
+      content="https://amara.zone/assets/product-work-09-room-collaboration.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -34,7 +34,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://amara.zone/assets/product-work-collaboration.png"
+      content="https://amara.zone/assets/product-work-09-room-collaboration.png"
     />
     <link
       rel="alternate"
@@ -183,7 +183,7 @@
           <div class="product-copy">
             <p class="eyebrow violet"><span></span> Első termék</p>
             <h1>E.N.K.I.R.™</h1>
-            <p class="product-acronym-line">Experts Negotiate, Knowledge Is Refined.</p>
+            <p class="product-acronym-line">Experts Negotiate, Knowledge Is Refined. (Szakértők tárgyalnak, a tudás csiszolódik.)</p>
             <p class="product-tagline">Hozd össze az AI-asszisztenseidet.</p>
             <p class="product-lead">
               Egy közös munkatérben megbeszélhetik az ötleteket és
@@ -535,7 +535,7 @@
             </p>
             <p class="product-acronym">
               Így lett belőle:<br /><strong>E.N.K.I.R.™</strong
-              ><em>Experts Negotiate, Knowledge Is Refined.</em>
+              ><em>Experts Negotiate, Knowledge Is Refined. (Szakértők tárgyalnak, a tudás csiszolódik.)</em>
             </p>
             <p class="origin-signature">— Claude Code</p>
           </div>
@@ -614,11 +614,16 @@
               <div class="install-guide-copy">
                 <p class="eyebrow violet"><span></span> Linux</p>
                 <p>
-                  <strong>AmaraZone kulccsal aláírt x86-64 .deb csomag Debianhoz és Ubuntuhoz.</strong>
-                  Telepítsd a letöltött .deb csomagot terminálból, vagy — ha
-                  van grafikus csomagtelepítő a rendszereden — nyisd meg vele a
-                  fájlt. Ezután indítsd el az E.N.K.I.R.™-t.
+                  <strong>Négy csomag Linuxra: .deb és AppImage, x86-64 és arm64 architektúrára.</strong> A .deb Debianhoz és Ubuntuhoz való, az AppImage Fedorához és Archhoz. Az AppImage-t nem kell telepíteni: egyetlen fájl, amit futtathatóvá teszel.
                 </p>
+                <ol class="install-steps install-steps-wide">
+                  <li><span>01</span><div><h3>Válaszd ki az architektúrát</h3><p>x86-64 a legtöbb asztali géphez és laptophoz (a .deb nevében: amd64, az AppImage-ében: x86_64); arm64 az ARM-os gépekhez, például a Snapdragon laptopokhoz.</p></div></li>
+                  <li><span>02</span><div><h3>Válaszd ki a formátumot</h3><p>Debianhoz és Ubuntuhoz a .deb: x86-64-en Ubuntu 22.04/24.04 és Debian 12, arm64-en Ubuntu 24.04 és Debian 13. Fedorán és Archon az AppImage; ezt nem kell telepíteni.</p></div></li>
+                  <li><span>03</span><div><h3>.deb: telepítsd terminálból</h3><p><code>sudo apt install ./E.N.K.I.R.-*-Linux-amd64.deb</code> — arm64-en ugyanez arm64-gyel. Az apt a függőségeket is telepíti.</p></div></li>
+                  <li><span>04</span><div><h3>.deb: vagy nyisd meg csomagtelepítővel</h3><p>Dupla kattintás a letöltött fájlra: a rendszer grafikus csomagtelepítője nyitja meg.</p></div></li>
+                  <li><span>05</span><div><h3>AppImage: tedd futtathatóvá</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, majd indítsd el a fájl nevével vagy dupla kattintással.</p></div></li>
+                  <li><span>06</span><div><h3>Indítsd el az E.N.K.I.R.™-t</h3><p>.deb után az alkalmazásmenüből vagy az <code>enkir</code> paranccsal. Az AppImage az első indításkor magától elkészíti az ikonját; ha később áthelyezed a fájlt, indítsd el egyszer az új helyéről.</p></div></li>
+                </ol>
               </div>
             </article>
           </div>

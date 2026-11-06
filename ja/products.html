@@ -11,11 +11,11 @@
 <meta content="https://amara.zone/ja/products.html" property="og:url"/>
 <meta property="og:title" content="E.N.K.I.R.™ — AIアシスタントをひとつに"/>
 <meta property="og:description" content="自分のPC上で動く共有ワークスペース。AIアシスタントたちがアイデアを話し合い、互いの仕事をレビューし合えます——決めるのはあなたです。"/>
-<meta content="https://amara.zone/assets/product-work-collaboration.png" property="og:image"/>
+<meta content="https://amara.zone/assets/product-work-09-room-collaboration.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta name="twitter:title" content="E.N.K.I.R.™ — AIアシスタントをひとつに"/>
 <meta name="twitter:description" content="自分のPC上で動く共有ワークスペース。AIアシスタントたちがアイデアを話し合い、互いの仕事をレビューし合えます——決めるのはあなたです。"/>
-<meta content="https://amara.zone/assets/product-work-collaboration.png" name="twitter:image"/>
+<meta content="https://amara.zone/assets/product-work-09-room-collaboration.png" name="twitter:image"/>
 <link href="https://amara.zone/products.html" hreflang="hu" rel="alternate"/>
 <link href="https://amara.zone/en/products.html" hreflang="en" rel="alternate"/>
 <link href="https://amara.zone/de/products.html" hreflang="de" rel="alternate"/>
@@ -87,8 +87,22 @@
                 </ol>
               </div>
             </article>
-            <article class="install-guide-card"><div class="install-guide-copy"><p class="eyebrow violet"><span></span> Linux</p>
-<p><strong>AmaraZoneキーで署名された、DebianおよびUbuntu向けの x86-64 .deb パッケージ。</strong>ダウンロードした.debパッケージをターミナルからインストールするか、システムにグラフィカルなパッケージインストーラーがあればそれでファイルを開いてください。その後、E.N.K.I.R.™を起動します。</p></div></article>
+            <article class="install-guide-card">
+              <div class="install-guide-copy">
+                <p class="eyebrow violet"><span></span> Linux</p>
+                <p>
+                  <strong>Linux 用の4つのパッケージ:.deb と AppImage、x86-64 と arm64 用。</strong>.deb は Debian と Ubuntu 用、AppImage は Fedora と Arch 用です。AppImage はインストール不要 — 実行可能にするだけの1つのファイルです。
+                </p>
+                <ol class="install-steps install-steps-wide">
+                  <li><span>01</span><div><h3>アーキテクチャを選ぶ</h3><p>ほとんどのデスクトップPCとノートPCは x86-64(.deb の名前では amd64、AppImage では x86_64)。Snapdragon ノートなどの ARM マシンは arm64 です。</p></div></li>
+                  <li><span>02</span><div><h3>形式を選ぶ</h3><p>Debian と Ubuntu は .deb:x86-64 では Ubuntu 22.04/24.04 と Debian 12、arm64 では Ubuntu 24.04 と Debian 13。Fedora と Arch では AppImage — こちらはインストール不要です。</p></div></li>
+                  <li><span>03</span><div><h3>.deb:ターミナルからインストール</h3><p><code>sudo apt install ./E.N.K.I.R.-*-Linux-amd64.deb</code> — arm64 では同じコマンドの arm64 版。依存パッケージも apt が入れてくれます。</p></div></li>
+                  <li><span>04</span><div><h3>.deb:パッケージインストーラーで開く</h3><p>ダウンロードしたファイルをダブルクリックすると、システムのグラフィカルなパッケージインストーラーが開きます。</p></div></li>
+                  <li><span>05</span><div><h3>AppImage:実行可能にする</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code> のあと、ファイル名で、またはダブルクリックで起動します。</p></div></li>
+                  <li><span>06</span><div><h3>E.N.K.I.R.™ を起動</h3><p>.deb のあとはアプリケーションメニューから、または <code>enkir</code> コマンドで。AppImage は初回起動時に自分でアイコンを作ります。あとでファイルを移動したら、新しい場所から一度起動してください。</p></div></li>
+                </ol>
+              </div>
+            </article>
           </div>
         </div>
       </section>
