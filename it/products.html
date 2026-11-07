@@ -100,6 +100,7 @@
                   <li><span>04</span><div><h3>.deb: oppure aprilo con l’installatore di pacchetti</h3><p>Doppio clic sul file scaricato: si apre l’installatore grafico di pacchetti del sistema.</p></div></li>
                   <li><span>05</span><div><h3>AppImage: rendila eseguibile</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, poi avviala con il nome del file o con un doppio clic.</p></div></li>
                   <li><span>06</span><div><h3>Avvia E.N.K.I.R.™</h3><p>Dopo il .deb, dal menu delle applicazioni o con il comando <code>enkir</code>. L’AppImage crea da sola la sua icona al primo avvio; se in seguito sposti il file, avviala una volta dalla nuova posizione.</p></div></li>
+                  <li><span>07</span><div><h3>Verifica la firma</h3><p><strong>Firmato con la chiave di AmaraZone.</strong> Le firme e la chiave pubblica sono nello ZIP «Checksums and Signatures». Prima importa la chiave: <code>gpg --import amara-zone-public.asc</code>, poi, accanto all’installer: <code>gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt</code>, infine <code>sha256sum -c --ignore-missing SHA256SUMS.txt</code>. gpg mostra <code>Good signature from AmaraZone (ENKIR release signing key)</code>, poi l’impronta della chiave: <code>AE5A 8D0F C5DD 4C96 B245 CE7B 7BAA 8871 18C5 B8AC</code>. L’impronta stampata da gpg deve corrispondere a questa. Se gpg segnala una chiave «not certified», riguarda la chiave, non il file: conta la riga «Good signature».</p></div></li>
                 </ol>
               </div>
             </article>

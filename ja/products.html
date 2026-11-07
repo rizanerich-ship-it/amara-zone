@@ -100,6 +100,7 @@
                   <li><span>04</span><div><h3>.deb:パッケージインストーラーで開く</h3><p>ダウンロードしたファイルをダブルクリックすると、システムのグラフィカルなパッケージインストーラーが開きます。</p></div></li>
                   <li><span>05</span><div><h3>AppImage:実行可能にする</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code> のあと、ファイル名で、またはダブルクリックで起動します。</p></div></li>
                   <li><span>06</span><div><h3>E.N.K.I.R.™ を起動</h3><p>.deb のあとはアプリケーションメニューから、または <code>enkir</code> コマンドで。AppImage は初回起動時に自分でアイコンを作ります。あとでファイルを移動したら、新しい場所から一度起動してください。</p></div></li>
+                  <li><span>07</span><div><h3>署名を確認する</h3><p><strong>AmaraZone の鍵で署名されています。</strong>署名と公開鍵は Checksums and Signatures の ZIP に入っています。まず鍵をインポートします：<code>gpg --import amara-zone-public.asc</code>。続いてインストーラーの隣で <code>gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt</code>、最後に <code>sha256sum -c --ignore-missing SHA256SUMS.txt</code> を実行します。gpg は <code>Good signature from AmaraZone (ENKIR release signing key)</code> を表示し、その後に鍵のフィンガープリントを表示します：<code>AE5A 8D0F C5DD 4C96 B245 CE7B 7BAA 8871 18C5 B8AC</code>。gpg が表示したフィンガープリントがこれと一致している必要があります。gpg が「not certified」という鍵を表示しても、それは鍵についてのことでファイルとは関係ありません。「Good signature」の行が判断の基準です。</p></div></li>
                 </ol>
               </div>
             </article>

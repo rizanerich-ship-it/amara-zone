@@ -148,6 +148,7 @@
                   <li><span>04</span><div><h3>.deb: or open it in a package installer</h3><p>Double-click the downloaded file: your system's graphical package installer opens it.</p></div></li>
                   <li><span>05</span><div><h3>AppImage: make it executable</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, then start it by its file name or with a double click.</p></div></li>
                   <li><span>06</span><div><h3>Start E.N.K.I.R.™</h3><p>After the .deb, from the application menu or with the <code>enkir</code> command. The AppImage creates its own icon on the first start; if you move the file later, start it once from the new place.</p></div></li>
+                  <li><span>07</span><div><h3>Verify the signature</h3><p><strong>Signed with the AmaraZone key.</strong> The signatures and the public key are in the Checksums and Signatures ZIP. First import the key: <code>gpg --import amara-zone-public.asc</code>, then, next to the installer: <code>gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt</code>, and finally <code>sha256sum -c --ignore-missing SHA256SUMS.txt</code>. gpg prints <code>Good signature from AmaraZone (ENKIR release signing key)</code>, then the key fingerprint: <code>AE5A 8D0F C5DD 4C96 B245 CE7B 7BAA 8871 18C5 B8AC</code>. The fingerprint gpg prints must match this one. If gpg reports a “not certified” key, that is about the key, not the file: the “Good signature” line is what counts.</p></div></li>
                 </ol>
               </div>
             </article>

@@ -100,6 +100,7 @@
                   <li><span>04</span><div><h3>.deb: atau buka dengan pemasang paket</h3><p>Klik dua kali berkas yang diunduh: pemasang paket grafis sistem Anda akan terbuka.</p></div></li>
                   <li><span>05</span><div><h3>AppImage: jadikan dapat dijalankan</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, lalu jalankan dengan nama berkasnya atau klik dua kali.</p></div></li>
                   <li><span>06</span><div><h3>Jalankan E.N.K.I.R.™</h3><p>Setelah .deb, dari menu aplikasi atau dengan perintah <code>enkir</code>. AppImage membuat ikonnya sendiri saat pertama dijalankan; jika nanti berkasnya Anda pindahkan, jalankan sekali dari lokasi barunya.</p></div></li>
+                  <li><span>07</span><div><h3>Verifikasi tanda tangan</h3><p><strong>Ditandatangani dengan kunci AmaraZone.</strong>Tanda tangan dan kunci publik ada di ZIP Checksums and Signatures. Pertama impor kuncinya: <code>gpg --import amara-zone-public.asc</code>. Lalu, di samping pemasang: <code>gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt</code>, dan terakhir <code>sha256sum -c --ignore-missing SHA256SUMS.txt</code>. gpg menampilkan <code>Good signature from AmaraZone (ENKIR release signing key)</code>, lalu sidik jari kuncinya: <code>AE5A 8D0F C5DD 4C96 B245 CE7B 7BAA 8871 18C5 B8AC</code>. Sidik jari yang dicetak gpg harus sama dengan ini. Jika gpg menyebut kunci “not certified”, itu tentang kuncinya, bukan berkasnya: yang menentukan adalah baris “Good signature”.</p></div></li>
                 </ol>
               </div>
             </article>

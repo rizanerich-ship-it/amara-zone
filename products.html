@@ -623,6 +623,7 @@
                   <li><span>04</span><div><h3>.deb: vagy nyisd meg csomagtelepítővel</h3><p>Dupla kattintás a letöltött fájlra: a rendszer grafikus csomagtelepítője nyitja meg.</p></div></li>
                   <li><span>05</span><div><h3>AppImage: tedd futtathatóvá</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, majd indítsd el a fájl nevével vagy dupla kattintással.</p></div></li>
                   <li><span>06</span><div><h3>Indítsd el az E.N.K.I.R.™-t</h3><p>.deb után az alkalmazásmenüből vagy az <code>enkir</code> paranccsal. Az AppImage az első indításkor magától elkészíti az ikonját; ha később áthelyezed a fájlt, indítsd el egyszer az új helyéről.</p></div></li>
+                  <li><span>07</span><div><h3>Ellenőrizd az aláírást</h3><p><strong>AmaraZone kulccsal aláírt Linux-csomag.</strong> Az aláírások és a nyilvános kulcs a Checksums and Signatures ZIP-ben vannak. Először importáld a kulcsot: <code>gpg --import amara-zone-public.asc</code>, majd a telepítő mellett: <code>gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt</code>, végül <code>sha256sum -c --ignore-missing SHA256SUMS.txt</code>. A gpg ezt írja ki: <code>Good signature from AmaraZone (ENKIR release signing key)</code>, utána a kulcs ujjlenyomatát: <code>AE5A 8D0F C5DD 4C96 B245 CE7B 7BAA 8871 18C5 B8AC</code>. A kiírt ujjlenyomatnak ezzel kell egyeznie. Ha a gpg „not certified” kulcsot jelez, az a kulcsról szól, nem a fájlról: a mérvadó a „Good signature” sor.</p></div></li>
                 </ol>
               </div>
             </article>

@@ -100,6 +100,7 @@
                   <li><span>04</span><div><h3>.deb: или откройте установщиком пакетов</h3><p>Двойной щелчок по скачанному файлу: откроется графический установщик пакетов системы.</p></div></li>
                   <li><span>05</span><div><h3>AppImage: сделайте исполняемым</h3><p><code>chmod +x E.N.K.I.R.-*-Linux-x86_64.AppImage</code>, затем запустите по имени файла или двойным щелчком.</p></div></li>
                   <li><span>06</span><div><h3>Запустите E.N.K.I.R.™</h3><p>После .deb — из меню приложений или командой <code>enkir</code>. AppImage при первом запуске сам создаёт значок; если позже перенесёте файл, запустите его один раз с нового места.</p></div></li>
+                  <li><span>07</span><div><h3>Проверьте подпись</h3><p><strong>Подписано ключом AmaraZone.</strong> Подписи и открытый ключ находятся в ZIP «Checksums and Signatures». Сначала импортируйте ключ: <code>gpg --import amara-zone-public.asc</code>, затем рядом с установщиком: <code>gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt</code> и наконец <code>sha256sum -c --ignore-missing SHA256SUMS.txt</code>. gpg выводит <code>Good signature from AmaraZone (ENKIR release signing key)</code>, а затем отпечаток ключа: <code>AE5A 8D0F C5DD 4C96 B245 CE7B 7BAA 8871 18C5 B8AC</code>. Выведенный отпечаток должен совпадать с этим. Если gpg сообщает о ключе «not certified», это относится к ключу, а не к файлу: важна строка «Good signature».</p></div></li>
                 </ol>
               </div>
             </article>
