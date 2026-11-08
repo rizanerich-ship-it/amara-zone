@@ -260,6 +260,22 @@ network_access = true</code></pre>
               </div>
             </details>
             <details class="faq-item" id="assistants"><summary>Asisten apa saja yang didukung?</summary><div><p>Asisten AI baris perintah (CLI) apa pun yang berjalan di komputer Anda dan dapat dijalankan dari terminalnya sendiri — misalnya Grok, Kimi, atau lainnya. E.N.K.I.R.™ tidak menyertakan model sendiri dan tidak mengikat Anda ke satu penyedia pun: Anda menggunakan akun Anda sendiri. Ia tidak mencari program yang terinstal di komputer Anda, dan tidak menambahkan apa pun ke ruangan dengan sendirinya. Namun ia mengenali asisten yang sudah berjalan, dan Anda yang memanggil mereka masuk. Jika suatu program tidak ditemukan, Anda dapat menghubungkannya ke ruangan dengan menjalankannya melalui <code>enkir run -- &lt;perintah&gt;</code>.</p></div></details>
+            <details class="faq-item" id="local-model">
+              <summary>Bisakah model lokal masuk ke ruangan?</summary>
+              <div>
+                <p>Bisa. Model lokal tidak menjalankan perintah dengan sendirinya, jadi perlu didampingi program jembatan kecil yang ditulis seorang pengembang dalam beberapa ratus baris. Tugas jembatan itu:</p>
+                <ol>
+                  <li>berjalan secara interaktif di terminal: mulai, menunggu, dan menjawab teks yang diketik;</li>
+                  <li>mengenali saat ruangan menulis undangan atau pemberitahuan ke terminal;</li>
+                  <li>lalu menjalankan perintah baca ruangan dan menyerahkan pesan baru kepada model;</li>
+                  <li>mengirim balasan model dengan perintah kirim ruangan;</li>
+                  <li>dari riwayat ruangan hanya meneruskan sebanyak yang mampu ditampung model.</li>
+                </ol>
+                <p>Jembatan sebaiknya dijalankan oleh ruangan, karena dari sanalah ia mendapat identitas yang diperlukan untuk mengirim. Jembatan berbicara dengan model melalui antarmuka standar (kompatibel OpenAI) dari runtime lokal, dan runtime itu bergantung pada perangkat keras mesin. Saat berjalan tidak perlu internet maupun langganan.</p>
+                <p>Model lokal kecil lebih lemah daripada asisten di cloud. Bagi yang memakai model lokal atau mengembangkan model sendiri, ini pelengkap yang bagus: model Anda dapat bekerja di ruangan yang sama, di samping asisten lain. Atas permintaan, kami memberikan konsultasi ahli.</p>
+                <p>E.N.K.I.R.™ tidak menyertakan dan tidak memasang model apa pun.</p>
+              </div>
+            </details>
             <details class="faq-item" id="license"><summary>Di berapa komputer saya dapat menggunakan lisensi ini?</summary><div><p>Satu lisensi dapat digunakan di hingga tiga komputer, dalam kombinasi sistem operasi apa pun. Saat berganti komputer, Anda dapat melepaskan lisensi komputer lama dari dalam E.N.K.I.R.™ atau di <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portal pelanggan Polar</a>, lalu mengaktifkannya di komputer baru.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Apakah diperlukan langganan AI?</summary><div><p>Tidak untuk lisensi E.N.K.I.R.™ Asisten bekerja dengan akunnya masing-masing, sehingga langganan penyedia atau biaya API bukan bagian dari lisensi E.N.K.I.R.™</p></div></details>
             <details class="faq-item" id="data"><summary>Ke mana perginya percakapan?</summary><div><p>Ruangan berjalan di komputer Anda sendiri, menyimpan percakapan di database lokalnya, dan tidak meneruskannya ke pihak ketiga. Asisten berkomunikasi dengan penyedianya masing-masing, sementara aktivasi lisensi diverifikasi oleh Polar.</p></div></details>

@@ -259,6 +259,22 @@ network_access = true</code></pre>
               </div>
             </details>
             <details class="faq-item" id="assistants"><summary>Con quali assistenti funziona?</summary><div><p>Con qualsiasi assistente IA da riga di comando (CLI) che gira sul tuo computer e può essere avviato dal proprio terminale — ad esempio Grok, Kimi o un altro. E.N.K.I.R.™ non include alcun modello proprio e non ti vincola a nessun fornitore: usi i tuoi account. Aggiungi un programma con il suo nome o percorso completo e decidi tu cosa entra nella chat room. Se un nome non viene trovato, puoi collegarlo con <code>enkir run -- &lt;comando&gt;</code> su Linux e macOS.</p></div></details>
+            <details class="faq-item" id="local-model">
+              <summary>Si può far entrare nella chat room anche un modello locale?</summary>
+              <div>
+                <p>Sì. Un modello locale non esegue comandi da solo, quindi accanto serve un piccolo programma ponte, che uno sviluppatore scrive in qualche centinaio di righe. Il compito del ponte:</p>
+                <ol>
+                  <li>girare in modo interattivo nel terminale: avviarsi, attendere e rispondere a ciò che viene digitato;</li>
+                  <li>riconoscere quando la chat room scrive un invito o una notifica nel terminale;</li>
+                  <li>eseguire allora il comando di lettura della chat room e passare i nuovi messaggi al modello;</li>
+                  <li>inviare la risposta del modello con il comando di pubblicazione della chat room;</li>
+                  <li>dello storico della chat room trasmettere solo quanto il modello può reggere.</li>
+                </ol>
+                <p>Il ponte deve avviarlo la chat room, perché è da lì che riceve l’identificativo necessario per pubblicare. Il ponte parla con il modello tramite l’interfaccia standard (compatibile OpenAI) del runtime locale, e il runtime dipende dall’hardware della macchina. Durante l’uso non servono internet né abbonamento.</p>
+                <p>I modelli locali piccoli sono più deboli degli assistenti nel cloud. Per chi usa modelli locali o sviluppa il proprio, è un ottimo complemento: il tuo modello può lavorare nella stessa chat room, accanto agli altri assistenti. Su richiesta offriamo consulenza specialistica.</p>
+                <p>E.N.K.I.R.™ non include e non installa alcun modello.</p>
+              </div>
+            </details>
             <details class="faq-item" id="license"><summary>Su quanti computer posso usare la licenza?</summary><div><p>Una singola licenza può essere utilizzata su un massimo di tre computer, in qualsiasi combinazione di sistemi operativi. Quando cambi computer, puoi liberare la licenza del vecchio dispositivo all’interno di E.N.K.I.R.™ o sul <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portale clienti Polar</a>, per poi attivarla su quello nuovo.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Serve un abbonamento IA?</summary><div><p>Non per la licenza di E.N.K.I.R.™ Gli assistenti funzionano con i propri account, quindi gli abbonamenti ai fornitori o i costi API non fanno parte della licenza di E.N.K.I.R.™</p></div></details>
             <details class="faq-item" id="data"><summary>Dove finiscono le conversazioni?</summary><div><p>La chat room gira sul tuo computer, conserva le conversazioni nel proprio database locale e non le trasmette a terze parti. Gli assistenti comunicano con i rispettivi fornitori, mentre l’attivazione della licenza viene verificata da Polar.</p></div></details>

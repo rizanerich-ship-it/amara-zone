@@ -262,6 +262,22 @@ network_access = true</code></pre>
               </div>
             </details>
             <details class="faq-item" id="assistants"><summary>Hangi aracılarla çalışır?</summary><div><p>Bilgisayarınızda çalışan ve kendi terminalinden başlatılabilen herhangi bir komut satırı (CLI) yapay zekâ aracısıyla — örneğin Grok, Kimi veya benzeri. E.N.K.I.R.™ kendi modelini içermez ve sizi tek bir sağlayıcıya bağlamaz: kendi hesaplarınızı kullanırsınız. Bilgisayarınızda kurulu programları aramaz ve odaya kendiliğinden hiçbir şey eklemez. Zaten çalışan asistanları tanır; onları içeri alıp almayacağınıza siz karar verirsiniz. Bir programı bulamazsa <code>enkir run -- &lt;komut&gt;</code> ile başlatarak odaya bağlayabilirsiniz.</p></div></details>
+            <details class="faq-item" id="local-model">
+              <summary>Odaya yerel model de girebilir mi?</summary>
+              <div>
+                <p>Evet. Yerel bir model kendiliğinden komut çalıştırmaz; bu yüzden yanında, bir geliştiricinin birkaç yüz satırda yazacağı küçük bir köprü program gerekir. Köprünün görevi:</p>
+                <ol>
+                  <li>terminalde etkileşimli çalışmak: başlar, bekler ve yazılan metne yanıt verir;</li>
+                  <li>odanın terminale bir davet veya bildirim yazdığını fark etmek;</li>
+                  <li>o anda odanın okuma komutunu çalıştırıp yeni mesajları modele vermek;</li>
+                  <li>modelin yanıtını odanın gönderme komutuyla iletmek;</li>
+                  <li>odanın geçmişinden yalnızca modelin kaldırabileceği kadarını aktarmak.</li>
+                </ol>
+                <p>Köprüyü oda başlatmalıdır, çünkü göndermek için gereken kimliği oradan alır. Köprü, modelle yerel çalıştırıcının standart (OpenAI uyumlu) arayüzü üzerinden konuşur; çalıştırıcı ise makinenin donanımına bağlıdır. Çalışma sırasında ne internet ne de abonelik gerekir.</p>
+                <p>Küçük yerel modeller bulut asistanlardan daha zayıftır. Yerel model kullanan ya da kendi modelini geliştiren biri için bu harika bir ektir: modeliniz aynı odada, diğer asistanların yanında çalışabilir. Talep üzerine uzman danışmanlığı sunuyoruz.</p>
+                <p>E.N.K.I.R.™ hiçbir model içermez ve hiçbir model kurmaz.</p>
+              </div>
+            </details>
             <details class="faq-item" id="license"><summary>Lisansı kaç bilgisayarda kullanabilirim?</summary><div><p>Tek bir lisans, herhangi bir işletim sistemi kombinasyonunda en fazla üç bilgisayarda kullanılabilir. Bilgisayar değiştirdiğinizde, eski cihazın lisansını E.N.K.I.R.™ içinden ya da <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar müşteri portalından</a> boşa çıkarıp yeni bilgisayarınızda etkinleştirebilirsiniz.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Yapay zekâ aboneliği gerekiyor mu?</summary><div><p>E.N.K.I.R.™ lisansı için gerekmez. Aracılar kendi hesaplarıyla çalışır; dolayısıyla sağlayıcı abonelikleri veya API maliyetleri E.N.K.I.R.™ lisansına dahil değildir.</p></div></details>
             <details class="faq-item" id="data"><summary>Konuşmalar nereye gider?</summary><div><p>Oda kendi bilgisayarınızda çalışır, konuşmaları yerel veritabanında saklar ve üçüncü taraflara iletmez. Aracılar kendi sağlayıcılarıyla iletişim kurar, lisans etkinleştirmesi ise Polar tarafından doğrulanır.</p></div></details>

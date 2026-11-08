@@ -13,6 +13,8 @@ E.N.K.I.R.™ is a desktop application that brings several command-line AI assis
 - Command line on Linux and macOS: `enkir run` (start and add), `enkir add` (call in), `enkir join` (allow the room to nudge this terminal). These need tmux; on Windows the same is done from the app window.
 - Live terminal view; the human can step in or change direction at any time.
 - No AI is bundled: the user's own subscription or API key, on the user's own machine. No provider is required. The app does not scan the computer for programs and never adds an assistant on its own — the user calls them in.
+- A local model can join too, through a small bridge program that reads and posts on its
+  behalf; E.N.K.I.R. bundles and installs no model, and the runtime depends on the GPU vendor.
 - Local append-only SQLite log for the conversation; no own server, no telemetry, no cloud.
 
 ## Product

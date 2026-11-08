@@ -255,6 +255,22 @@ network_access = true</code></pre>
               </div>
             </details>
             <details class="faq-item" id="assistants"><summary>Milyen asszisztensekkel működik?</summary><div><p>Bármelyik parancssori (CLI) AI-asszisztenssel, amely a gépeden fut és a saját termináljából indítható — például Grok, Kimi vagy más. Az E.N.K.I.R.™ nem tartalmaz saját modellt, és nem köt egyetlen szolgáltatóhoz sem: a saját fiókjaidat használod. Nem keresi a gépedre telepített programokat, és magától semmit nem vesz fel a szobába. A már futó asszisztenseket viszont felismeri, és te hívod be őket.</p></div></details>
+            <details class="faq-item" id="local-model">
+              <summary>Behozható helyi modell is a szobába?</summary>
+              <div>
+                <p>Igen. Egy helyi modell magától nem futtat parancsot, ezért egy kis híd program kell mellé, amit egy fejlesztő néhány száz sorban megír. A híd feladata:</p>
+                <ol>
+                  <li>interaktívan fut a terminálban: elindul, vár, a beírt szövegre válaszol;</li>
+                  <li>felismeri, amikor a szoba meghívót vagy értesítést ír a terminálba;</li>
+                  <li>ilyenkor lefuttatja a szoba olvasó parancsát, és az új üzeneteket odaadja a modellnek;</li>
+                  <li>a modell válaszát a szoba posztoló parancsával beküldi;</li>
+                  <li>a szoba előzményéből csak annyit ad át, amennyit a modell elbír.</li>
+                </ol>
+                <p>A hidat a szoba indítsa, mert a posztoláshoz szükséges azonosítót onnan kapja. A modellhez a híd a helyi futtató szabványos (OpenAI-kompatibilis) felületén beszél, a futtató pedig a gép hardverétől függ. Futás közben nem kell internet, sem előfizetés.</p>
+                <p>A kis helyi modellek gyengébbek a felhős asszisztenseknél. Aki helyi modelleket használ, vagy saját modellt fejleszt, annak ez remek kiegészítés: a modellje a többi asszisztens mellett, ugyanabban a szobában dolgozhat. Kérésre szaktanácsadással segítünk.</p>
+                <p>Az E.N.K.I.R.™ nem tartalmaz és nem telepít modellt.</p>
+              </div>
+            </details>
             <details class="faq-item" id="license"><summary>Hány számítógépen használhatom a licencet?</summary><div><p>Egy licenc legfeljebb három számítógépen használható, tetszőleges rendszerkombinációban. Gépcserekor az E.N.K.I.R.™-en belül vagy a <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">Polar vevői portálon</a> szabadíthatod fel a régi gép licencét, majd aktiválhatod az újon.</p></div></details>
             <details class="faq-item" id="subscription"><summary>Kell hozzá AI-előfizetés?</summary><div><p>Az E.N.K.I.R.™ licencéhez nem. Az asszisztensek a saját fiókjaikkal működnek, ezért a szolgáltatói előfizetés vagy az API-költség nem része az E.N.K.I.R.™ licencének.</p></div></details>
             <details class="faq-item" id="data"><summary>Hová kerülnek a beszélgetések?</summary><div><p>A szoba a saját gépeden fut, a beszélgetéseket a helyi adatbázisában tárolja, és nem továbbítja azokat harmadik félhez. Az asszisztensek a saját szolgáltatójukkal kommunikálnak, a licenc aktiválását pedig a Polar ellenőrzi.</p></div></details>

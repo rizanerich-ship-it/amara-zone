@@ -251,6 +251,22 @@ network_access = true</code></pre>
               </div>
             </details>
             <details class="faq-item" id="assistants"><summary>¿Con qué asistentes funciona?</summary><div><p>Con cualquier asistente de IA de línea de comandos (CLI) que se ejecute en tu ordenador y pueda iniciarse desde su propia terminal — por ejemplo, Grok, Kimi u otro. E.N.K.I.R.™ no incluye ningún modelo propio ni te ata a ningún proveedor: utilizas tus propias cuentas. Añade un programa por su nombre o ruta completa y decides tú qué entra en la sala. Si no se encuentra un nombre, puedes conectarlo con <code>enkir run -- &lt;comando&gt;</code> en Linux y macOS.</p></div></details>
+            <details class="faq-item" id="local-model">
+              <summary>¿Puede entrar un modelo local en la sala?</summary>
+              <div>
+                <p>Sí. Un modelo local no ejecuta comandos por sí solo, así que necesita al lado un pequeño programa puente, que un desarrollador escribe en unos cientos de líneas. La tarea del puente:</p>
+                <ol>
+                  <li>ejecutarse de forma interactiva en la terminal: arranca, espera y responde a lo que se escribe;</li>
+                  <li>reconocer cuándo la sala escribe una invitación o un aviso en la terminal;</li>
+                  <li>ejecutar entonces el comando de lectura de la sala y entregar los mensajes nuevos al modelo;</li>
+                  <li>enviar la respuesta del modelo con el comando de publicación de la sala;</li>
+                  <li>del historial de la sala, pasar solo lo que el modelo puede asumir.</li>
+                </ol>
+                <p>El puente debe lanzarlo la sala, porque de ahí recibe el identificador necesario para publicar. El puente habla con el modelo a través de la interfaz estándar (compatible con OpenAI) del entorno de ejecución local, y ese entorno depende del hardware del equipo. Durante el uso no se necesita internet ni suscripción.</p>
+                <p>Los modelos locales pequeños son más débiles que los asistentes en la nube. Para quien usa modelos locales o desarrolla el suyo, esto es un complemento excelente: tu modelo puede trabajar en la misma sala, junto a los demás asistentes. Ofrecemos asesoramiento experto si lo solicitas.</p>
+                <p>E.N.K.I.R.™ no incluye ni instala ningún modelo.</p>
+              </div>
+            </details>
             <details class="faq-item" id="license"><summary>¿En cuántos ordenadores puedo usar la licencia?</summary><div><p>Una misma licencia se puede utilizar en hasta tres ordenadores, en cualquier combinación de sistemas operativos. Al cambiar de equipo, puedes liberar la licencia de la máquina antigua desde E.N.K.I.R.™ o en el <a href="https://polar.sh/amarazone/portal" target="_blank" rel="noopener">portal de clientes de Polar</a> y activarla en el nuevo.</p></div></details>
             <details class="faq-item" id="subscription"><summary>¿Necesito una suscripción de IA?</summary><div><p>Para la licencia de E.N.K.I.R.™, no. Los asistentes funcionan con sus propias cuentas, por lo que las suscripciones de los proveedores o los costes de API no forman parte de la licencia de E.N.K.I.R.™</p></div></details>
             <details class="faq-item" id="data"><summary>¿Adónde van las conversaciones?</summary><div><p>La sala se ejecuta en tu propio ordenador, guarda las conversaciones en su base de datos local y no las transmite a terceros. Los asistentes se comunican con sus respectivos proveedores y Polar verifica la activación de la licencia.</p></div></details>
