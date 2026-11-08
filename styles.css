@@ -343,3 +343,8 @@
 .faq-item:target summary { color:#3d3560; }
 @media (max-width:760px) { .product-faq { padding:75px 0; } .product-faq .faq-heading h1,.product-faq .faq-heading h2 { font-size:clamp(28px,8vw,34px); } .faq-item summary { font-size:15px; } .faq-item>div { padding-left:0; } .faq-item pre { font-size:11px; } }
 @media (max-width:760px) { .setup-guide { margin:38px 0 46px; padding:24px 20px; font-size:14px; } .setup-guide h2 { font-size:26px; } .setup-guide h3 { font-size:20px; } .setup-guide pre { font-size:11px; } }
+
+/* Felelősségi nyilatkozat — link a vásárlási doboz alján (2026-11-08) */
+.liability-link { display:block; margin-top:12px; font-size:13px; }
+.liability-link a { color:#c7bbff; text-decoration:underline; text-underline-offset:3px; }
+.liability-link a:hover { color:#fff; }

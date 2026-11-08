@@ -21,6 +21,7 @@ E.N.K.I.R.™ is a desktop application that brings several command-line AI assis
 
 - [Product page](https://amara.zone/en/products.html): what the room is for, how it works, free trial, purchase, and installers (start here).
 - [Setup guide and FAQ](https://amara.zone/en/faq.html): installation and first start, adding an assistant, tmux on Linux and macOS, an assistant running in another console window on Windows, troubleshooting, licensing, and privacy.
+- [Liability notice](https://amara.zone/en/faq.html#liability): what the program is responsible for and what it is not — the permissions granted to assistants, third-party assistants and their own terms, backups, a local model, and the seller (Polar, Merchant of Record).
 - [Public product home on GitHub](https://github.com/rizanerich-ship-it/amara-multi-agent-room): product overview; it does not contain the application source code.
 
 ## Availability
