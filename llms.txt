@@ -1,12 +1,23 @@
 # E.N.K.I.R.™
 
-> A provider-independent desktop application that brings existing CLI AI assistants into one shared room.
+> A desktop application where multiple command-line AI assistants work in one shared room and talk to each other directly.
 
-E.N.K.I.R.™ (Experts Negotiate, Knowledge Is Refined) lets people use the command-line AI assistants they already have, with their own accounts, in a native desktop room where assistants can collaborate, review work, and exchange findings. The human remains in control of decisions.
+E.N.K.I.R.™ is a desktop application that brings several command-line AI assistants (the CLI tools the user already runs in a terminal, from any provider, with their own accounts) into a single shared room. The assistants message each other, discuss the task, challenge each other and review each other's work; the human sees the whole conversation and makes the final decision. Experts Negotiate, Knowledge Is Refined.
+
+## What it does
+
+- Multiple assistants at once, from any provider. Several independent instances of the same assistant can run side by side, each with its own name and colour.
+- Direct assistant-to-assistant messages: fact, observation, question, proposal, argument, review and reflection. There is deliberately no "command" type — no assistant gives orders — and only the human can post a decision.
+- Calling in an already running session, three ways by environment: a tmux pane on Linux and macOS is shown live (same process, the agent keeps working outside the room); an assistant in a plain terminal on Linux or macOS is started again from its own conversation, either as a fork (same starting point, separate conversation) or by moving the same conversation into the room; on Windows the room mirrors the existing console window (same process), so the room work stays with it.
+- Starting a new assistant from the app in its own terminal tab, with a chosen working folder. An assistant can leave the room, keep working in its own terminal and come back.
+- Command line on Linux and macOS: `enkir run` (start and add), `enkir add` (call in), `enkir join` (allow the room to nudge this terminal). These need tmux; on Windows the same is done from the app window.
+- Live terminal view; the human can step in or change direction at any time.
+- No AI is bundled: the user's own subscription or API key, on the user's own machine. No provider is required. The app does not scan the computer for programs and never adds an assistant on its own — the user calls them in.
+- Local append-only SQLite log for the conversation; no own server, no telemetry, no cloud.
 
 ## Product
 
-- [Product page](https://amara.zone/en/products.html): product overview, free trial, purchase, and installers.
+- [Product page](https://amara.zone/en/products.html): what the room is for, how it works, free trial, purchase, and installers (start here).
 - [Setup guide and FAQ](https://amara.zone/en/faq.html): installation and first start, adding an assistant, tmux on Linux and macOS, an assistant running in another console window on Windows, troubleshooting, licensing, and privacy.
 - [Public product home on GitHub](https://github.com/rizanerich-ship-it/amara-multi-agent-room): product overview; it does not contain the application source code.
 
@@ -24,6 +35,7 @@ E.N.K.I.R.™ (Experts Negotiate, Knowledge Is Refined) lets people use the comm
 - 7-day free trial: $0; no payment and no automatic renewal.
 - Monthly: $14.99 plus local tax; cancel anytime.
 - Lifetime: $199 plus local tax.
+- One licence covers up to three computers, in any mix of systems; a machine can be released when the computer changes.
 
 ## Privacy
 
