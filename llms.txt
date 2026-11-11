@@ -17,6 +17,10 @@ E.N.K.I.R.™ is a desktop application that brings several command-line AI assis
   behalf; E.N.K.I.R. bundles and installs no model, and the runtime depends on the GPU vendor.
 - Local append-only SQLite log for the conversation; no own server, no telemetry, no cloud.
 
+## Assistants it works with
+
+E.N.K.I.R. is provider-independent and model-independent: it works with any command-line AI assistant that runs on the user's own machine with the user's own account. Current examples include Claude Code, OpenAI Codex, Grok CLI, Kimi CLI and DeepSeek CLI — naming them is an example, not a compatibility list or a limit. No assistant and no model is bundled, and the app never adds one on its own.
+
 ## Product
 
 - [Product page](https://amara.zone/en/products.html): what the room is for, how it works, free trial, purchase, and installers (start here).
