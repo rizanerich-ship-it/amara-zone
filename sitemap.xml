@@ -1872,4 +1872,18 @@
     <xhtml:link rel="alternate" hreflang="id" href="https://amara.zone/id/products.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://amara.zone/en/products.html" />
   </url>
+  <url>
+    <loc>https://amara.zone/privacy.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://amara.zone/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://amara.zone/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amara.zone/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://amara.zone/en/privacy.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://amara.zone/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://amara.zone/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amara.zone/en/privacy.html" />
+  </url>
 </urlset>
