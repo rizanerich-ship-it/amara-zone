@@ -757,14 +757,7 @@
                   target="_blank"
                   rel="noopener"
                   >Előfizetek</a
-                ><button
-                  class="coupon-code"
-                  data-copy="AMARA10"
-                  type="button"
-                  title="Kuponkód másolása"
                 >
-                  <b>AMARA10</b><span>10% · első 100</span>
-                </button>
               </article>
               <article class="license-option-lifetime">
                 <div>
@@ -780,14 +773,7 @@
                   target="_blank"
                   rel="noopener"
                   >Megvásárolom</a
-                ><button
-                  class="coupon-code"
-                  data-copy="AMARA20"
-                  type="button"
-                  title="Kuponkód másolása"
                 >
-                  <b>AMARA20</b><span>20% · első 100</span>
-                </button>
               </article>
             </div>
             <div class="release-purchase-side">
@@ -926,26 +912,6 @@
         demoVideo.innerHTML = `<iframe src="https://www.youtube.com/embed/p5p1JACnz-8?rel=0&enablejsapi=1&origin=${embedOrigin}" title="E.N.K.I.R.™ működés közben" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         productDetailsTitle.insertAdjacentElement("afterend", demoVideo);
       }
-      document.querySelectorAll(".coupon-code").forEach((button) => {
-        button.addEventListener("click", async () => {
-          const code = button.dataset.copy;
-          try {
-            await navigator.clipboard.writeText(code);
-          } catch {
-            const area = document.createElement("textarea");
-            area.value = code;
-            document.body.appendChild(area);
-            area.select();
-            document.execCommand("copy");
-            area.remove();
-          }
-          const original = button.innerHTML;
-          button.textContent = "Kimásolva";
-          setTimeout(() => {
-            button.innerHTML = original;
-          }, 1600);
-        });
-      });
     </script>
     <script src="origin-room-art.js" defer></script>
   </body>
